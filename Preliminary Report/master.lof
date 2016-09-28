@@ -1,0 +1,38 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The Cardiac Depolarization Route. AVN: Atrioventricular Node; SAN: Sinoatrial Node. \cite {hall2015guyton}}}{4}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The Basic Pattern of Electrical Activity across the Heart \cite {ashley2004conquering}}}{5}{figure.1.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Wireless Vital Signs Monitoring System Block Diagram}}{11}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 3 Model B \cite {rpi3pic}}}{14}{figure.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces AD8232 Functional Block Diagram \cite {ad8232datasheet}}}{19}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces AD8232 Pin Configuration \cite {ad8232datasheet}}}{19}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces AD8232 Simplified Schematic Diagram \cite {ad8232datasheet}}}{20}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Circuit Configuration for ECG Waveform Monitoring using the AD8232 \cite {ad8232datasheet}}}{21}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces AD8232 Heart Rate Monitor from SparkFun Electronics \cite {ad8232}}}{22}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces AD8232 Connection Diagram using Fritzing \cite {ad8232}}}{23}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Thermistor in Voltage Divider Configuration using Fritzing}}{24}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Thermistor Formulae and Properties \cite {thermistor}}}{25}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Thermistor Formulae and Properties (cont.) \cite {thermistor}}}{25}{figure.5.9}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated ECG Signal}}{31}{figure.7.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Typical Sensor Placements \cite {ashley2004conquering}}}{34}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Typical Sensor Placements (3 Electrodes) \cite {ad8232}}}{34}{figure.9.2}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces ECG Output Test 2}}{35}{figure.9.3}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces ECG Output recorded by the Raspberry Pi over WiFi}}{35}{figure.9.4}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces ECG Output with Deep Breathing}}{36}{figure.9.5}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces ECG Output with Limb Movement}}{36}{figure.9.6}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces NOOBS (New Out Of the Box Software) Initial Installation Screen \cite {rpi3noobs}}}{46}{figure.A.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces AD8232 SparkFun Implementation Schematic Diagram \cite {ad8232sfschematic}}}{55}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Raspberry Pi 3 Model B Schematic Diagram \cite {rpi3hardware}}}{56}{figure.B.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Snippet of Material Type F Thermistor Datasheet \cite {thermistor}}}{59}{figure.C.1}

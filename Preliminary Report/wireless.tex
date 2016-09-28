@@ -1,0 +1,55 @@
+\chapter{Survey of Related Previous Work - Overview of Wireless Sensor Network Technology}
+
+\section{Wireless Sensor Networks}
+
+In line with the expansion of Internet of Things, this project is able to incorporate the idea of smart and ubiquitous connections between devices \cite{gubbi2013internet}.
+
+\section{Body Area Networks}
+
+\section{Methods of Wireless Transmission}
+
+\subsection{Comparison between Virtual Nerwork Computing (VNC) and Raw Transmission}
+
+One of the biggest considerations of the project is whether to transmit the raw data wirelessly or to allow access to the data-processing terminal via virtual network computing (VNC). A quick comparison between the strengths and weaknesses is laid out below, with reference to Figure \ref{system}. 
+
+Raw data transmission from one terminal to another requires less processing power as the workload of data visualisation and transmission can be equally delegated between the two terminals. In terms of the actual transmission, the bandwidth required by raw data transmission is much smaller than the bandwidth needed for setting up and maintaining a VNC server-client connection. This directly implies that there would be a smaller delay for the raw data transmission model. 
+
+On the other hand, VNC provides inherent encryption whereas raw data transmission is susceptible to interception if no encryption is implemented. In addition to this, most VNC server-client systems are packaged with user password authentication, providing increased security against unauthorised access to the sensor outputs collected from patients. Again, raw data transmission requires further deliberate work to attain similar security standards. 
+
+In wireless systems, disconnection due to the devices going out of range is commonplace and can cause disruption in the flow of information between terminals. For a VNC implementation of the WVSMS, data-processing isolation is a great benefit obtained compared to raw data transmission. Referring to Figure \ref{system}, should a disconnection occur, data processing and visualisation are not interrupted as the wireless transmission component is a completely separate, independent, and disjointed process between the terminals. As such, the Terminal connected to the Sensors are completely isolated. The Display-connected Terminal is not required for the system to function as the purpose of the second Terminal is only to be a VNC client for accessing the first Terminal. However, for raw data transmission be interrupted, both data processing and visualisation (assuming this is done by the Display-connected Terminal), will terminate completely due to the cessation of input. Using a VNC model effectively eliminates the problem of transmission errors affecting data processing.  
+
+Another point worth noting is the full remote control of the Sensor-connected Terminal that VNC affords to the user should there be a need to access the Terminal in real time to operate and change the processes. Raw transmission does not allow such control between Terminals. 
+
+From the above comparison, it can be seen that using VNC is highly suited for the purposes of this project instead of raw data transmission according to the required specifications as seen in Section \ref{specifications}. \\
+
+\subsection{Virtual Network Computing}
+\label{vnc}
+
+https://en.wikipedia.org/wiki/Virtual\_Network\_Computing 
+
+VNC is platform-independent 
+
+VNC
+encryption
+isolation - big point
+security - authentication
+full remote control over patient's devices 
+
+Raw 
+Less processing power required
+Less delay
+
+\section{WiFi}
+
+\section{Bluetooth}
+
+\section{Zigbee}
+
+\section{Comparison of Different Protocols}
+
+\begin{center}
+	\begin{tabular}{| l | l |}
+		\hline
+		Test1 & Test2 \\ \hline
+	\end{tabular}
+\end{center}

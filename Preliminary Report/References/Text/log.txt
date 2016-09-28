@@ -1,0 +1,590 @@
+Project: MP2 - Wireless Patient Monitoring System 
+Author: William Ngeow
+Start Date: 13/7/2016
+
+
+
+Development Log: 
+
+Wed 13 Jul 18:25:02 GMT-10 2016
+- Set up VNC server on RPi using TightVNCServer
+- Set up boot_mp2.sh and pi.sh. Both shell files are used to automate processes in Linux. 
+  	boot_mp2.sh - sets up TightVNCServer on RPi
+	pi.sh - runs a new vnc server at 1920x1080
+	log.sh - adds timestamp to log
+- Looked up speech synthesizer - FreeTTS and Mbrola database
+- Bought temperature sensor, breadboard, 5V regulator, and battery holder from Jaycar. 
+- Order online to be received.  
+- Testing how long RPi can be on without issues - uptime at 16:48.
+- cmds used so far: 
+	1. uptime
+	2. hostname -I
+	3. sudo apt-get update
+	4. test 
+	5. cd & ls
+- Set up timestamp for logging.
+- To be done: 
+	1. Connect temperature sensor to log data via Arduino
+	2. Set up database using MySQL
+
+Wed 13 Jul 18:37:47 GMT-10 2016
+Tested logging script. 
+
+Wed 13 Jul 18:38:29 GMT-10 2016
+Tested logging script.
+
+Wed 13 Jul 22:38:53 GMT-10 2016
+Updated and tested logging script. 
+
+Thu 14 Jul 20:31:56 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 20:32:08 up 1 day, 18:55,  3 users,  load average: 0.09, 0.11, 0.08
+- Acquired Arduino for ADC conversion of analog to digital signals (required for temperature sensor).
+- Need to buy male-to-male and male-to-female connectors from Jaycar. 
+- Downloaded and read duinotech's XC-4494 datasheet (Temperature Sensor Module).
+
+Thu 14 Jul 23:33:20 GMT-10 2016
+- Installed xtightvncviewer. 
+- Added xtightvncviewer to boot_mp2.sh. 
+
+Thu 14 Jul 23:41:32 GMT-10 2016
+- Successfully viewed a previously established Tight VNC Server using 'vncviewer' command. 
+- Hostname required for VNC client viewing. 
+- To do: Set up ad hoc WiFi access point for RPi. 
+
+Fri 15 Jul 00:11:53 GMT-10 2016
+- Changed keyboard layout from English(UK) to English(US). 
+- New commands for better RPi process handling and configuration:
+	1. w
+	2. who -all 
+	3. sudo raspi-config
+
+Fri 15 Jul 00:37:03 GMT-10 2016
+- To do: Check memory capacity when running VNC Viewer. 
+- To do: Hypothesis testing and statistical analysis of RPi reliability for:
+	1. Transmission
+	2. Processing
+	3. Memory
+	4. Temperature
+	5. Current/Power Consumption - Battery Concerns
+- Checked RPi on board temperature using the following command. 
+- Command: '/opt/vc/bin/vcgencmd measure_temp'
+- To do: Data Visualisation for Heartbeat to follow Pulse Oximetry pattern. 
+- To do: Set up battery and DC-DC voltage converter and check current limit. 
+- Downloaded and read duinotech's XC-4512 datasheet (5V DC to DC Converter Module). 
+
+Fri 15 Jul 21:28:33 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 21:30:18 up 2 days, 19:53,  2 users,  load average: 0.12, 0.20, 0.23
+- Bought male-to-male and male-to-female connectors from Jaycar. 
+- To do: Set up static IP address for RPi's ad hoc WiFi access point. 
+- To do: Acquire USB power measurement unit (for voltage and current) to determine compatibility and power consumption.
+
+Fri 15 Jul 21:40:54 GMT-10 2016
+- Installed Arduino IDE on RPi using the following command. 
+- Command: 'sudo apt-get install arduino'
+- Added command to boot_mp2.sh for first time installation on RPi.
+ 
+Fri 15 Jul 22:01:14 GMT-10 2016
+- Successfully booted Arduino IDE and connected Arduino Uno. 
+- Successfully verified and compiled code for XC-4494 thermistor onto Arduino Uno. 
+- Successfully received readings on Serial Monitor between ranges of 430~500.
+- Values are not calibrated but heating with finger increases output value. 
+- Temperature sensing using thermistor requires further calibration. 
+- Code saved as 'sketch_jul15a'. 
+- Initial concern that RPi might not be able to provide sufficient power for Arduino Uno. 
+- Upon testing with multiple sketch uploads, Arduino Uno performs normally. 
+- RPi shows no sign of power degradation. 
+- Arduino Uno without shields or motors should be able to be fully supported by RPi without power concerns. 
+- Mouse, keyboard, and Arduino Uno were connected together at time of test. 
+- To do: Calibrate temperature sensor (in degree Celcius). 
+- To do: Save Arduino Uno output values into database. Database to be created. 
+
+Fri 15 Jul 23:01:00 GMT-10 2016
+- Successfully created RPi processor temperature logging script file. 
+- Script file name is 'rpitemplog.sh'. 
+- Output of temperature log is named with timestamp. 
+- Output file name is 'temp_log_2016-7-15_23-05-10.txt'. Saved in Archive folder.
+- Changed output format for 'rpitemplog.sh'.
+- Created new temperature log.   
+
+Fri 15 Jul 23:24:04 GMT-10 2016
+- MySQL should be used for database. (VOID)
+- Python needed to interface between Arduino Uno serial input and SQL database. 
+
+Sat 16 Jul 00:24:21 GMT-10 2016
+- After some reading, SQLite proves to be a better match for the purpose of this project. 
+- According to www.sqlite.org/whentouse.html, 
+  "SQLite strives to provide local data storage for individual applications and devices". 
+- Since the data visualisation programs are all local applications, SQLite fits as a more appropriate database than MySQL. 
+
+Sat 16 Jul 02:51:41 GMT-10 2016
+- Found AD8232 (Single Lead Heart Rate Monitor) on SparkFun (Littlebird Electronics). 
+- Order made for ECG equipment based on the AD8232 ($107.71). 
+- Found multiple ways to display data: 
+	1. Store data in database, retrieve, and plot. 
+	2. Store data in text file, retrieve, and plot (with live update). Requires FIFO pattern for storing data. 
+	3. View all graphs in Processing (directly from Arduino Uno output). 
+- Plot can be made using Matplotlib.  
+- For data display #3, requires a way to display the graphs on screen in the right proportion. 
+- Also, need to consider how to automate boot and display process for RPi. 
+
+Sat 16 Jul 13:46:19 GMT-10 2016
+- Attempted to redirect Arduino Uno serial output to terminal using bash. 
+- Commands: 
+	1. sudo stty -F /dev/ttyACM0 9600
+	2. tail -f /dev/ttyACM0 
+	3. cat /dev/ttyACM0
+	4. sudo chmod +r /dev/ttyACM0
+- Unsuccessful. Attempting to redirect output using minicom. 
+- Installed minicom using 'sudo apt-get install minicom'. 
+- Configured baud rate and serial input for minicom. 
+- Received 'Device /dev/ttyACM0 is locked.' error. 
+
+Sat 16 Jul 14:01:48 GMT-10 2016
+- Deleted lock file in /var/lock/LCK..ttyACM0. 
+- Reconfigured minicom for serial port and baud rate. 
+- Successfully redirected Arduino Uno output to text file (test.txt).
+- Command used: 'sudo minicom -C test.txt'. 
+- Data can be stored in text file via bash shell. 
+- To do: Repeat using Python script. 
+
+Sat 16 Jul 14:17:29 GMT-10 2016
+- Added 'sudo apt-get install minicom' into boot_mp2.sh file. 
+- Added 'sudo minicom -C test.txt' to pi.sh file. 
+- Checked uptime for RPi.
+- Output: 14:20:09 up 3 days, 12:43,  3 users,  load average: 0.09, 0.25, 0.38
+
+Sat 16 Jul 14:43:45 GMT-10 2016
+- Reduced RAM usage by shutting down unused processes seen in 'pstree -p'. 
+- Explored alwaysshared option in vncserver. 
+
+Sat 16 Jul 15:53:49 GMT-10 2016 
+- Consider testing live update graph with test data from either temperature sensor or processor temperature log. 
+- Consider multiple windows from separate programs in a single window with fixed geometric configuration. 
+
+Sat 16 Jul 18:21:29 GMT-10 2016
+- Installed "screen" using 'sudo apt-get install screen'. 
+- Learned controls for "screen" and how to maneuver around. 
+- Used "screen" successfully for redirecting Arduino Uno output to shell. 
+- Arduino Uno serial port is '/dev/ttyACM0'. 
+
+Sat 16 Jul 18:46:23 GMT-10 2016
+- Wrote Python script and successfully redirected Arduino Uno serial output to terminal window. 
+- Added file I/O functions to write output to 'ard_log.txt'. 
+- Python would be better than minicom or screen for redirecting output. 
+- For reading live values directly from the file, use the command 'tail -f ard_log.txt'. 
+
+Sat 16 Jul 19:18:51 GMT-10 2016
+- To log Terminal input and output, use 'script [file name]'. 
+- LXDE is default desktop environment for Raspbian. 
+
+Sat 16 Jul 20:07:06 GMT-10 2016
+- Amended serial_to_db.py to count lines in output file. 
+- Function is called file_length(name). 
+
+Sat 16 Jul 20:25:24 GMT-10 2016
+- Amended serial_to_db.py to truncate file to x number of lines (5 for testing). 
+- The first line is removed for a FIFO queue, leaving x lines left of the most recent data.
+
+Sat 16 Jul 20:42:30 GMT-10 2016
+- Installed Matplotlib using 'sudo apt-get install python-matplotlib'. 
+- Added 'sudo apt-get install python-matplotlib' to boot_mp2.sh. 
+- Added Python file called plot_fromwebsite.py. 
+
+Sat 16 Jul 21:12:38 GMT-10 2016
+- Successfully plotted graph of Arduino Uno temperature sensor output with live update using Matplotlib. 
+- Data set extended from 5 to 20. 
+- serial_to_db.py must run first and gather data set of specified size first, before running plot_fromwebsite.py.
+
+Sun 17 Jul 21:50:22 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 21:50:42 up 4 days, 20:14,  2 users,  load average: 0.02, 0.09, 0.13
+- Looked up information on powerbank as a possible RPi power supply. 
+- Looked up information on 3D-printed RPi covers. 
+- Cover must include section for RPi, Arduino Uno, and powerbank. 
+- Cover must include holes for wires and sensors to pass through. 
+- Cover must include a sercure way to lock. 
+- If possible, cover must be aesthetically pleasing. 
+- For plot_fromwebsite.py, there is a small reliability issue if the dimension of x,y values do not match. 
+- To do: Revise serial_to_db.py to remove serial input that is inconsistent with expected format. 
+
+Mon 18 Jul 23:30:03 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 23:30:10 up 5 days, 21:53,  3 users,  load average: 0.05, 0.05, 0.05
+- Set up GitHub private repository for code and script collaboration. 
+- Uploaded all files onto git repository. 
+- Researched other Linux distributions for possible uses. 
+- Looked up possible power banks for RPi use. 
+- Power bank must not power off while RPi is connected. 
+
+Tue 19 Jul 22:32:31 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 22:32:34 up 6 days, 20:56,  2 users,  load average: 0.20, 0.11, 0.10
+- OS installed for RPi is the default Raspbian Jessie. 
+- Consider using Ubuntu MATE. 
+- Unsuccessful attempted to install Beyond Compare 4.1.6 by downloading the tar.gz file. 
+- Version: 4.1.6, build 21095, released May 13, 2016
+- Installed Iceweasel (Firefox for Linux)
+
+Wed 20 Jul 01:13:22 GMT-10 2016
+- Unsuccessfully attempted to get pulse sensor working. 
+- Pulse sensor gave output but inconsistent with heartbeat. 
+- Values of output were too small to be significant. 
+- Code for Arduino cannot be compiled on the RPi but can be compiled on Windows 8. 
+- Error of java.lang.StackOverflowException was received upon compilation. 
+- Conclude that pulse sensor is obsolete, not compatible with Pulse Amped code. 
+- To do: Purchase new pulse sensor. 
+
+Wed 20 Jul 02:56:19 GMT-10 2016
+- Added first prototype code to GitHub. 
+- Added README.md file content and wiki content. 
+- Wiki on GitHub repository to be used as documentation and foundation for final report. 
+- Update plot range, refresh rate, and resolution for Temperature Sensor and plotting script. 
+- Fixed window size by limiting y-values between a certain range in plot.py. 
+- Increased refresh rate by reducing delay for both temperature.ino and plot.py. 
+- Increased resolution of plot by increasing the number of points plotted per window. 
+
+Wed 20 Jul 22:59:25 GMT-10 2016
+- Installed and tested x11VNC. 
+- x11VNC allows the desktop environment connected to the HDMI of the RPi to be shared concurrently with a VNC Viewer of another client. 
+
+Thu 21 Jul 00:50:20 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 00:50:35 up 7 days, 23:14,  4 users,  load average: 0.16, 0.14, 0.09
+- Installed PROCESSING using 'curl https://processing.org/download/install-arm.sh | sudo sh'. 
+- Tested Processing IDE. 
+- Processing IDE is available for RPi. Consider using Processing for visualisation instead of Matplotlib. 
+- Reason for Processing is because of control over the plots and it is highly compatible with serial inputs. 
+
+Fri 22 Jul 00:53:51 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 00:53:54 up 8 days, 23:17,  3 users,  load average: 0.12, 0.08, 0.06
+- Google Account set up for MP2 Capstone Project. 
+- capstonemp2@gmail.com
+
+Fri 22 Jul 22:14:21 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 22:14:36 up 9 days, 20:38,  2 users,  load average: 0.27, 0.11, 0.07
+- Installed Weaved on RPi. 
+- Weaved is a private internet VPN connection service to the RPi without port forwarding. 
+- To do: Sign up for Weaved account and test system. 
+
+Sat 23 Jul 00:34:21 GMT-10 2016
+- Explanation for how 2 RPis work with the system. 
+- Sensors connected directly to RPi #1 (might be through an Arduino since RPi does not have analog inputs). 
+- RPi #2 accesses RPi #1 through a VNC Server. 
+- The benefits of such a system are as follows: 
+	1. No need for transmission of raw data
+	2. Eliminates the problem of errors in transmission (for raw data) 
+	3. Data Processing is independent and isolated in RPi #1 
+	4. If RPi #2 goes down, data can still be read from RPi #1 using another screen 
+	5. Encryption at VNC level
+	6. Password authentication for sessions
+
+Sat 23 Jul 23:53:49 GMT-10 2016
+- Received shipment of ECG devices based on AD8232 (Single Lead Heart Rate Monitor) from SparkFun (Littlebird Electronics). 
+- Checked uptime for RPi.
+- Output: 23:54:46 up 10 days, 22:18,  2 users,  load average: 0.28, 0.15, 0.08
+- Read background details of ECG, EEG, and blood pressure monitoring. 
+- Anaesthesia monitoring must conform to ANZCA standards. 
+- Websites can be found in email sent from ERC Library. 
+- For ECG and EEG, interference will occur at 50 Hz/60 Hz due to capacitative effects from mains power. 
+- Have to account for such interference using notch filters for signal input. 
+
+Sun 24 Jul 23:36:17 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 23:36:19 up 11 days, 21:59,  2 users,  load average: 0.21, 0.11, 0.06
+- Read about multiple plots on the same graph in Processing. 
+
+Mon 25 Jul 00:51:04 GMT-10 2016
+- Learn how to use Processing at a basic level. 
+- Removed .X0-lock files for TightVNC. 
+- Tried using X11 to replace TightVNC. 
+- For X11 VNC Server set up, use command 'x11vnc -bg -nevershared -forever -nopw -tightfilexfer -display :0'.
+- To use Processing for serial input data visualisation. 
+
+Mon 25 Jul 19:51:39 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 19:51:53 up 12 days, 18:15,  3 users,  load average: 0.09, 0.08, 0.06
+- Soldered headers to Arduino Pro Mini 328 and Single Lead Heart Rate Monitor - AD8232. 
+
+Mon 25 Jul 23:10:34 GMT-10 2016
+- Assembled AD8232 ECG device. 
+- Package contains the following: 
+	1. Arduino Pro Mini 328 - 3.3V/8MHz (DEV-11114)
+	2. SparkFun USB Mini-B Cable - 6 foot (CAB-11301)
+	3. SparkFun FTDI Basic Breakout - 3.3V (DEV-09873)
+	4. Break Away Headers - Straight (PRT-00116)
+	5. Sensor Cable - Electrode Pads (3 connector) (CAB-12970)
+	6. Biomedical Sensor Pad (10 pack) (SEN-12969) 
+	7. SparkFun Single Lead Heart Rate Monitor - AD8232 (SEN-12650) 
+- Uploaded and compiled sample Arduino code from SparkFun GitHub repository. 
+- Need to change board type to Arduino Pro Mini 328 - 3.3V/8MHz. 
+- Also, need to use Processing 2.2.1, not 3.1.1. 
+- Devices will not function with new version of Processing, displaying size() error. 
+- Might be necessary to uninstall package 'libgles2-mesa' before using Processing, to prevent startup errors related to the P2D and P3D renderers. 
+- Downloaded Processing 2.2.1 from https://processing.org/download/?processing for Linux 32 platforms. 
+- processing-2.2.1-linux32.tgz is a 98.4 MB file. 
+
+Tue 26 Jul 01:22:46 GMT-10 2016
+- Processing 2.2.1 runs well on Java 7, not Java 8. 
+- By default the Raspbian Jessie ships with Java 8. 
+- Need to install Java 7 using the following commands: 
+	1. 'sudo apt-get update'
+	2. 'sudo apt-get install oracle-java7-jdk' 
+	3. 'sudo update-alternatives --config java'
+- Extracted the tar file using 'tar xvzf processing-2.2.1-linux32.tgz'. 
+- Need to remove the x86 Java runtime and replace with RPi armhf version. Use: 
+	1. 'rm -rf ~/processing-2.2.1/java
+	2. 'ln -s /usr/lib/jvm/jdk-7-oracle-armhf ~/processing-2.2.1/java'
+
+Tue 26 Jul 22:58:26 GMT-10 2016
+- Received RPi #2 with microSD card and power adapter. 
+- Checked uptime for RPi.
+- Output: 22:58:32 up 13 days, 21:21,  4 users,  load average: 1.45, 0.63, 0.28
+- 'ln -s /usr/lib/jvm/jdk-7-oracle-armhf ~/processing-2.2.1/java' does not work. Folder name is different. 
+- Copy '/usr/lib/jvm/jdk-7-oracle-arm-vfp-hflt' to the 'java' folder in processing-2.2.1. 
+- Change 'myPort = new Serial(this, Serial.list()[1], 9600);' depending on which serial port is used. 
+
+Wed 27 Jul 00:00:36 GMT-10 2016
+- Successfully tested ECG sensor. 
+- ECG waveform output initially was not in the form of a heartbeat.  
+- Several adjustments necessary to reduce noise in ECG output and capture heartbeat. 
+- Position of electrodes are as follows: 
+	1. Electrode 1 inch above right nipple. 
+	2. Electrode 1 inch above left nipple. 
+	3. Electrode 2.5 inches right of navel. 
+- ECG output is significantly affected by posture. 
+- Best results from an upright sitting position with hands bent in front. 
+- ECG output is significantly affected by muscle contractions of any kind. 
+- This includes deep breathing or moving while measurements are taken. 
+- ECG output is highly variable and extremely susceptible to noise. 
+- ECG test outputs are recorded in video AVI format under names: test1.avi - test27.avi. 
+- ECG test output screenshots are taken. 
+- jSSC-2.6.0-Release MIGHT be needed for ECG to work with Processing 2.2.1. Needs to be confirmed. 
+- HDMI connection to RPi completely disrupts the ECG output. 
+
+Wed 27 Jul 02:23:25 GMT-10 2016
+- Java version must be as follows for Processing 2.2.1 to work correctly: 
+	java version "1.7.0_60"
+	Java(TM) SE Runtime Environment (build 1.7.0_60-b19)
+	Java HotSpot(TM) Client VM (build 24.60-b09, mixed mode)
+- For signal processing, use Linux's MATLAB equivalent, GNU Octave. 
+
+Wed 27 Jul 21:57:07 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 21:58:05 up 14 days, 20:21,  2 users,  load average: 0.40, 0.12, 0.08
+- Updated GitHub repository with new code for ECG Sensor. 
+- MobaXTerm is used for SSH access to the RPi. 
+
+Thu 28 Jul 01:38:20 GMT-10 2016
+- Consider using a web server on RPi to display Processing data visualisation. 
+- Embed Processing plots on a webpage. Reduces need for VNC and can be viewed from a local network.
+- Consider upgrading RPi to Intel Nuc as RPi does not provide sufficient processing power for the VNC Server and Data Visualisation. 
+- To do: Read up on multiple graphs for Processing. 
+- To do: Migrate from Matplotlib to Processing for Temperature Sensor. 
+- To do: Add gridlines to ECG Sensor waveform output. 
+- To do: Set up ad hoc WiFi network for RPi with static IP address. 
+
+Thu 28 Jul 20:19:22 GMT-10 2016
+- Received Pulse Sensor Amped (AF-1093) shipment. 
+- Checked uptime for RPi.
+- Output: 20:20:26 up 15 days, 18:43,  2 users,  load average: 0.11, 0.07, 0.05
+- Acquired code for Arduino and Processing for Pulse Sensor Amped from www.pulsesensor.com. 
+- The repository is found at https://github.com/WorldFamousElectronics/PulseSensor_Amped_Arduino AND 
+- https://github.com/WorldFamousElectronics/PulseSensor_Amped_Processing_Visualizer. 
+- Unzip all ino files to /home/pi/sketchbook. 
+- Uploaded and compiled code using laptop. Java issue and error with Arduino on RPi.
+
+Thu 28 Jul 21:30:22 GMT-10 2016
+- Successfully started Pulse Sensor Amped Visualizer 1.1 on Processing 2.2.1. 
+- Output waveform is inconsistent with a heartbeat and measurement is 200 BPM. 
+- Output waveform is very noisy. 
+
+Thu 28 Jul 21:50:39 GMT-10 2016
+- Pulse Sensor Amped works well with laptop but not RPi. 
+- Clear waveform can be seen on screen for pulse sensor with a measurement of 62 BPM. 
+- Issue unresolved when attempted with RPi. 
+- Suspect that AC mains power supply is injecting noise to Arduino through USB. 
+
+Fri 29 Jul 01:48:28 GMT-10 2016
+- Researched Nellcor DS-100A pulse oximeter sensor. 
+- DS-100A uses a 9 pin connector and does not take in serial data. 
+- Need to find another pulse oximeter. 
+
+Sat 30 Jul 15:36:20 GMT-10 2016
+- Set up Excel sheet for tabulating papers published on similar projects in Google Drive. 
+- To do: Incorporate a notch filter at 50 Hz for the ECG or implement a moving average filter. Latter is more desirable. 
+- Checked uptime for RPi.
+- Output: 15:39:45 up 17 days, 14:03,  2 users,  load average: 0.18, 0.12, 0.07
+
+Sun 31 Jul 01:00:14 GMT-10 2016
+- To do: Design PCB for temperature sensor with phase shift oscillator. 
+
+Mon  1 Aug 01:21:21 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 01:22:01 up 18 days, 23:45,  2 users,  load average: 0.17, 0.11, 0.07
+- Researched temperature sensor with phase shift oscillator and temperature sensor calibration. 
+
+Tue  2 Aug 23:20:28 GMT-10 2016
+
+
+Thu  4 Aug 10:52:37 GMT-10 2016
+- Researched invasive and non-invasive sensors for blood pressure. 
+
+Thu  4 Aug 23:54:31 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 23:54:36 up 22 days, 22:18,  3 users,  load average: 0.00, 0.04, 0.05
+
+Fri  5 Aug 22:03:02 GMT-10 2016
+- Started schematics for temperature sensor with phase shift oscillator in Altium Designer. 
+- Checked uptime for RPi.
+- Output: 22:04:21 up 23 days, 20:27,  2 users,  load average: 0.06, 0.07, 0.11
+
+Sun  7 Aug 22:24:23 GMT-10 2016
+- Recorded and uploaded Windows version of ECG output - higher number of frames per second. 
+- More processing power required for ECG visualisation - consider Intel Nuc. 
+- Checked uptime for RPi.
+- Output: 22:25:56 up 25 days, 20:49,  2 users,  load average: 0.18, 0.18, 0.15
+
+Tue  9 Aug 23:18:09 GMT-10 2016
+- Filmed and edited Capstone Video. 
+- Obtained 10k ohm thermistor (NTC). 
+- Checked uptime for RPi.
+- Output: 23:19:18 up 27 days, 21:42,  2 users,  load average: 0.13, 0.07, 0.10
+
+Wed 10 Aug 23:42:24 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 23:42:33 up 28 days, 22:06,  3 users,  load average: 0.01, 0.08, 0.12
+- Built PSO but not successful
+
+Thu 11 Aug 20:16:58 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 20:17:02 up 29 days, 18:40,  3 users,  load average: 0.00, 0.04, 0.09
+- Initiated troubleshooting for the phase shift oscillator but still not successful. 
+
+Thu 11 Aug 23:42:19 GMT-10 2016
+- Researched on how to use LaTex for report writing. 
+- Installed MiKTex and TexStudio. 
+- Researched syntax of LaTex and tried using TexStudio to produce a Tex-based document. 
+
+Mon 15 Aug 09:48:05 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 09:48:11 up 33 days,  8:11,  3 users,  load average: 0.36, 0.34, 0.24
+- Checked up more information about phase shift oscillators. 
+
+Wed 17 Aug 03:55:18 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 03:55:29 up 35 days,  2:18,  3 users,  load average: 0.29, 0.19, 0.24
+- Installed Raspbian Jessie on new Raspberry Pi. 
+- Installed TightVNCServer. 
+- Installed XTightVNCViewer. 
+- Installed Arduino. 
+- Installed Python-Matplotlib. 
+- Installed Java 7. 
+- Installed Iceweasel. 
+- Installed Processing 2.2.1. 
+- jSSC-2.6.0 is necessary for Processing 2.2.1 to work. 
+- Otherwise, "A library is used which is not found in the native code" error is returned. 
+- This is due to the incorrect library for Serial. 
+
+Wed 17 Aug 16:24:17 GMT-10 2016
+- Met with supervisors to brief them about project progress. 
+- Summary report can be found in "Wireless Operating Theatre Meeting (17-8-2016).pdf". 
+
+Fri 19 Aug 01:19:39 GMT-10 2016
+- Researched how to write preliminary report using LaTex.  
+- Started structuring report to include: 
+	1. title.tex
+	2. acknowledgement.tex
+	3. abstract.tex
+	4. intro.tex
+	5. conclusion.tex
+	6. abbreviations.tex
+	7. appendixmeasure.tex
+	8. appendixbasic.tex
+	8. BibTex - bibfile.bib
+- Edited title.tex and intro.tex. 
+- Learned how to cite sources using BibTex.
+- Structured intro.tex to include: 
+	1. Introduction and Background
+	2. The Spaghetti Syndrome and its Implications - the need for a Wireless Patient Monitoring System
+	3. Overview of the Project
+	4. Anaesthetic Parameters for Patient Monitoring
+	5. Electrocardiography
+	6. Electroencephalography
+	7. Photoplethysmography
+	8. Blood Pressure
+	9. Blood Temperature
+
+Tue 23 Aug 00:22:05 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 00:22:41 up 40 days, 22:46,  2 users,  load average: 0.50, 0.25, 0.18
+- Started typing for the Introduction and Background (ECG) for the Preliminary Report.
+
+Tue 23 Aug 02:52:35 GMT-10 2016
+- Added the following: 
+	1. wireless.tex
+	2. terminal.tex
+	3. devices.tex
+	4. processing.tex
+	5. challenges.tex
+- Structured wireless.tex to include: 
+	1. Overview of Wireles Sensor Network Technology
+	2. Wireless Sensor Networks
+	3. Body Area Networks 
+	4. Methods of Wireless Transmission
+	5. VNC vs Raw Transmission
+	6. WiFi
+	7. Bluetooth
+	8. Zigbee
+- Structured terminal.tex to include: 
+	1. Type of Terminal
+	2. Raspberry Pi
+	3. Intel Nuc
+- Structured devices.tex to include: 
+	1. Devices
+	2. Analysis of Existing Systems
+	3. Consideration of Bionomadix
+	4. Consideration of Libelium and Waspmote
+	5. Consideration of Cooking Hacks
+	6. ECG
+	7. SparkFun	
+	8. Blood Temperature
+	9. Self-Heating - Phase Shift Oscillator
+- Structured processing.tex to include: 
+	1. Data Processing
+	2. Code
+	3. Visualisation
+- Added ANZCA and Imhoff to bibliography.
+
+Tue 23 Aug 23:23:25 GMT-10 2016
+- Added challenges.tex. 
+- Structured challenges.tex to include: 
+	1. Power Efficiency
+	2. Interference
+	3. Security Risk
+	4. Data Management
+	5. Regulation and Compliance Standards
+- Added Sohraby to bibliography. 
+
+Thu 25 Aug 18:22:19 GMT-10 2016
+- Determined type of connector for pressure transducer - RJ11 (telephone plug) or Medex connector. 
+- Updated report. 
+
+Fri 26 Aug 00:57:41 GMT-10 2016
+- Added the University of Melbourne logo to the title page. 
+- Added the System Overview section to the Project Implementation chapter. 
+- This includes the Hardware and Software Design and Development. 
+- Added the block diagram for Wireless Vital Signs Monitoring System. 
+- Added more subsections and changed Appendix to include PCB, Program Installation, and Measurements. 
+- Included Motion Artifact (for ECG) section to the Results chapter.
+- Added factors for terminal choice. 
+
+Sat 27 Aug 01:55:33 GMT-10 2016
+- Migrated logging to another file for the Capstone Report writing. 
+
+Sun 25 Sep 18:16:21 GMT-10 2016
+- Checked uptime for RPi.
+- Output: 18:16:27 up 74 days, 16:39,  2 users,  load average: 0.26, 0.24, 0.23

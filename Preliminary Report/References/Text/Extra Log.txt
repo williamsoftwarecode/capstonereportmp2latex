@@ -1,0 +1,54 @@
+- Added Electrocardiography by Noble, R Joe and Hillis, J Stanley and Rothbaum, Donald A to bibliography. 
+- Downloaded AD8232 datasheet. 
+- Added details of phase shift oscillator. 
+- Added details of Arduino Uno sensitivity. 
+- Added Cardiology Explained by Ashley and Niebauer to bibliography. 
+- Added content and figures to "Theory of Electrocardiography". 
+
+12/9/2016
+- Added Section for ECG under Results. 
+- Added Operation for ECG. 
+- Updated bibliography. 
+
+13/9/2016
+- Added Sections for Design and Development. 
+- Typed out section for System Overview. 
+- Added AD8232 Section under ECG. 
+- Updated bibliography. 
+
+14/9/2016 11:18 pm 
+- Added AD8232 schematics and expanded on theory of operation. 
+- Added AD8232 implementation by SparkFun.
+- Added ECG motion artifact citation. 
+- Added anaesthesia complications in the Introduction.  
+- Updated bibliography. 
+
+15/9/2016 11:06 pm
+- Added advantages and disadvantages of a Linux OS. 
+- Added the reason for choosing Raspbian Jessie as the OS for the project. 
+- Updated bibliography. 
+
+24/9/2016 10:38 pm
+- Created new private GitHub repository for Capstone Report writing and made first commit. 
+- Added and wrote Comparison between VNC and Raw Transmission Section.
+- Added specifications for Raspberry Pi 3 Model B Section.
+- Updated bibliography. 
+
+25/9/2016 7:53 pm
+- Added and wrote the Raspberry Pi 3 Model B Section. 
+- Added Raspbian Jessie Section. 
+- Added Portable Power Supply for the Raspberry Pi 3 Model B Section. 
+- Updated bibliography.
+
+26/9/2016 2:42 am
+- Added components of the ECG sensor based on the AD8232. 
+- Added code for installing applications on the Raspbian Jessie. 
+- Changed code font to Courier for all code using lstlisting. 
+- Added list of applications required for the WVSMS. 
+- Updated bibliography. 
+
+26/9/2016 6:32 pm
+- Added NOOBS installation to Appendix A. 
+- Added Raspberry Pi Schematic to Appendix B. 
+- Added code for ECG Simulation from PhysioNet. 
+- Updated bibliography. 
