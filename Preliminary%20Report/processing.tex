@@ -1,0 +1,82 @@
+\chapter{Data Processing, Visualisation, and Transmission} 
+\label{processing}
+
+The following programs are required for the complete functionality of the WVSMS using the Raspberry Pi Terminals running on Raspbian Jessie: 
+
+\begin{itemize}
+	\item \textbf{Tight VNC Server} - Set up VNC server required to access the Raspberry Pi with its internal programs and applications \cite{rpitightvncserver}.
+	\item \textbf{X Tight VNC Viewer} - Allows the Display-connected Terminal to access and view the Sensor-connected Terminal via the VNC server	\cite{rpitightvncserver}.
+	\item \textbf{Arduino} - Provides analog-to-digital interface between Sensor and Terminal, converts the signal into a serial input for processing, and visualisation \cite{arduino}.
+	\item \textbf{Matplotlib} - Software which renders graphs from text files \cite{matplotlib}.
+	\item \textbf{Processing 2.2.1} - Software sketchbook which receives serial inputs and renders real-time graphs of given information \cite{processing221}.
+	\item \textbf{Java 7} - Allows Java-based applications to run on the Platform (specifically required for Processing 2.2.1) \cite{java7}.
+\end{itemize}
+
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install tightvncserver
+sudo apt-get install xtightvncviewer
+sudo apt-get install arduino
+sudo apt-get install python-matplotlib
+\end{lstlisting}
+
+\begin{lstlisting}
+curl https://processing.org/download/install-arm.sh | sudo sh
+\end{lstlisting}
+
+
+
+
+- Also, need to use Processing 2.2.1, not 3.1.1. 
+- Devices will not function with new version of Processing, displaying size() error. 
+- Might be necessary to uninstall package 'libgles2-mesa' before using Processing, to prevent startup errors related to the P2D and P3D renderers. 
+- Downloaded Processing 2.2.1 from https://processing.org/download/?processing for Linux 32 platforms. 
+- processing-2.2.1-linux32.tgz is a 98.4 MB file. 
+
+
+\begin{lstlisting}
+sudo apt-get update'
+sudo apt-get install oracle-java7-jdk
+sudo update-alternatives --config java
+\end{lstlisting}
+
+
+
+
+- Processing 2.2.1 runs well on Java 7, not Java 8. 
+- By default the Raspbian Jessie ships with Java 8. 
+- Need to install Java 7 using the following commands: 
+1. 'sudo apt-get update'
+2. 'sudo apt-get install oracle-java7-jdk' 
+3. 'sudo update-alternatives --config java'
+- Extracted the tar file using 'tar xvzf processing-2.2.1-linux32.tgz'. 
+- Need to remove the x86 Java runtime and replace with RPi armhf version. Use: 
+1. 'rm -rf ~/processing-2.2.1/java
+2. 'ln -s /usr/lib/jvm/jdk-7-oracle-armhf ~/processing-2.2.1/java'
+
+
+
+
+- 'ln -s /usr/lib/jvm/jdk-7-oracle-armhf ~/processing-2.2.1/java' does not work. Folder name is different. 
+- Copy '/usr/lib/jvm/jdk-7-oracle-arm-vfp-hflt' to the 'java' folder in processing-2.2.1. 
+- Change 'myPort = new Serial(this, Serial.list()[1], 9600);' depending on which serial port is used. 
+
+
+\section{Processing 2.2.1}
+
+\section{Serial Input}
+
+\section{Code}
+
+
+
+
+\section{Visualisation}
+
+\section{Wireless Transmission}
+ 
+For this project, wireless communications between the Sensor-connected Terminal and the client requires the use of VNC as seen in Section \ref{vnc}. 
+
+To set up the Raspberry Pi as a VNC server, TightVNCServer was used . For the Windows client used to access the VNC server of the Raspberry Pi, Tight VNC Viewer was used \cite{windowstightvnc}. 
+

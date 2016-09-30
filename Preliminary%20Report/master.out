@@ -1,0 +1,92 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction and Background}{}% 1
+\BOOKMARK [1][-]{section.1.1}{The Spaghetti Syndrome and its Implications - the need for a Wireless Vital Signs Monitoring System}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Benefits of a Wireless Implementation}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Overview of the Project}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Anaesthetic Parameters for Patient Monitoring}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.4.1}{Theory of Electrocardiography}{section.1.4}% 6
+\BOOKMARK [2][-]{subsection.1.4.2}{Theory of Electroencephalography}{section.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.4.3}{Theory of Photoplethysmography}{section.1.4}% 8
+\BOOKMARK [2][-]{subsection.1.4.4}{Theory of Blood Pressure}{section.1.4}% 9
+\BOOKMARK [2][-]{subsection.1.4.5}{Theory of Blood Temperature}{section.1.4}% 10
+\BOOKMARK [0][-]{chapter.2}{Survey of Related Previous Work - Overview of Wireless Sensor Network Technology}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Wireless Sensor Networks}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Body Area Networks}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Methods of Wireless Transmission}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Comparison between Virtual Nerwork Computing \(VNC\) and Raw Transmission}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Virtual Network Computing}{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{WiFi}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.5}{Bluetooth}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.6}{Zigbee}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.7}{Comparison of Different Protocols}{chapter.2}% 20
+\BOOKMARK [0][-]{chapter.3}{Project Design and Development}{}% 21
+\BOOKMARK [1][-]{section.3.1}{System Overview}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Design Specifications}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Hardware Design and Development}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Software Design and Development}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.5}{Analysis of Competitors - Similar Papers - Literature Review}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.6}{Analysis of Existing Systems}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.6.1}{Consideration of Bionomadix}{section.3.6}% 28
+\BOOKMARK [2][-]{subsection.3.6.2}{Consideration of Libelium and Waspmote}{section.3.6}% 29
+\BOOKMARK [2][-]{subsection.3.6.3}{Consideration of Cooking Hacks}{section.3.6}% 30
+\BOOKMARK [0][-]{chapter.4}{Terminals for Data Processing}{}% 31
+\BOOKMARK [1][-]{section.4.1}{Operating System}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.2}{Raspberry Pi 3 Model B}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.2.1}{Raspbian Jessie}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.2}{Portable Power Supply for the Raspberry Pi 3 Model B}{section.4.2}% 35
+\BOOKMARK [1][-]{section.4.3}{Intel Nuc}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Sensors}{}% 37
+\BOOKMARK [1][-]{section.5.1}{ECG}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.1.1}{AD8232 IC ECG Sensor}{section.5.1}% 39
+\BOOKMARK [1][-]{section.5.2}{EEG}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.2.1}{Neurosky TGAM module}{section.5.2}% 41
+\BOOKMARK [1][-]{section.5.3}{Blood Temperature}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.3.1}{Thermistor}{section.5.3}% 43
+\BOOKMARK [2][-]{subsection.5.3.2}{Thermistor with Phase Shift Oscillator \(PSO\) Configuration}{section.5.3}% 44
+\BOOKMARK [2][-]{subsection.5.3.3}{Astable Operation of 555 Timer}{section.5.3}% 45
+\BOOKMARK [1][-]{section.5.4}{Interface}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.4.1}{USB}{section.5.4}% 47
+\BOOKMARK [2][-]{subsection.5.4.2}{Arduino Uno / Arduino Pro Mini - Analog to Digital Conversion}{section.5.4}% 48
+\BOOKMARK [0][-]{chapter.6}{Data Processing, Visualisation, and Transmission}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Processing 2.2.1}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Serial Input}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{Code}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.4}{Visualisation}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.5}{Wireless Transmission}{chapter.6}% 54
+\BOOKMARK [0][-]{chapter.7}{Simulation}{}% 55
+\BOOKMARK [0][-]{chapter.8}{Testing}{}% 56
+\BOOKMARK [0][-]{chapter.9}{Results}{}% 57
+\BOOKMARK [1][-]{section.9.1}{Wireless Vital Signs Monitoring System}{chapter.9}% 58
+\BOOKMARK [2][-]{subsection.9.1.1}{Setup}{section.9.1}% 59
+\BOOKMARK [1][-]{section.9.2}{Interface Output}{chapter.9}% 60
+\BOOKMARK [1][-]{section.9.3}{ECG}{chapter.9}% 61
+\BOOKMARK [2][-]{subsection.9.3.1}{AD8232 and Arduino Pro Mini Setup}{section.9.3}% 62
+\BOOKMARK [2][-]{subsection.9.3.2}{ECG Electrode Placement}{section.9.3}% 63
+\BOOKMARK [2][-]{subsection.9.3.3}{ECG Output}{section.9.3}% 64
+\BOOKMARK [2][-]{subsection.9.3.4}{Motion Artifacts}{section.9.3}% 65
+\BOOKMARK [1][-]{section.9.4}{EEG}{chapter.9}% 66
+\BOOKMARK [2][-]{subsection.9.4.1}{Operation}{section.9.4}% 67
+\BOOKMARK [1][-]{section.9.5}{Statistics}{chapter.9}% 68
+\BOOKMARK [0][-]{chapter.10}{Challenges and Limitations}{}% 69
+\BOOKMARK [1][-]{section.10.1}{Power Efficiency}{chapter.10}% 70
+\BOOKMARK [1][-]{section.10.2}{Interference}{chapter.10}% 71
+\BOOKMARK [1][-]{section.10.3}{Security Risk}{chapter.10}% 72
+\BOOKMARK [1][-]{section.10.4}{Data Management}{chapter.10}% 73
+\BOOKMARK [1][-]{section.10.5}{Regulation and Compliance Standards}{chapter.10}% 74
+\BOOKMARK [1][-]{section.10.6}{Reliability}{chapter.10}% 75
+\BOOKMARK [1][-]{section.10.7}{Range}{chapter.10}% 76
+\BOOKMARK [1][-]{section.10.8}{Raspberry Pi USB}{chapter.10}% 77
+\BOOKMARK [0][-]{chapter.11}{Conclusion }{}% 78
+\BOOKMARK [1][-]{section.11.1}{Summary of Main Results}{chapter.11}% 79
+\BOOKMARK [1][-]{section.11.2}{Practical Interpretation of our Results}{chapter.11}% 80
+\BOOKMARK [0][-]{appendix.A}{Program Installation}{}% 81
+\BOOKMARK [1][-]{section.A.1}{Operating System - Raspbian Jessie}{appendix.A}% 82
+\BOOKMARK [1][-]{section.A.2}{Code}{appendix.A}% 83
+\BOOKMARK [2][-]{subsection.A.2.1}{Arduino Code for Thermistor}{section.A.2}% 84
+\BOOKMARK [2][-]{subsection.A.2.2}{MATLAB ECG Simulation}{section.A.2}% 85
+\BOOKMARK [0][-]{appendix.B}{PCB Design and Schematics}{}% 86
+\BOOKMARK [1][-]{section.B.1}{ECG Shield for AD8232 and Arduino Pro Mini}{appendix.B}% 87
+\BOOKMARK [1][-]{section.B.2}{Blood Temperature}{appendix.B}% 88
+\BOOKMARK [1][-]{section.B.3}{AD8232 Heart Rate Monitor SparkFun Implementation}{appendix.B}% 89
+\BOOKMARK [1][-]{section.B.4}{Raspberry Pi 3 Model B}{appendix.B}% 90
+\BOOKMARK [0][-]{appendix.C}{Measurements and Datasheets}{}% 91
+\BOOKMARK [1][-]{section.C.1}{Datasheet}{appendix.C}% 92

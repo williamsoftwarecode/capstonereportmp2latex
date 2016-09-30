@@ -1,0 +1,84 @@
+\documentclass[12pt]{report}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+
+%\evensidemargin = 0mm
+%\oddsidemargin = 0mm
+\topmargin = -20mm
+\headheight = 0mm
+\headsep = 20mm
+\textheight = 240mm
+%\textheight = 240mm
+\textwidth = 170mm
+%\leftmargin = 0mm
+\parindent = 00mm
+\baselineskip = 20mm
+\lineskip = 1.0mm
+\parskip = 1.5mm
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\usepackage{cite}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{gensymb}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{frame=single}
+
+\makeatletter
+
+\newif\if@mainmatter \@mainmattertrue
+
+\newcommand\frontmatter{%
+	\cleardoublepage
+	\@mainmatterfalse
+	\pagenumbering{roman}}
+\newcommand\mainmatter{%
+	\cleardoublepage
+	\@mainmattertrue
+	\pagenumbering{arabic}}
+\makeatother
+
+\begin{document}
+
+	\input{title.tex}
+	\frontmatter
+	\input{ackowledgement.tex}
+	\input{abbreviations.tex}
+	\input{abstract.tex}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	
+	\mainmatter
+	\input{intro.tex}
+	\input{wireless.tex}	
+	\input{project.tex}
+	\input{terminal.tex}
+	\input{devices.tex}
+	\input{processing.tex}
+	\input{results.tex}
+	\input{challenges.tex}
+	\input{conclusion.tex}
+	
+	\nocite{*}
+	\bibliographystyle{plain}
+	%\bibliographystyle{ieeetr}
+	\bibliography{bibfile}	
+	
+	\appendix
+	\input{appendixprograms.tex}
+	\input{appendixpcb.tex}
+	\input{appendixmeasure.tex}
+	
+\end{document}
