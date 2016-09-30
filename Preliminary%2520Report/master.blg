@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: master.aux
+The style file: plain.bst
+Database file #1: bibfile.bib
+Too many commas in name 1 of "John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the matplotlib development team" for entry matplotlib
+while executing---line 1049 of file plain.bst
+Warning--empty note in peterfarrell
+Warning--empty journal in goldman1976principles
+Too many commas in name 1 of "John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the matplotlib development team" for entry matplotlib
+while executing---line 1090 of file plain.bst
+Warning--empty journal in noble1990electrocardiography
+(There were 2 error messages)

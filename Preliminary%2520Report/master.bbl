@@ -1,0 +1,267 @@
+\begin{thebibliography}{10}
+
+\bibitem{ad8232datasheet}
+Inc. Analog~Devices.
+\newblock Ad8232 datasheet: Single-lead, heart rate monitor front end.
+\newblock
+  \url{http://www.analog.com/media/en/technical-documentation/data-sheets/AD8232.pdf}.
+\newblock Accessed: 2016-9-13.
+
+\bibitem{ad8232evalzuserguide}
+Inc. Analog~Devices.
+\newblock Ad8232-evalz user guide ug-514.
+\newblock
+  \url{http://www.analog.com/media/en/technical-documentation/user-guides/AD8232-EVALZ_UG-514.pdf}.
+\newblock Accessed: 2016-9-13.
+
+\bibitem{ad8232analogdevices}
+Inc. Analog~Devices.
+\newblock Ad8232 single-lead heart rate monitor analog front end.
+\newblock
+  \url{http://www.analog.com/en/products/application-specific/medical/ecg/ad8232.html}.
+\newblock Accessed: 2016-9-13.
+
+\bibitem{arduino}
+Arduino.
+\newblock Arduino.
+\newblock \url{https://www.arduino.cc/}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{ashley2004conquering}
+Euan~A Ashley and Josef Niebauer.
+\newblock {\em Conquering the ECG}.
+\newblock Remedica, 2004.
+
+\bibitem{atlee2006complications}
+John~L Atlee.
+\newblock {\em Complications in anesthesia}.
+\newblock Elsevier Health Sciences, 2006.
+
+\bibitem{anaesthesiaguide}
+Australian and New Zealand~College of~Anaesthetists~(ANZCA).
+\newblock Guidelines on monitoring during anaesthesia how should i cite
+  thissssssssssssssssssssssssssssssssssssssssssssssssss.
+\newblock {\em Australian and New Zealand College of Anaesthetists (ANZCA)},
+  PS18, 2016.
+
+\bibitem{processing221}
+Casey~Reas Ben~Fry.
+\newblock Processing.
+\newblock \url{https://processing.org/download/?processing}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{ad8232}
+SparkFun Electronics~(R) CaseyTheRobot.
+\newblock Ad8232 heart rate monitor hookup guide.
+\newblock
+  \url{https://learn.sparkfun.com/tutorials/ad8232-heart-rate-monitor-hookup-guide},
+  2014.
+\newblock Accessed: 2016-9-12.
+
+\bibitem{cesarano1979spaghetti}
+FL~Cesarano and AR~Piergeorge.
+\newblock The spaghetti syndrome. a new clinical entity.
+\newblock {\em Critical care medicine}, 7(4):182--183, 1979.
+
+\bibitem{linuxadvantagedisadvantage}
+Jennifer Marsh StorageCraft~Technology Corporation.
+\newblock Linux: Advantages and disadvantages of open-source technology.
+\newblock
+  \url{http://www.storagecraft.com/blog/linux-advantages-disadvantages-open-source-technology/},
+  9 2016.
+\newblock Accessed: 2016-9-15.
+
+\bibitem{linuxwindows}
+Ubuntu-Team-Member DeviantArt.
+\newblock 8 advantages of using linux over windows.
+\newblock
+  \url{http://ubuntu-artists.deviantart.com/journal/8-Advantages-of-using-Linux-over-Windows-291681914},
+  3 2012.
+\newblock Accessed: 2016-9-15.
+
+\bibitem{ad8232sfschematic}
+Casey Kuhns~SparkFun Electronics.
+\newblock Ad8232\_heart\_rate\_monitor\_v10.
+\newblock
+  \url{https://cdn.sparkfun.com/datasheets/Sensors/Biometric/AD8232\_Heart\_Rate\_Monitor\_v10.pdf},
+  7 2014.
+\newblock Accessed: 2016-9-14.
+
+\bibitem{peterfarrell}
+Peter Farrell.
+\newblock Elen30013 electronic system implementation 2014 lecture (university
+  of melbourne).
+
+\bibitem{rpi3faqs}
+RASPBERRY~PI FOUNDATION.
+\newblock Faqs.
+\newblock \url{https://www.raspberrypi.org/help/faqs}.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{rpi3noobs}
+RASPBERRY~PI FOUNDATION.
+\newblock Noobs.
+\newblock \url{https://www.raspberrypi.org/downloads/noobs/}.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{rpi3mb}
+RASPBERRY~PI FOUNDATION.
+\newblock Raspberry pi 3 model b.
+\newblock \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}.
+\newblock Accessed: 2016-9-24.
+
+\bibitem{rpi3hardware}
+RASPBERRY~PI FOUNDATION.
+\newblock Raspberry pi hardware.
+\newblock
+  \url{https://www.raspberrypi.org/documentation/hardware/raspberrypi/}.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{rpi3pic}
+RASPBERRY~PI FOUNDATION.
+\newblock Raspberry pi weekly.
+\newblock \url{https://www.raspberrypi.org/weekly/connected/}.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{rpi3raspbian}
+RASPBERRY~PI FOUNDATION.
+\newblock Raspbian.
+\newblock \url{https://www.raspberrypi.org/documentation/raspbian/}.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{rpitightvncserver}
+RASPBERRY~PI FOUNDATION.
+\newblock Vnc (virtual network computing).
+\newblock \url{https://www.raspberrypi.org/documentation/remote-access/vnc/}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{jiahui4}
+RJ~Gajraj, M~Doi, H~Mantzaridis, and GN~Kenny.
+\newblock Comparison of bispectral eeg analysis and auditory evoked potentials
+  for monitoring depth of anaesthesia during propofol anaesthesia.
+\newblock {\em British Journal of Anaesthesia}, 82(5):672--678, 1999.
+
+\bibitem{goldman1976principles}
+Mervin Goldman et~al.
+\newblock Principles of clinical electrocardiography.
+\newblock 1976.
+
+\bibitem{gubbi2013internet}
+Jayavardhana Gubbi, Rajkumar Buyya, Slaven Marusic, and Marimuthu Palaniswami.
+\newblock Internet of things (iot): A vision, architectural elements, and
+  future directions.
+\newblock {\em Future Generation Computer Systems}, 29(7):1645--1660, 2013.
+
+\bibitem{hall2015guyton}
+John~E Hall.
+\newblock {\em Guyton and Hall textbook of medical physiology}.
+\newblock Elsevier Health Sciences, 2015.
+
+\bibitem{imhoff2004spaghetti}
+Michael Imhoff.
+\newblock The spaghetti syndrome revisited.
+\newblock {\em Anesthesia \& Analgesia}, 98(3):566--568, 2004.
+
+\bibitem{nisignalamplitude}
+National Instruments.
+\newblock Biomedical engineering education portal.
+\newblock \url{http://www.ni.com/white-paper/5593/en/}, 3 2016.
+\newblock Accessed: 2016-9-13.
+
+\bibitem{jiahui3}
+Leslie~C Jameson and Tod~B Sloan.
+\newblock Using eeg to monitor anesthesia drug effects during surgery.
+\newblock {\em Journal of clinical monitoring and computing}, 20(6):445--472,
+  2006.
+
+\bibitem{matplotlib}
+Eric Firing Michael~Droettboom John~Hunter, Darren~Dale and the
+  matplotlib~development team.
+\newblock matplotlib.
+\newblock \url{http://matplotlib.org/}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{kershaw2002wireless}
+Erik Kershaw.
+\newblock Wireless networking reshapes the face of patient monitoring systems.
+\newblock {\em Biomedical instrumentation \& technology}, 36(3):201--202, 2002.
+
+\bibitem{jiahui2}
+Nicolas Marchant, Robert Sanders, Jamie Sleigh, Audrey Vanhaudenhuyse,
+  Marie-Aur{\'e}lie Bruno, Jean~Fran{\c{c}}ois Brichant, Steven Laureys, and
+  Vincent Bonhomme.
+\newblock How electroencephalography serves the anesthesiologist.
+\newblock {\em Clinical EEG and neuroscience}, page 1550059413509801, 2014.
+
+\bibitem{jiahui1}
+Johns~Hopkins Medicine.
+\newblock Electroencephalogram (eeg).
+\newblock
+  \url{http://www.hopkinsmedicine.org/healthlibrary/test_procedures/neurological/electroencephalogram_eeg_92,p07655/}.
+\newblock Accessed: 2016-9-28.
+
+\bibitem{jiahui5}
+Natus Neurology.
+\newblock Natus eeg webinar: Noise and artifacts sources eeg \- how to
+  identify, reduce and avoid.
+\newblock \url{https://www.youtube.com/watch?v=CywlDhf2Vno}.
+\newblock Accessed: 2016-9-28.
+
+\bibitem{noble1990electrocardiography}
+R~Joe Noble, J~Stanley Hillis, and Donald~A Rothbaum.
+\newblock Electrocardiography.
+\newblock 1990.
+
+\bibitem{java7}
+Oracle.
+\newblock Java.
+\newblock \url{https://www.java.com/en/}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{ecgsimulation}
+PhysioNet.
+\newblock Ecg waveform generator for matlab/octave.
+\newblock \url{https://www.physionet.org/physiotools/matlab/ECGwaveGen/}, 6
+  2016.
+\newblock Accessed: 2016-9-26.
+
+\bibitem{thermistor}
+Electrocomponents PLC.
+\newblock Ntc thermistors.
+\newblock
+  \url{http://docs-europe.electrocomponents.com/webdocs/14c2/0900766b814c2f5a.pdf}.
+\newblock Accessed: 2016-9-28.
+
+\bibitem{rosenthal2003new}
+Kelli Rosenthal.
+\newblock New frequencies, new monitoring technology.
+\newblock {\em Nursing management}, 34(3):49--51, 2003.
+
+\bibitem{windowstightvnc}
+TightVNC Software.
+\newblock Tightvnc: Vnc-compatible free remote control / remote desktop
+  software.
+\newblock \url{http://www.tightvnc.com/}.
+\newblock Accessed: 2016-9-25.
+
+\bibitem{sohraby2007wireless}
+Kazem Sohraby, Daniel Minoli, and Taieb Znati.
+\newblock {\em Wireless sensor networks: technology, protocols, and
+  applications}.
+\newblock John Wiley \& Sons, 2007.
+
+\bibitem{strohmenger1997analysis}
+Hans-Ulrich Strohmenger, Karl~H Lindner, and Charles~G Brown.
+\newblock Analysis of the ventricular fibrillation ecg signal amplitude and
+  frequency parameters as predictors of countershock success in humans.
+\newblock {\em Chest}, 111(3):584--589, 1997.
+
+\bibitem{psotutorial}
+Electronics Tutorials.
+\newblock The rc oscillator circuit.
+\newblock
+  \url{http://www.electronics-tutorials.ws/oscillator/rc_oscillator.html},
+  2014.
+\newblock Accessed: 2016-8-27.
+
+\end{thebibliography}

@@ -1,0 +1,20 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Pin Configuration for the AD8232 and the Arduino Pro Mini \cite {ad8232}}}{25}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Material Type F Thermistor Parameters for $0\ensuremath {^\circ }C$ to $50\ensuremath {^\circ }C$}}{30}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Summary of Output Frequency, $R_1$ Resistance, and Temperature}}{40}{table.5.3}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{Output Frequency based on R1 Values}}{82}{table.C.1}
+\contentsline {table}{\numberline {C.2}{Output Frequency based on R1 Values (cont.)}}{85}{table.C.2}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Output Frequency based on R1 Values (cont.)}}{86}{table.C.3}
