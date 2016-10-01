@@ -1,0 +1,605 @@
+\chapter{Program Installation}
+
+\section{Operating System - Raspbian Jessie}
+\label{appraspbianjessie}
+
+The operating system used for the project is Raspbian Jessie. To simplify installation, the SD card of the Raspberry Pi was flashed with an OS installer containing Raspbian Jessie, called NOOBS (New Out Of the Box Software) \cite{rpi3noobs}. When starting up, the loading screen will look typically like Figure \ref{rpi3noobs}. The version of NOOBS used was version 1.9.2, with a release date of 27/5/2016. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{noobs.png}
+	\caption{NOOBS (New Out Of the Box Software) Initial Installation Screen \cite{rpi3noobs}}
+	\label{rpi3noobs}
+\end{figure}
+
+Aside from using NOOBS for the OS installation, it is possible to download the Raspbian Jessie image from the official Raspberry Pi website, unzip the image file, and copy it to the SD card. However, NOOBS was used specifically for its convenience, since it is necessary to obtain disk imager utilities on Windows for this method. Nevertheless, the choice of installation approach does not in any way affect the functionality of the OS after it has been loaded.  
+
+
+
+
+
+
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install tightvncserver
+sudo apt-get install xtightvncviewer
+sudo apt-get install arduino
+sudo apt-get install python-matplotlib
+\end{lstlisting}
+
+
+
+
+
+\section{Code}
+
+\subsection{ECG Code for Arduino Pro Mini}
+\label{ecgarduino}
+
+The following source code is sourced from SparkFun's AD8232 Heart Rate Monitor GitHub repository \cite{ad8232github}. This is saved as Heart\_Rate\_Display\_Arduino.ino.
+
+\begin{lstlisting}
+/******************************************************************************
+Heart_Rate_Display.ino
+Demo Program for AD8232 Heart Rate sensor.
+Casey Kuhns @ SparkFun Electronics
+6/27/2014
+https://github.com/sparkfun/AD8232_Heart_Rate_Monitor
+The AD8232 Heart Rate sensor is a low cost EKG/ECG sensor.  This example shows
+how to create an ECG with real time display.  The display is using Processing.
+This sketch is based heavily on the Graphing Tutorial provided in the Arduino
+IDE. http://www.arduino.cc/en/Tutorial/Graph
+Resources:
+This program requires a Processing sketch to view the data in real time.
+Development environment specifics:
+IDE: Arduino 1.0.5
+Hardware Platform: Arduino Pro 3.3V/8MHz
+AD8232 Heart Monitor Version: 1.0
+This code is beerware. If you see me (or any other SparkFun employee) at the
+local pub, and you've found our code helpful, please buy us a round!
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+void setup() {
+// initialize the serial communication:
+Serial.begin(9600);
+pinMode(10, INPUT); // Setup for leads off detection LO +
+pinMode(11, INPUT); // Setup for leads off detection LO -
+
+}
+
+void loop() {
+
+if((digitalRead(10) == 1)||(digitalRead(11) == 1)){
+Serial.println('!');
+}
+else{
+// send the value of analog input 0:
+Serial.println(analogRead(A0));
+}
+//Wait for a bit to keep serial data from saturating
+delay(1);
+}
+\end{lstlisting}
+
+The method to upload is as the following figure: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{ecgarduino.png}
+	\caption{Upload sketch to Arduino Pro-Mini \cite{ad8232}}
+\end{figure}
+
+\subsection{ECG Code for Processing 2.2.1}
+\label{ecgprocessing}
+
+The following source code is sourced from SparkFun's AD8232 Heart Rate Monitor GitHub repository \cite{ad8232github}. This is saved as Heart\_Rate\_Display.pde.
+
+\begin{lstlisting}
+/******************************************************************************
+Heart_Rate_Display.ino
+Demo Program for AD8232 Heart Rate sensor.
+Casey Kuhns @ SparkFun Electronics
+6/27/2014
+https://github.com/sparkfun/AD8232_Heart_Rate_Monitor
+The AD8232 Heart Rate sensor is a low cost EKG/ECG sensor.  This example shows
+how to create an ECG with real time display.  The display is using Processing.
+This sketch is based heavily on the Graphing Tutorial provided in the Arduino
+IDE. http://www.arduino.cc/en/Tutorial/Graph
+Resources:
+This program requires a Processing sketch to view the data in real time.
+Development environment specifics:
+IDE: Arduino 1.0.5
+Hardware Platform: Arduino Pro 3.3V/8MHz
+AD8232 Heart Monitor Version: 1.0
+This code is beerware. If you see me (or any other SparkFun employee) at the
+local pub, and you've found our code helpful, please buy us a round!
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+import processing.serial.*;
+
+Serial myPort;        // The serial port
+int xPos = 1;         // horizontal position of the graph
+float height_old = 0;
+float height_new = 0;
+float inByte = 0;
+
+
+void setup () {
+// set the window size:
+size(1000, 400);        
+
+// List all the available serial ports
+println(Serial.list());
+// Open whatever port is the one you're using.
+myPort = new Serial(this, Serial.list()[2], 9600);
+// don't generate a serialEvent() unless you get a newline character:
+myPort.bufferUntil('\n');
+// set inital background:
+background(0xff);
+}
+
+
+void draw () {
+// everything happens in the serialEvent()
+}
+
+
+void serialEvent (Serial myPort) {
+// get the ASCII string:
+String inString = myPort.readStringUntil('\n');
+
+if (inString != null) {
+// trim off any whitespace:
+inString = trim(inString);
+
+// If leads off detection is true notify with blue line
+if (inString.equals("!")) { 
+stroke(0, 0, 0xff); //Set stroke to blue ( R, G, B)
+inByte = 512;  // middle of the ADC range (Flat Line)
+}
+// If the data is good let it through
+else {
+stroke(0xff, 0, 0); //Set stroke to red ( R, G, B)
+inByte = float(inString); 
+}
+
+//Map and draw the line for new data point
+inByte = map(inByte, 0, 1023, 0, height);
+height_new = height - inByte; 
+line(xPos - 1, height_old, xPos, height_new);
+height_old = height_new;
+
+// at the edge of the screen, go back to the beginning:
+if (xPos >= width) {
+xPos = 0;
+background(0xff);
+} 
+else {
+// increment the horizontal position:
+xPos++;
+}
+
+}
+}
+\end{lstlisting}
+
+The method to run is as in the following figure: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{ecgprocessing.png}
+	\caption{Run the Processing sketch \cite{ad8232}}
+\end{figure}
+
+\subsection{PPG with Processing 2+}
+
+\begin{lstlisting}[language=c]
+import processing.serial.*;
+
+Serial myPort;        // The serial port
+int xPos = 1;         // horizontal position of the graph
+float inByte = 0;
+float oldinByte = 0;
+PrintWriter output;   // Create an object for exporting data
+PrintWriter output_average;
+
+int LM_SIZE = 750;
+float[] LM =  new float[LM_SIZE];      // LastMeasurements
+int index = 0;
+static float sum = 0;
+int count = 0;
+
+float movingAverage = 0;
+double previous_time = 0;
+double current_time = 0;
+double time_difference = 0;
+double heart_rate = 0;
+float input;
+
+int peak = 0;
+int trough = 0;
+
+void setup () {
+
+// Create a new file in the sketch directory
+//output = createWriter("infrared_data.txt");
+//output_average = createWriter("movingAverage.txt");
+
+// set the window size:
+size(980, 420);
+
+// List all the available serial ports
+// if using Processing 2.1 or later, use Serial.printArray()
+println(Serial.list());
+
+// I know that the first port in the serial list on my mac
+// is always my  Arduino, so I open Serial.list()[0].
+// Open whatever port is the one you're using.
+myPort = new Serial(this, Serial.list()[2], 9600);
+
+// don't generate a serialEvent() unless you get a newline character:
+myPort.bufferUntil('\n');
+
+// set inital background:
+background(0);
+}
+void draw () {
+// draw the line:
+stroke(127, 34, 255);
+
+//if (inByte > 30 && inByte < 600) {
+line(xPos-1, (height-oldinByte), xPos, (height-inByte));
+//text("received: " + inByte,10,50); 
+// at the edge of the screen, go back to the beginning:
+if (xPos >= width) {
+xPos = 1;
+background(0);
+} else {
+// increment the horizontal position:
+xPos++;
+}
+//}
+
+}
+
+void serialEvent (Serial myPort) {
+// get the ASCII string:
+String inString = myPort.readStringUntil('\n');
+
+if (inString != null) {
+
+// Store the old value for line drawing purpose
+oldinByte = inByte;
+// trim off any whitespace:
+//inString = trim(inString);
+// convert to an int and map to the screen height:
+inByte = float(inString);
+input = inByte;
+//println("Input = " + input);
+movingAverage = runningAverage(input);
+//println(" Average = " + movingAverage);     
+//output.println(input);
+//output_average.println(movingAverage);
+inByte = map(inByte*30, 0, 800, 0, height-500);
+
+// Wait 3 seconds before calculating heart rate
+if ( millis() > 3000){
+// Calculating heart rate
+
+// Detects peak of the period
+if (input > movingAverage && (peak == 0)){
+
+current_time = millis();
+time_difference = current_time - previous_time;
+//println("Current_time = " + current_time);
+//println("previous_time = " + previous_time);
+heart_rate = 60.0/(time_difference*0.001);
+previous_time = current_time;
+println("heart rate = " + heart_rate);
+peak = 1;
+trough = 0;
+}
+
+// Detects trough of the period
+if (input < movingAverage && (trough == 0)){
+peak = 0;
+trough = 1;
+
+}    
+}
+
+}
+}
+
+// runningAverage for heart rate counting
+float runningAverage(float M) {
+
+// keep sum updated to improve speed.
+sum -= LM[index];
+LM[index] = M;
+sum += LM[index];
+
+//println("Sum = " + sum);
+
+index++;
+index = index % LM_SIZE;
+if (count < LM_SIZE) count++;
+
+return (sum / count);
+}
+
+
+
+
+\end{lstlisting}
+
+\subsection{Arduino Code for Thermistor}
+\label{arduinothermistor}
+
+\begin{lstlisting}[language=c]
+/*
+AnalogReadSerial
+Reads an analog input on pin 0, prints the result to the serial monitor.
+Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
+
+This example code is in the public domain.
+*/
+
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+double T; 
+double TK; 
+double lnratio; 
+double a, b, c, d; 
+
+// the setup routine runs once when you press reset:
+void setup() {
+	// initialize serial communication at 9600 bits per second:
+	Serial.begin(9600);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+	// read the input on analog pin 0:
+	double sensorValue = analogRead(A0);
+	// print out the value you read:
+	a = 3.3540154e-3;
+	b = 2.5627725*pow(10,-4);
+	c = 2.0829210*pow(10,-6);
+	d = 7.3003206*pow(10,-8);
+	
+	// lnratio = log(sensorValue/(1023-sensorValue));
+	for (double i=1;i<1024;i++) {
+		lnratio = log(i/(1024-i));
+		T = 1/(a+b*(lnratio)+c*pow(lnratio,2)+d*pow(lnratio,3)); 
+		TK = T-273.15; 
+		
+		Serial.println(TK); 
+		//Serial.print(' '); 
+		//Serial.println(sensorValue);
+		
+		delay(1); 	// delay in between reads for stability
+		}        
+}
+\end{lstlisting}
+
+\subsection{Arduino Code for Phase Shift Oscillator}
+\label{arduinopso}
+
+\begin{lstlisting}[language=c]
+#include <math.h>
+double T = 0;  	/*Temperature*/
+double t = 0;	/*Period*/
+double F = 0;	/*Frequency*/
+
+void setup() {
+
+	/* Define pin 3 as an input */
+	pinMode(3,INPUT);
+	Serial.begin(9600); 
+}
+
+void loop() {
+
+	while(digitalRead(3) == HIGH) {
+	}; 
+	while(digitalRead(3) == LOW) {
+	};
+	t = micros();
+	while(digitalRead(3) == HIGH) {
+	};
+	while(digitalRead(3) == LOW) {
+	}; 
+
+	t = micros() - t;
+	F = 1.0E6/t;
+	T = 102.58*log(F) - 659.57; 
+
+	Serial.println(T); 
+	delay(1); 
+}
+
+\end{lstlisting}
+
+\subsection{MATLAB ECG Simulation}
+\label{ecgsimulationcode}
+
+The simulated ECG signal in Figure \ref{ecgsim} in Section \ref{simulation} was obtained by running the following code in MATLAB.
+
+\begin{lstlisting}
+>>ECGwaveGen(70,5,500,2500)
+\end{lstlisting}
+
+The ECGwaveGen.m file below was obtained from physionet.org \cite{ecgsimulation}.
+
+\begin{lstlisting}[language=Matlab]
+function [QRSwave]=ECGwaveGen(bpm,duration,fs,amp)
+%[QRSwave]=ECGwaveGen(bpm,dur,fs,amp) generates an artificial ECG/EKG waveform
+%    Heart rate (bpm) sets the qrs event frequency (RR interval). 
+%    Duration of the entire waveform (dur) is in units of seconds.
+%    Sample frequency (fs) sets the sample frequency in Hertz. 
+%    Amplitude (amp) of the QRS event is measured in micro Volts. The
+%    waveform consists of a QRS complex and a T-wave. No attempt to 
+%    represent a P-wave has been made.
+%     
+%    There are two additional parameters that can be changed from within the function.
+%    They are the parameters that set the QRS width (default 0.1 secs) and the t-wave 
+%    amplitude (default 500 uV).
+
+%Created January 22, 2001 by Floyd Harriott, primary email (fharriott@stellate.com), secondary email (fsh@po.cwru.edu)
+%Modified March 19, 2002 by Floyd Harriott, extended default duration so that default settings produce a QRS event rather than 
+%   an error. Allows for the random insertion of PVCs.  This file must be edited to include PVCs.
+
+%Algorithm is based in part on the jounal article:
+%Ruha, Antti and Seppo Nissila, "A Real-Time Microprocessor QRS Detector System with a 1-ms Timing Accuracy
+%      for the Measurement of Ambulatory HRV", IEEE Trans. Biomed. Eng. Vol. 44, No. 3, 1997
+%The artificial ECG signal they describe is based on the recommendations in the Association for the Advancement
+%of Medical Instrumentation (AAMI) "Standard for Cardiac Monitors, Heart Rate Meters and Alarms (draft), Aug. 1981
+%Feel free to make modifications, corrections and or suggestions.
+
+if (exist('fs') ~= 1)  fs=  200;   end  %default value, Hz
+if (exist('bpm') ~= 1)  bpm =  72;   end %default value, beats per minute
+if (exist('amp') ~= 1)  amp = 1000;   end %default value, micro volts
+if (exist('duration') ~= 1)  duration =  (60/bpm-0.35)+60/bpm+1/fs; end  %default value gives one cycle, seconds
+
+global t_line; %seconds
+global sample_freq; % always equal to fs
+
+
+%Changeable Parameters
+d=0.1; %.07 to .120 seconds, QRS width
+at=500; %amplitude of t-wave, 400 to 1200 uv
+
+%Should not touch
+org_amp=amp;
+sample_freq=fs; %duplicated simply to make a global version
+RR=(60/bpm); %RR interval, seconds
+d1=0.4375*d;
+d2=0.5*d;
+d3=d-(d1+d2);
+dt=0.180; %width of t wave, seconds
+qt=0.35; %time from beginning of QRS to end of t-wave
+t_line=0:1/fs:duration; %time line, seconds
+QRS_wave=zeros( size(t_line) ); %QRS waveform
+deadspace=RR-qt; %time between t-wave and next QRS
+if deadspace < 0 
+err_msg=['Bpm must be equal to or less than ' int2str(60/qt) ' inorder to fit one cycle.'];
+error(err_msg); 
+end
+
+
+%Calculate PVC parameters and segment
+PVCchance=0.1; %How often does PVC happen., percent eg. 0.1=10%
+PVCamp=amp;    %PVC amplitude, eg. same as normals (amp)
+earlyfactor=0.25; %percentage, how much early should PVC happen then normal RR interval
+PVCwidth=0.12; %seconds, QRS width of PVC, usually .12 to .17
+PVCseg=[QRSpulse(d,60/((1-earlyfactor)*RR-0.4375*PVCwidth),fs,RandAmp(org_amp)) QRSpulse(PVCwidth,bpm*(1-earlyfactor),fs,PVCamp) QRSpulse(d,bpm,fs, RandAmp(org_amp))]; %PVC segment
+tPVC=size(PVCseg,2)/fs; %amount of time taken up by PVC segment in seconds
+
+t1=deadspace; %Where does the first QRS start? eg deadspace, or 0
+
+%need enough time to display at least one interval.
+if (t1+60/bpm+1/sample_freq > duration)
+err_msg=['The waveform length (duration) must be more than ' sprintf('%.2f%',t1+60/bpm+1/sample_freq) ' second(s) in order to display one QRS event.'];
+error(err_msg);
+end
+
+
+%GENERATION LOOP
+while ( t1+60/bpm+1/sample_freq <= duration) %space to insert another qrs pulse in time line
+
+%amp=RandAmp(org_amp); %random size on qrs event
+amp=org_amp;
+
+
+
+%Segment 1  (Q-R)
+qrs_start=t1;   
+t2=t1+d1;
+i_t1=time2index(t1); i_t2=time2index(t2);
+left=0; right=0.875*amp;
+m1=(right-left)/(t2-t1);
+QRS1=m1*index2time(i_t1:i_t2)-(m1*t1-left);
+QRSwave(i_t1:i_t2)=QRS1;
+
+%Segment 2  (R-?)
+t1=t2; t2=t1+d2;
+i_t1=time2index(t1); i_t2=time2index(t2);
+left=right; right=-.125*amp;
+m2=(right-left)/(t2-t1);
+QRS1=m2*index2time(i_t1:i_t2)-(m2*t1-left);
+QRSwave(i_t1:i_t2)=QRS1;
+
+
+%Segment 3 bottom_top (?-S) 
+t1=t2; t2=t1+d3; 
+i_t1=time2index(t1); i_t2=time2index(t2);
+left=right; right=0;
+if (i_t2-i_t1 >0) %at low sampling freq. there may be no sample for this segment
+m3=(right-left)/(t2-t1);
+QRS1=m3*index2time(i_t1:i_t2)-(m3*t1-left);
+QRS1=QRS1( find(QRS1<=0));
+QRSwave(i_t1:i_t1+size(QRS1,2)-1)=QRS1;
+elseif i_t2-i_t1==0
+m3=(right-left)/(t2-t1);
+QRS1=m3*index2time(i_t1:i_t2)-(m3*t1-left);
+QRSwave(i_t1)=QRS1(1);
+end
+
+%Segment 4, S-T interval
+t1=t2; t2=t1+qt+qrs_start-(dt+t2);
+i_t1=time2index(t1); i_t2=time2index(t2);
+left=right; right=0;
+
+%Segment 5, t-wave
+t1=t2; t2=t1+dt;
+i_t1=time2index(t1); i_t2=time2index(t2);
+t=-1:2/(i_t2-i_t1):1;
+QRS1=at*sqrt(1-t.^2);
+QRSwave(i_t1:i_t2)=QRS1;
+
+%Segment 6, remaining deadspace
+t1=t2; t2=t1+deadspace;
+i_t1=time2index(t1); i_t2=time2index(t2);
+
+
+%Do we insert a PVC here? Roll the die and find out.
+insertPVC=rand(1); %uncomment following 5 lines if PVCs are desired.
+%if insertPVC<=PVCchance & t2+tPVC+2/sample_freq <= duration %enough space to insert PVC
+%   t1=t2; t2=t1+tPVC;
+%  i_t1=time2index(t1); i_t2=time2index(t2);
+% QRSwave(i_t1:i_t1+size(PVCseg,2)-1)=PVCseg;
+%end
+
+%stem(QRSwave); % view ECG waveform
+t1=t2; %end of this segment becomes beginning of next segment
+
+end %while loop, appending qrs pulses
+
+%_____________________________________%
+function index=time2index(t)
+%TIME2INDEX converts time (s) to an index value
+
+global t_line;
+
+indexArray=find(t_line>=t);
+index=indexArray(1); 
+
+%_____________________________________%
+function time=index2time(i)
+%INDEX2TIME converts a time line index to a time value (seconds)
+global sample_freq
+
+time=(i-1).*1/sample_freq;
+
+
+%_____________________________________%
+function RAmp=RandAmp(orgAmp)
+
+RAmp=orgAmp+0.4*orgAmp*rand(1);
+\end{lstlisting}

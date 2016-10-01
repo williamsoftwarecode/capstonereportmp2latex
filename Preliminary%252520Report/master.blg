@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: master.aux
+The style file: plain.bst
+Database file #1: bibfile.bib
+Warning--I didn't find a database entry for "bc548"
+Too many commas in name 1 of "John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the matplotlib development team" for entry matplotlib
+while executing---line 1049 of file plain.bst
+Warning--empty note in peterfarrell
+Warning--empty journal in goldman1976principles
+Warning--empty journal in george9
+Too many commas in name 1 of "John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the matplotlib development team" for entry matplotlib
+while executing---line 1090 of file plain.bst
+Warning--empty journal in noble1990electrocardiography
+Warning--empty note in imanshames
+Warning--empty journal in lit6
+(There were 2 error messages)

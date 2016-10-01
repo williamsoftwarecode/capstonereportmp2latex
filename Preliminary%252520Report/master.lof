@@ -1,0 +1,81 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The Cardiac Depolarization Route. AVN: Atrioventricular Node; SAN: Sinoatrial Node. \cite {hall2015guyton}}}{4}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The Basic Pattern of Electrical Activity across the Heart \cite {ashley2004conquering}}}{4}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The Basic Pattern of Electrical Activity across the Heart \cite {jiahui2}}}{7}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Waveform of PPG Signal \cite {george6}}}{9}{figure.1.4}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Absorption Spectra of Hemoglobin \cite {george3}}}{10}{figure.1.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces citeeeeeeeeeeeeeeeeeeeeee\cite {hall2015guyton}}}{13}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Benefits of Wireless Monitoring Systems \cite {lit1}}}{14}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Result for M/G/1 and M/G/N queueing models for the proposed scenario \cite {lit4}}}{16}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces e-Health Sensor Shield \cite {lit9}}}{18}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sample of BioNomadix Separate Vital Sign Monitor \cite {lit10}}}{19}{figure.2.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Wireless Vital Signs Monitoring System Block Diagram}}{21}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 3 Model B \cite {rpi3pic}}}{24}{figure.4.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces AD8232 Functional Block Diagram \cite {ad8232datasheet}}}{30}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces AD8232 Pin Configuration \cite {ad8232datasheet}}}{30}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces AD8232 Simplified Schematic Diagram \cite {ad8232datasheet}}}{31}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Circuit Configuration for ECG Waveform Monitoring using the AD8232 \cite {ad8232datasheet}}}{32}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces AD8232 Heart Rate Monitor from SparkFun Electronics \cite {ad8232}}}{33}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces AD8232 Connection Diagram using Fritzing \cite {ad8232}}}{34}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Sensors Connected to Heart Monitor \cite {ad8232}}}{35}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Neurosky TGAM Module}}{36}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Board Layout}}{37}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces ThinkGean Module}}{38}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Circuit Design}}{39}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Circuit Design}}{40}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces LM 358 \cite {george12}}}{41}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Sinusoidal Input}}{42}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Output of LTSpice Simulation}}{42}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Thermistor in Voltage Divider Configuration using Fritzing}}{43}{figure.5.16}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Thermistor Formulae and Properties \cite {thermistor}}}{44}{figure.5.17}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Thermistor Formulae and Properties (cont.) \cite {thermistor}}}{44}{figure.5.18}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Bit Value vs Number of Samples}}{45}{figure.5.19}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Temperature Reading vs Bit Value}}{46}{figure.5.20}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Temperature Reading ($5\ensuremath {^\circ }C$ to $45\ensuremath {^\circ }C$) vs Bit Value}}{47}{figure.5.21}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces $\frac {d(RT/R25)}{dt}$ against Temperature (Kelvin)}}{48}{figure.5.22}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Basic RC Oscillator Circuit (Phase Shift Oscillator) \cite {psotutorial}}}{49}{figure.5.23}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Phase Shift Oscillator Circuit in LTSpice \cite {peterfarrell}}}{50}{figure.5.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Thermistor Formulae and Properties \cite {rpitightvncserver}}}{54}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Actual Raspberry Pi VNC Server Viewed through a VNC Viewer in a Windows Environment Wirelessly over WiFi}}{55}{figure.6.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Typical Sensor Placements \cite {ashley2004conquering}}}{58}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Typical Sensor Placements (3 Electrodes) \cite {ad8232}}}{58}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces ECG Output Test 2}}{59}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces ECG Output recorded by the Raspberry Pi over WiFi}}{59}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces ECG Output with Deep Breathing}}{60}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces ECG Output with Limb Movement}}{60}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Simulated ECG Signal}}{61}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Points for Placement of Macroelectrodes in EEG}}{62}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Expected EEG Output}}{63}{figure.7.9}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Actual EEG Output}}{64}{figure.7.10}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Prototype Sensor with Arduino Uno}}{65}{figure.7.11}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Actual PPG Sensor Output}}{65}{figure.7.12}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Expected PPG Sensor Output}}{66}{figure.7.13}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Sinusoidal Wave with 0 DC Offset}}{67}{figure.7.14}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Moving average DC offset (Matlab plot)}}{68}{figure.7.15}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Detected Light Signal and Modulation Ratio for $SaO_2\%$}}{68}{figure.7.16}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Phase Shift Oscillator LTSpice Simulation Voltage Output \cite {peterfarrell}}}{69}{figure.7.17}
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Phase Shift Oscillator LTSpice Simulation Voltage Output (Zoomed In) \cite {peterfarrell}}}{69}{figure.7.18}
+\contentsline {figure}{\numberline {7.19}{\ignorespaces Phase Shift Oscillator LTSpice Fast Fourier Transform (FFT) Simulation \cite {peterfarrell}}}{70}{figure.7.19}
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Temperature against Output Frequency of Phase Shift Oscillator}}{73}{figure.7.20}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces NOOBS (New Out Of the Box Software) Initial Installation Screen \cite {rpi3noobs}}}{85}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Upload sketch to Arduino Pro-Mini \cite {ad8232}}}{87}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Run the Processing sketch \cite {ad8232}}}{90}{figure.A.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces AD8232 SparkFun Implementation Schematic Diagram \cite {ad8232sfschematic}}}{103}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Raspberry Pi 3 Model B Schematic Diagram \cite {rpi3hardware}}}{104}{figure.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Transmitter Schematics for PPG}}{105}{figure.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Transmitter PCB for PPG}}{106}{figure.B.4}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Receiver Schematics for PPG}}{106}{figure.B.5}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Receiver PCB for PPG}}{107}{figure.B.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Snippet of Material Type F Thermistor Datasheet \cite {thermistor}}}{109}{figure.C.1}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces RT/R25 against Temperature (Kelvin)}}{110}{figure.C.2}
