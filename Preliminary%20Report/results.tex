@@ -12,7 +12,7 @@ In the early phases of development, it was necessary to simulate the ECG signals
 \end{figure} 
 
 \chapter{Testing}
-wireless VNC
+
 
 \chapter{Results}
 
@@ -136,6 +136,71 @@ However, for the output that is colleceted from the setup:
 \end{figure} 
 
 From the code at the appendix, we can see that the Neurosky module is pre-loaded with schemes to output no results when the input is too unreliable. This can be due to artifacts discussed earlier, contact resistance and imperfections in soldering as well as losses in the circuitry as the signal is very minute. A second attempt on building an individual EEG circuit from scratch will be conducted to amplify and filter the signal before feeding it into the TGAM chip.
+
+\section{PPG}
+
+
+\subsection{Prototype Sensor with Arduino Uno}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{georgepic8.jpg}
+	\caption{Prototype Sensor with Arduino Uno}
+\end{figure}
+
+Processing 2+ is used for waveform visualization:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{georgepic9.jpg}
+	\caption{Actual PPG Sensor Output}
+\end{figure}
+
+Comparison with the PPG wave from medical standard monitor display:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{georgepic10.jpg}
+	\caption{Expected PPG Sensor Output}
+\end{figure}
+
+\subsection{Heart Rate Measurement}
+
+The basic idea of calculating heart rate with the data collected by pulse oximeter is measuring the period of each periodic pulse and calculate the frequency. For normal sinusoidal waves, this is very easy to be achieved by finding the DC offset of the waveform and measure the time difference between every time the signal goes above that DC offset. Then the frequency can be calculated from the time difference.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{georgepic11.jpg}
+	\caption{Sinusoidal Wave with 0 DC Offset}
+\end{figure}
+
+However, the pulse oximeter is very sensitive to any physical movement. The amplitude of the waveform is relatively stable if you keep your finger at the same position. But the movement of the pulse oximeter itself can cause the change in DC offset of the signal.
+
+In order to mitigate the fluctuation of DC offset, we implement a moving average filter with window size of 400 samples. For normal human resting heart rate, each periodic pulse takes approximately 200 samples. With a window size of two periods, the moving average can be used as the DC offset for calculating the heart rate.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{georgepic12.jpg}
+	\caption{Moving average DC offset (Matlab plot)}
+\end{figure}
+
+From the plot above, we can observe the moving average line behaves as a trend line for the PPG waveform.
+
+\subsection{Abstract AC/DC Values}
+
+As explained in the previous, the modulation ratio R is the key parameter for calculating Oxygen Saturation level SpO2. 
+
+For DC component value for Red/IR signals, the moving average can be used here as the. 
+The 
+
+…… (might need one more page later)
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{georgepic13.jpg}
+	\caption{Detected Light Signal and Modulation Ratio for $SaO_2\%$}
+\end{figure}
+
 
 \section{Statistics}
 

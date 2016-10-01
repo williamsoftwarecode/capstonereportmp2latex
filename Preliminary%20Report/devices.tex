@@ -141,12 +141,16 @@ In terms of the pin connections between the AD8232 and the Arduino Pro Mini, the
 
 The complete circuit can be found in the Figure below 
 
-FIGUREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{ecgsetup.jpg}
+	\caption{Sensors Connected to Heart Monitor \cite{ad8232}}
+	\label{ecgsetup}
+\end{figure}
 
 To circumvent the need of using a breadboard, a PCB shield for the AD8232 and the Arduino Pro Mini was designed to accomodate both breakout boards on a single board without the need for wires to connect the internal components. The PCB design can be found in Appendix \ref{ecgshieldpcb}. 
 
-- Uploaded and compiled sample Arduino code from SparkFun GitHub repository. 
-- Need to change board type to Arduino Pro Mini 328 - 3.3V/8MHz. 
+
 
 \section{EEG}
 
@@ -200,6 +204,103 @@ Preferable for this part to be in paragraphs. Overusage of bullet points not rec
 \end{figure}
 
 A 9V battery is used as the power source, and Arduino is used as an interface to capture the output data to be visualized at the console. 
+
+\section{PPG}
+
+When we tried to obtain the PPG waveform by directly connecting a pair of infrared transmitter and receiver with the Arduino, we were not able to visualize any valid signals. This could be due to two main reasons: 
+
+\begin{enumerate}
+	\item The photoplethysmogram signal is very small in amplitude compare with the DC offset component in the carrying signal.
+	\item The pair of sensors is not working properly.	
+\end{enumerate}
+
+To eliminate the second possibility, we did some testing with the sensors along. The intensity of the infrared beams received at the receiver is proportional to the separation between the transmitter and the receiver. By moving the transmitter towards and away from the receiver, we can observe instant change of the readings. 
+
+Hence, we come to the conclusion that the signal from our PPG sensor is very small in amplitude compare with the DC offset and the high frequency noise. Therefore, low-pass filter, high-pass filter and op-amp are used to extract the useful information from the “raw” signal from PPG sensor. 
+
+For the Arduino we are using, it has 10-bit analog to digital convertor which maps the analog input between 0 to 5V into 1024 discrete levels between 0 and 1023. This gives the resolution around 5mV per unit. Hence, in order to obtain a clear visualization of the PPG signal, the AC component needs to be amplified to few volts in amplitude (less than supply voltage 5V). 
+
+\subsection{Bandwidth Selection}
+
+The frequency of the normal resting heart rate is between 1Hz to 2Hz \cite{george8}. Hence, for our Pulse Oximeter, we allow the signal between 0.5Hz to 4Hz to pass through. Extra margin is designed for special cases.
+
+\subsection{Circuit design}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{georgepic3.jpg}
+	\caption{Circuit Design}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{georgepic4.jpg}
+	\caption{Circuit Design}
+\end{figure}
+
+\subsubsection{High Pass Filter}
+
+A RC high pass filter is designed to meet the lower bound of the bandwidth requirement.
+
+\begin{equation}
+	f_c = \frac{1}{2\pi RC}
+\end{equation}
+
+In our design, we choose $R = 6666 \Omega$ (20k and 10k in parallel) and $C = 44 \mu F$ which gives us a cut-off frequency of $0.543 Hz$.
+
+\subsubsection{Low Pass Filter}
+
+A RC low pass filter is designed to meet the upper bound of the bandwidth requirement.
+
+\begin{equation}
+f_c = \frac{1}{2\pi RC}
+\end{equation}
+
+In our design, we choose $R = 200k \Omega$ and $C = 200nF$ which gives us a cut-off frequency of $3.98 Hz$ which is close to $4 Hz$.
+
+\subsubsection{Amplifier}
+
+Since we are not able to observe any waveform from the original signal, the amplitude of the original AC component must have magnitude of few mV because the resolution of the Arduino is 5mV. If the oscillation of the original signal has few hundred mV in amplitude, the waveform would be clearly observed without any signal processing. In order to amplify the signal to the magnitude of volts, we design an amplifier with gain of 100 which gives the output in Volts. 
+
+Another limitation is the power supply from the Arduino UNO. A normal operational amplifier requires positive and negative voltage for its supply rails. But Arduino UNO only provides positive 5V and GND. LM358 op-amp, which is used in our prototype, requires only positive voltage supply which is perfectly compatible with Arduino.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{georgepic5.jpg}
+	\caption{LM 358 \cite{george12}}
+\end{figure}
+
+\subsubsection{Offset Voltage}
+
+To avoid signal being saturated at 0, an offset voltage is supplied to the input signal before the amplifier. Since the Arduino UNO can detect values between 0 ~ 5V, it is reasonable to have an offset voltage of 1.5V. 
+
+In order to achieve 1.5V offset at the output, the pre-amplified offset is set to be 1.5V/100 = 15mV, where 100 is the gain of the amplifier. Voltage divider is used to get 15 mV from a 5V source.
+
+\subsubsection{LTSpice Simulation}
+
+A sinusoidal input with frequency 3 Hz with peak-to-peak voltage 20 mV is used for simulation:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{georgepic6.jpg}
+	\caption{Sinusoidal Input}
+\end{figure}
+
+The output is:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{georgepic7.jpg}
+	\caption{Output of LTSpice Simulation}
+\end{figure}
+
+From the output plot, we are able to see the input sinusoidal signal has been amplified to roughly 1.4V peak-to-peak with 1.3V DC-offset.
+
+
+
+
+
+
 
 \section{Blood Temperature}
 
@@ -274,7 +375,7 @@ Steps for testing Negative Temperature Coefficient (NTC) behaviour:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{thermistor1.jpg}
+	\includegraphics[width=0.8\linewidth]{thermistor1.jpg}
 	\caption{Bit Value vs Number of Samples}
 	\label{bitvaluevssamples}
 \end{figure}
@@ -297,7 +398,7 @@ The following graph is obtained by plotting the relationship between temperature
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{thermistor2.jpg}
+	\includegraphics[width=0.8\linewidth]{thermistor2.jpg}
 	\caption{Temperature Reading vs Bit Value}
 	\label{temperaturevsbitvalue}
 \end{figure}
@@ -306,7 +407,7 @@ The graph shown in Figure \ref{temperaturevsbitvalue} indicates that the relatio
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{thermistor3.jpg}
+	\includegraphics[width=0.8\linewidth]{thermistor3.jpg}
 	\caption{Temperature Reading ($5\degree C$ to $45\degree C$) vs Bit Value}
 	\label{temperaturevsbitvalue5-45}
 \end{figure}
@@ -348,19 +449,132 @@ To circumvent the issue of self-heating of NTC thermistors in Section \ref{therm
 
 From the voltage division perspective, temperature is resistance-dependent. However, it is possible to make temperature dependent on frequency by implementing thermistor coupled with a phase shift oscillator.  
 
-\cite{psotutorial}
+The phase shift oscillator (PSO) is an oscillator with a resistor-capacitor network, leading to regenerative feedback which produces a sine wave output signal \cite{psotutorial}. This regenerative feedback is due to the charge storage capacity of the capacitor \cite{psotutorial}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{psowebsite.jpg}
+	\caption{Basic RC Oscillator Circuit (Phase Shift Oscillator) \cite{psotutorial}}
+	\label{psowebsite}
+\end{figure}
+
+One of the properties of the phase shift oscillator is the change in frequency when any of the values of the resistances in the phase shift network is adjusted. This leads to the dependence of the output frequency on the resistance.  
+
+By replacing one of the resistors with a thermistor, it is then possible to keep the current relatively small across the thermistor while still measuring the change in temperature based on the change in frequency. Hence, using a thermistor coupled with phase shift oscillator helps to mitigate the issue of self-heating in the thermistor.  
+
+The frequency of the oscillations of the phase shift oscillator is governed by the following formula \cite{psotutorial}:
+\begin{equation}
+	f_r = \frac{1}{2 \pi RC \sqrt{2N}}
+	\label{frequencyoutput}
+\end{equation} 
+
+Where:  \\
+$f_r$ is the Output Frequency in Hz \\
+$R$ is the Resistance in $\Omega$ \\
+$C$ is the Capacitance in $F$ \\
+$N$ is the Number of RC stages ($N=3$) \\
+
+Based on the phase shift oscillator design by Dr. Peter Farrell from the University of Melbourne, the following circuit was simulated in LTSpice \cite{peterfarrell}: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{psoltspice.jpg}
+	\caption{Phase Shift Oscillator Circuit in LTSpice \cite{peterfarrell}}
+	\label{psoltspice}
+\end{figure}
+
+The above circuit was assembled using a BC548 as the NPN transistor. \cite{bc548}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{psooutput.jpg}
+	\caption{Phase Shift Oscillator LTSpice Simulation Voltage Output \cite{peterfarrell}}
+	\label{psoltspicevoltageoutput}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{psooutputzoom.jpg}
+	\caption{Phase Shift Oscillator LTSpice Simulation Voltage Output (Zoomed In) \cite{peterfarrell}}
+	\label{psoltspicevoltageoutputzoom}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{psooutputfft.jpg}
+	\caption{Phase Shift Oscillator LTSpice Fast Fourier Transform (FFT) Simulation \cite{peterfarrell}}
+	\label{psoltspicefft}
+\end{figure}
+
+The dominant frequency of the phase shift oscillator at equilibrium ($R_1 = 10k \Omega$) is about 860 Hz from the FFT plot in Figure \ref{psoltspicefft}. By replacing $R_1$ with a thermistor, the frequency becomes temperature-dependent. Using an Arduino Uno, it is possible to deduce the frequency of the output by measuring the period, which is time between two consecutive transitions from HIGH to LOW.  
 
 
+\subsubsection{Calibration of Phase Shift Oscillator}
 
+In order to integrate the thermistor into the circuit in Figure \ref{psoltspice}, it is necessary to empirically calibrate the Arduino Uno for the measured frequency to correspond to the temperature.  As such, $R_1$ is replaced with differing values of resistances to simulate the varying resistance of the thermistor and to observe its correlation with the temperature based on the thermistor datasheet. The formula used is Equation \ref{thermistorresistance2}. 
 
+Procedure: 
+\begin{enumerate}
+\item Choose random values of resistors (in the range 3kohms to 25kohms) based on the range of temperatures desired.  
+\item Connect the resistor to the point where the thermistor is supposed to be found.  
+\item Record the average of the frequencies using the Arduino.  
+\item Record resistance and temperature in a table in Microsoft Excel.  
+\item Calculate T based on formula on previous page.  
+\item Plot T against R and find trendline.  
+\item Insert trendline (best fit line) equation into Arduino (calibration). Now rewrite code for Arduino so it outputs T. 
+\end{enumerate} 
 
+Values of R chosen: $16k\Omega$, $18k\Omega$, $6.2k\Omega$, $9k\Omega$, $7.5k\Omega$, $18k\Omega$, $18k\Omega$, $22k\Omega$, $3.9k\Omega$, $16k\Omega$, $10k\Omega$, $12k\Omega$, $23k\Omega$, $9k\Omega$, $25k\Omega$, $6.7k\Omega$, $22k\Omega$, $13k\Omega$, $3.6k\Omega $
 
-How does the phase shift oscillator actually work
+The measurement results can be found in Appendix \ref{psocalibration}. The tables in this Appendix give rise to the following summarised results in table \ref{psocalibrationsummary}. 
 
-How does the PSO help in reducing self-heating
-Frequency becomes temperature dependent - Voltage not high across the thermistor 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Frequency (Average) (Hz)} & \textbf{Resistor (k ohm)} & \textbf{Temperature ($\degree C$)} \\ \hline
+		713.84                  & 16                        & 14.62522155              \\ \hline
+		793.2                   & 10                        & 25.00009198              \\ \hline
+		759.49                  & 12                        & 20.89759901              \\ \hline
+		668.81                  & 23                        & 7.043807812              \\ \hline
+		810.8                   & 9                         & 27.41774841              \\ \hline
+		657.95                  & 25                        & 5.351508212              \\ \hline
+		868.13                  & 6.7                       & 34.38035887              \\ \hline
+		667.96                  & 22                        & 7.953407074              \\ \hline
+		746.29                  & 13                        & 19.12817814              \\ \hline
+		1008.56                 & 3.6                       & 50.02636632              \\ \hline
+		712.37                  & 16                        & 14.62522155              \\ \hline
+		694.47                  & 18                        & 12.12527069              \\ \hline
+		885.42                  & 6.2                       & 36.2584574               \\ \hline
+		810.08                  & 9                         & 27.41774841              \\ \hline
+		848.1                   & 7.5                       & 31.68532759              \\ \hline
+		695.69                  & 18                        & 12.12527069              \\ \hline
+		694.83                  & 18                        & 12.12527069              \\ \hline
+		668.5                   & 22                        & 7.953407074              \\ \hline
+		984.74                  & 3.9                       & 47.93002289              \\ \hline
+	\end{tabular}
+	\caption{Summary of Output Frequency, $R_1$ Resistance, and Temperature}
+	\label{psocalibrationsummary}
+\end{table}
 
-PSO - Bipolar transistor Implementation \cite{psotutorial}
+Using the results from Table \ref{psocalibrationsummary}, a trendline is plotted in Microsoft Excel. A logarithmic trendline suits the data better than a quartic trendline. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{psocalibration.jpg}
+	\caption{Temperature against Output Frequency of Phase Shift Oscillator}
+	\label{psocalibrationplot}
+\end{figure}
+
+The relationship between temperature of the thermistor and the measured output frequency of the phase shift oscillator (PSO) can therefore be written as Equation \ref{temperaturefrequency}. 
+
+\begin{equation}
+T = 102.58 ln(F)-659.57 
+\label{temperaturefrequency}
+\end{equation}
+
+The updated Arduino code for directly reading the temperature from a thermistor in a phase shift oscillator configuration can be found in Appendix \ref{arduinopso}.
+
 
 \subsection{Astable Operation of 555 Timer}
 

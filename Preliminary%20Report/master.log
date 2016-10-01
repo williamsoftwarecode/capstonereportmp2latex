@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  29 SEP 2016 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  1 OCT 2016 16:53
 entering extended mode
 **./master.tex
 (master.tex
@@ -53,6 +53,24 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count91
+\LTcapwidth=\dimen111
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count92
+\LT@rows=\count93
+\c@LT@tables=\count94
+\c@LT@chunks=\count95
+\LT@p@ftn=\toks16
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -60,11 +78,11 @@ Package: cite 2015/02/27  v 5.5
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count91
-\float@exts=\toks16
-\float@box=\box26
-\@float@everytoks=\toks17
-\@floatcapt=\box27
+\c@float@type=\count96
+\float@exts=\toks17
+\float@box=\box30
+\@float@everytoks=\toks18
+\@floatcapt=\box31
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -89,14 +107,14 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count92
+\Gread@gobject=\count97
 ))
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/03/10 v2.15b AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -104,51 +122,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen113
+\@emptytoks=\toks19
+\ex@=\dimen114
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen114
+\pmbraise@=\dimen115
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count98
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count99
+\leftroot@=\count100
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count101
+\DOTSCASE@=\count102
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen115
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen116
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
-\tag@help=\toks19
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
-\andhelp@=\toks20
-\eqnshift@=\dimen116
-\alignsep@=\dimen117
-\tagshift@=\dimen118
-\tagwidth@=\dimen119
-\totwidth@=\dimen120
-\lineht@=\dimen121
-\@envbody=\toks21
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks22
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks20
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks21
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks22
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
@@ -157,15 +175,15 @@ Package: csquotes 2016/07/14 v5.1h context-sensitive quotations (JAW)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count105
+\etb@tempcnta=\count110
 )
-\csq@reset=\count106
-\csq@gtype=\count107
-\csq@glevel=\count108
-\csq@qlevel=\count109
-\csq@maxlvl=\count110
-\csq@tshold=\count111
-\csq@ltx@everypar=\toks23
+\csq@reset=\count111
+\csq@gtype=\count112
+\csq@glevel=\count113
+\csq@qlevel=\count114
+\csq@maxlvl=\count115
+\csq@tshold=\count116
+\csq@ltx@everypar=\toks24
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
 File: csquotes.def 2016/07/14 v5.1h csquotes generic definitions (JAW)
@@ -227,14 +245,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen122
-\Hy@linkcounter=\count112
-\Hy@pagecounter=\count113
+\@linkdim=\dimen123
+\Hy@linkcounter=\count117
+\Hy@pagecounter=\count118
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count114
+\Hy@SavedSpaceFactor=\count119
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -246,17 +264,17 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count115
+\c@Hy@tempcnt=\count120
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen123
-\Fld@menulength=\count116
-\Field@Width=\dimen124
-\Fld@charsize=\dimen125
+\XeTeXLinkMargin=\dimen124
+\Fld@menulength=\count121
+\Field@Width=\dimen125
+\Fld@charsize=\dimen126
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -266,24 +284,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count117
-\c@Item=\count118
-\c@Hfootnote=\count119
+\Hy@abspage=\count122
+\c@Item=\count123
+\c@Hfootnote=\count124
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
-\Fld@listcount=\count120
-\c@bookmark@seq@number=\count121
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip46
+\Hy@SectionHShift=\skip50
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
@@ -293,10 +311,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
 )
-\XKV@depth=\count122
+\XKV@depth=\count127
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
@@ -308,52 +326,52 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box30
+\collectedbox=\box34
 )
-\tc@llx=\dimen126
-\tc@lly=\dimen127
-\tc@urx=\dimen128
-\tc@ury=\dimen129
+\tc@llx=\dimen127
+\tc@lly=\dimen128
+\tc@urx=\dimen129
+\tc@ury=\dimen130
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen130
-\adjbox@Height=\dimen131
-\adjbox@Depth=\dimen132
-\adjbox@Totalheight=\dimen133
+\adjbox@Width=\dimen131
+\adjbox@Height=\dimen132
+\adjbox@Depth=\dimen133
+\adjbox@Totalheight=\dimen134
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count123
+\c@checkoddpage=\count128
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box31
-\sift@deathcycles=\count124
-\@vwid@loff=\dimen134
-\@vwid@roff=\dimen135
+\@vwid@box=\box35
+\sift@deathcycles=\count129
+\@vwid@loff=\dimen135
+\@vwid@roff=\dimen136
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count125
-\lst@gtempboxa=\box32
-\lst@token=\toks26
-\lst@length=\count126
-\lst@currlwidth=\dimen136
-\lst@column=\count127
-\lst@pos=\count128
-\lst@lostspace=\dimen137
-\lst@width=\dimen138
-\lst@newlines=\count129
-\lst@lineno=\count130
-\lst@maxwidth=\dimen139
+\lst@mode=\count130
+\lst@gtempboxa=\box36
+\lst@token=\toks27
+\lst@length=\count131
+\lst@currlwidth=\dimen137
+\lst@column=\count132
+\lst@pos=\count133
+\lst@lostspace=\dimen138
+\lst@width=\dimen139
+\lst@newlines=\count134
+\lst@lineno=\count135
+\lst@maxwidth=\dimen140
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count131
-\lst@skipnumbers=\count132
-\lst@framebox=\box33
+\c@lstnumber=\count136
+\lst@skipnumbers=\count137
+\lst@framebox=\box37
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -371,20 +389,20 @@ Package csquotes Info: ... none found.
  (master.aux)
 \openout1 = `master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -422,17 +440,17 @@ LaTeX Font Info:    ... okay on input line 50.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen140
-\scratchbox=\box34
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen141
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count138
+\scratchdimen=\dimen141
+\scratchbox=\box38
+\nofMPsegments=\count139
+\nofMParguments=\count140
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen142
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
+\everyMPtoPDFconversion=\toks29
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -446,8 +464,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 50.
+\AtBeginShipoutBox=\box39
+Package hyperref Info: Link coloring OFF on input line 51.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -455,30 +473,30 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count139
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (master.out) (master.out)
 \@outlinefile=\write3
 \openout3 = `master.out'.
 
-\c@lstlisting=\count140
-LaTeX Info: Redefining \celsius on input line 50.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 50.
+\c@lstlisting=\count145
+LaTeX Info: Redefining \celsius on input line 51.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 51.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 50.
-Package gensymb Info: Using \Omega for \ohm on input line 50.
+LaTeX Info: Redefining \ohm on input line 51.
+Package gensymb Info: Using \Omega for \ohm on input line 51.
 
 Package gensymb Warning: Not defining \micro.
 
-(title.tex <unimelblogo.png, id=371, 284.5029pt x 288.1164pt>
+(title.tex <unimelblogo.png, id=483, 284.5029pt x 288.1164pt>
 File: unimelblogo.png Graphic file (type png)
 
 <use unimelblogo.png>
@@ -520,22 +538,22 @@ Overfull \vbox (1.64746pt too high) has occurred while \output is active []
 
 ] [6] (master.toc [7
 
-] [8] [9] [10])
+] [8] [9] [10] [11])
 \tf@toc=\write4
 \openout4 = `master.toc'.
 
- [11] (master.lof
-[12
+ [12]
+(master.lof [13
 
-])
+] [14])
 \tf@lof=\write5
 \openout5 = `master.lof'.
 
- [13] (master.lot)
+ [15] [16] (master.lot)
 \tf@lot=\write6
 \openout6 = `master.lot'.
 
- [14
+ [17
 
 ] (intro.tex
 Chapter 1.
@@ -552,13 +570,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[2] [3] <ch3f3.jpg, id=678, 679.53876pt x 399.4925pt>
+[2] [3] <ch3f3.jpg, id=934, 679.53876pt x 399.4925pt>
 File: ch3f3.jpg Graphic file (type jpg)
  <use ch3f3.jpg>
 Package pdftex.def Info: ch3f3.jpg used on input line 54.
 (pdftex.def)             Requested size: 338.5863pt x 199.05083pt.
 
-<ch3f4.jpg, id=681, 679.53876pt x 484.81125pt>
+<ch3f4.jpg, id=937, 679.53876pt x 484.81125pt>
 File: ch3f4.jpg Graphic file (type jpg)
  <use ch3f4.jpg>
 Package pdftex.def Info: ch3f4.jpg used on input line 61.
@@ -577,7 +595,7 @@ Missing character: There is no ì in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- <jiahuipic1.jpg, id=699, 709.4505pt x 464.937pt>
+ <jiahuipic1.jpg, id=954, 709.4505pt x 464.937pt>
 File: jiahuipic1.jpg Graphic file (type jpg)
  <use jiahuipic1.jpg>
 Package pdftex.def Info: jiahuipic1.jpg used on input line 106.
@@ -611,96 +629,173 @@ Missing character: There is no ì in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-) (wireless.tex [8]
-Chapter 2.
-[9
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+ [8]
+<georgepic1.jpg, id=986, 417.9615pt x 358.941pt>
+File: georgepic1.jpg Graphic file (type jpg)
+ <use georgepic1.jpg>
+Package pdftex.def Info: georgepic1.jpg used on input line 149.
+(pdftex.def)             Requested size: 290.22105pt x 249.2524pt.
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+<georgepic2.jpg, id=988, 467.346pt x 342.078pt>
+File: georgepic2.jpg Graphic file (type jpg)
+ <use georgepic2.jpg>
+Package pdftex.def Info: georgepic2.jpg used on input line 155.
+(pdftex.def)             Requested size: 290.22105pt x 212.42543pt.
+ [9 <./georgepic1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-[10]) (project.tex [11]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+
+ []
+
+[10 <./georgepic2.jpg>]) (wireless.tex [11]
+Chapter 2.
+[12
+
+] <lit1.jpg, id=1024, 420.97275pt x 143.3355pt>
+File: lit1.jpg Graphic file (type jpg)
+ <use lit1.jpg>
+Package pdftex.def Info: lit1.jpg used on input line 19.
+(pdftex.def)             Requested size: 483.69684pt x 164.69235pt.
+ [13 <./lit1.jpg>] <lit2.jpg, id=1035, 384.83775pt x 143.93774pt>
+File: lit2.jpg Graphic file (type jpg)
+ <use lit2.jpg>
+Package pdftex.def Info: lit2.jpg used on input line 36.
+(pdftex.def)             Requested size: 338.5863pt x 126.64583pt.
+ [14 <./lit2.jpg>] <lit3.jpg, id=1043, 318.59026pt x 152.9715pt>
+File: lit3.jpg Graphic file (type jpg)
+ <use lit3.jpg>
+Package pdftex.def Info: lit3.jpg used on input line 55.
+(pdftex.def)             Requested size: 338.5863pt x 162.58546pt.
+ [15]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+[16 <./lit3.jpg>]
+Overfull \hbox (2.55594pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/bx/n/14.4 Consideration of e-Health Sen-sor by Cook-ing Hacks (Li-be
+lium) 
+ []
+
+<lit4.jpg, id=1061, 514.3215pt x 209.583pt>
+File: lit4.jpg Graphic file (type jpg)
+ <use lit4.jpg>
+Package pdftex.def Info: lit4.jpg used on input line 82.
+(pdftex.def)             Requested size: 338.5863pt x 137.97342pt.
+ [17]
+<lit5.jpg, id=1070, 508.90125pt x 204.16275pt>
+File: lit5.jpg Graphic file (type jpg)
+ <use lit5.jpg>
+Package pdftex.def Info: lit5.jpg used on input line 99.
+(pdftex.def)             Requested size: 483.69684pt x 194.05942pt.
+ [18 <./lit4.jpg>] [19 <./lit5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+[20]) (project.tex [21]
 Chapter 3.
-<system2.png, id=748, 1185.42876pt x 421.575pt>
+<system2.png, id=1098, 1185.42876pt x 421.575pt>
 File: system2.png Graphic file (type png)
  <use system2.png>
 Package pdftex.def Info: system2.png used on input line 18.
 (pdftex.def)             Requested size: 483.69684pt x 172.01704pt.
- [12
+ [22
 
 ])
-(terminal.tex [13 <./system2.png>]
+(terminal.tex [23 <./system2.png>]
 Chapter 4.
-[14
+[24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[15] <rpi3.jpg, id=780, 376.40625pt x 250.68657pt>
+[25] <rpi3.jpg, id=1131, 376.40625pt x 250.68657pt>
 File: rpi3.jpg Graphic file (type jpg)
  <use rpi3.jpg>
 Package pdftex.def Info: rpi3.jpg used on input line 48.
 (pdftex.def)             Requested size: 338.5863pt x 225.51636pt.
- [16 <./rpi3.jpg>] [17]) (devices.tex [18]
+ [26 <./rpi3.jpg>] [27]
+Overfull \hbox (0.48096pt too wide) in paragraph at lines 103--103
+[]\OT1/cmr/bx/n/17.28 Portable Power Sup-ply for the Rasp-berry Pi 3 Model
+ []
+
+) (devices.tex [28]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-[19
+[29
 
-] <ad8232funcdiagram.jpg, id=825, 230.0595pt x 230.0595pt>
+] <ad8232funcdiagram.jpg, id=1175, 230.0595pt x 230.0595pt>
 File: ad8232funcdiagram.jpg Graphic file (type jpg)
 
 <use ad8232funcdiagram.jpg>
 Package pdftex.def Info: ad8232funcdiagram.jpg used on input line 38.
 (pdftex.def)             Requested size: 241.84842pt x 241.86096pt.
- [20]
-<ad8232pin.jpg, id=834, 181.8795pt x 177.0615pt>
+ [30]
+<ad8232pin.jpg, id=1184, 181.8795pt x 177.0615pt>
 File: ad8232pin.jpg Graphic file (type jpg)
  <use ad8232pin.jpg>
 Package pdftex.def Info: ad8232pin.jpg used on input line 45.
 (pdftex.def)             Requested size: 193.47577pt x 188.3543pt.
 
-<ad8232schematic.jpg, id=836, 569.7285pt x 343.88475pt>
+<ad8232schematic.jpg, id=1186, 569.7285pt x 343.88475pt>
 File: ad8232schematic.jpg Graphic file (type jpg)
 
 <use ad8232schematic.jpg>
 Package pdftex.def Info: ad8232schematic.jpg used on input line 54.
 (pdftex.def)             Requested size: 483.69684pt x 291.95709pt.
- [21 <./ad8232funcdiagram.jpg> <./ad8232pin.jpg>]
-[22 <./ad8232schematic.jpg>]
-<ad8232cardiacconfig.jpg, id=856, 349.90726pt x 272.217pt>
+ [31 <./ad8232funcdiagram.jpg> <./ad8232pin.jpg>]
+[32 <./ad8232schematic.jpg>]
+<ad8232cardiacconfig.jpg, id=1206, 349.90726pt x 272.217pt>
 File: ad8232cardiacconfig.jpg Graphic file (type jpg)
 
 <use ad8232cardiacconfig.jpg>
 Package pdftex.def Info: ad8232cardiacconfig.jpg used on input line 82.
 (pdftex.def)             Requested size: 338.5863pt x 263.40633pt.
- <ad8232sfboard.jpg, id=860, 144.54pt x 144.54pt>
-File: ad8232sfboard.jpg Graphic file (type jpg)
 
-<use ad8232sfboard.jpg>
+<ad8232sfboard.jpg, id=1210, 144.54pt x 144.54pt>
+File: ad8232sfboard.jpg Graphic file (type jpg)
+ <use ad8232sfboard.jpg>
 Package pdftex.def Info: ad8232sfboard.jpg used on input line 91.
 (pdftex.def)             Requested size: 193.47577pt x 193.48627pt.
- [23 <./ad8232cardiacconfig.jpg>]
-<ad8232fritzing.png, id=872, 602.25pt x 326.21875pt>
+
+[33 <./ad8232cardiacconfig.jpg>]
+<ad8232fritzing.png, id=1222, 602.25pt x 326.21875pt>
 File: ad8232fritzing.png Graphic file (type png)
  <use ad8232fritzing.png>
 Package pdftex.def Info: ad8232fritzing.png used on input line 118.
 (pdftex.def)             Requested size: 435.32419pt x 235.80814pt.
 
-[24 <./ad8232sfboard.jpg>] [25 <./ad8232fritzing.png>]
-<jiahuipic2.jpg, id=894, 169.8345pt x 308.352pt>
+[34 <./ad8232sfboard.jpg>] <ecgsetup.jpg, id=1237, 602.25pt x 444.66125pt>
+File: ecgsetup.jpg Graphic file (type jpg)
+
+<use ecgsetup.jpg>
+Package pdftex.def Info: ecgsetup.jpg used on input line 146.
+(pdftex.def)             Requested size: 290.22105pt x 214.28987pt.
+ [35 <./ad8232fritzing.png>]
+<jiahuipic2.jpg, id=1246, 169.8345pt x 308.352pt>
 File: jiahuipic2.jpg Graphic file (type jpg)
  <use jiahuipic2.jpg>
-Package pdftex.def Info: jiahuipic2.jpg used on input line 157.
+Package pdftex.def Info: jiahuipic2.jpg used on input line 161.
 (pdftex.def)             Requested size: 145.11052pt x 263.4696pt.
-
-Overfull \hbox (58.4523pt too wide) in paragraph at lines 161--162
+ [36 <./ecgsetup.jpg>]
+Overfull \hbox (58.4523pt too wide) in paragraph at lines 165--166
 \OT1/cmr/m/n/12 PLEASE CITEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 EEEEEE
  []
@@ -708,117 +803,211 @@ EEEEEE
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-[26 <./jiahuipic2.jpg>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- <jiahuipic3.jpg, id=899, 487.8225pt x 275.22826pt>
+[37 <./jiahuipic2.jpg>] <jiahuipic3.jpg, id=1256, 487.8225pt x 275.22826pt>
 File: jiahuipic3.jpg Graphic file (type jpg)
 
 <use jiahuipic3.jpg>
-Package pdftex.def Info: jiahuipic3.jpg used on input line 184.
+Package pdftex.def Info: jiahuipic3.jpg used on input line 188.
 (pdftex.def)             Requested size: 386.95894pt x 218.32246pt.
- [27 <./jiahuipic3.jpg>]
-<jiahuipic4.jpg, id=904, 498.06075pt x 232.4685pt>
+ <jiahuipic4.jpg, id=1257, 498.06075pt x 232.4685pt>
 File: jiahuipic4.jpg Graphic file (type jpg)
- <use jiahuipic4.jpg>
-Package pdftex.def Info: jiahuipic4.jpg used on input line 198.
-(pdftex.def)             Requested size: 338.5863pt x 158.041pt.
 
-<temperaturefritzing1.jpg, id=907, 395.076pt x 304.7385pt>
+<use jiahuipic4.jpg>
+Package pdftex.def Info: jiahuipic4.jpg used on input line 202.
+(pdftex.def)             Requested size: 338.5863pt x 158.041pt.
+ [38 <./jiahuipic3.jpg>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [39 <./jiahuipic4.jpg>]
+<georgepic3.jpg, id=1269, 524.55975pt x 163.812pt>
+File: georgepic3.jpg Graphic file (type jpg)
+ <use georgepic3.jpg>
+Package pdftex.def Info: georgepic3.jpg used on input line 231.
+(pdftex.def)             Requested size: 386.95894pt x 120.84653pt.
+
+<georgepic4.jpg, id=1270, 727.518pt x 355.3275pt>
+File: georgepic4.jpg Graphic file (type jpg)
+ <use georgepic4.jpg>
+Package pdftex.def Info: georgepic4.jpg used on input line 237.
+(pdftex.def)             Requested size: 435.32419pt x 212.618pt.
+ [40 <./georgepic3.jpg>] [41 <./georgepic4.jpg>]
+<georgepic5.jpg, id=1284, 288.47775pt x 182.48175pt>
+File: georgepic5.jpg Graphic file (type jpg)
+ <use georgepic5.jpg>
+Package pdftex.def Info: georgepic5.jpg used on input line 269.
+(pdftex.def)             Requested size: 193.47577pt x 122.38742pt.
+
+<georgepic6.jpg, id=1286, 599.23875pt x 275.8305pt>
+File: georgepic6.jpg Graphic file (type jpg)
+ <use georgepic6.jpg>
+Package pdftex.def Info: georgepic6.jpg used on input line 285.
+(pdftex.def)             Requested size: 483.69684pt x 222.65126pt.
+
+[42 <./georgepic5.jpg>] <georgepic7.jpg, id=1294, 628.14674pt x 287.27325pt>
+File: georgepic7.jpg Graphic file (type jpg)
+
+<use georgepic7.jpg>
+Package pdftex.def Info: georgepic7.jpg used on input line 293.
+(pdftex.def)             Requested size: 483.69684pt x 221.21423pt.
+ [43 <./georgepic6.jpg> <./georgepic7.jpg>]
+<temperaturefritzing1.jpg, id=1302, 395.076pt x 304.7385pt>
 File: temperaturefritzing1.jpg Graphic file (type jpg)
 
 <use temperaturefritzing1.jpg>
-Package pdftex.def Info: temperaturefritzing1.jpg used on input line 215.
+Package pdftex.def Info: temperaturefritzing1.jpg used on input line 316.
 (pdftex.def)             Requested size: 241.84842pt x 186.55049pt.
- [28 <./jiahuipic4.jpg>]
-<thermistordatasheet2.jpg, id=914, 463.7325pt x 205.9695pt>
+
+<thermistordatasheet2.jpg, id=1304, 463.7325pt x 205.9695pt>
 File: thermistordatasheet2.jpg Graphic file (type jpg)
 
 <use thermistordatasheet2.jpg>
-Package pdftex.def Info: thermistordatasheet2.jpg used on input line 224.
+Package pdftex.def Info: thermistordatasheet2.jpg used on input line 325.
 (pdftex.def)             Requested size: 386.95894pt x 171.87233pt.
-
-<thermistordatasheet3.jpg, id=916, 475.7775pt x 230.0595pt>
+ [44 <./temperaturefritzing1.jpg>]
+<thermistordatasheet3.jpg, id=1310, 475.7775pt x 230.0595pt>
 File: thermistordatasheet3.jpg Graphic file (type jpg)
 
 <use thermistordatasheet3.jpg>
-Package pdftex.def Info: thermistordatasheet3.jpg used on input line 231.
+Package pdftex.def Info: thermistordatasheet3.jpg used on input line 332.
 (pdftex.def)             Requested size: 386.95894pt x 187.11946pt.
- [29 <./temperaturefritzing1.jpg> <./thermistordatasheet2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+ [45 <./thermistordatasheet2.jpg> <./thermistordatasheet3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
-[30 <./thermistordatasheet3.jpg>]
-<thermistor1.jpg, id=932, 492.6405pt x 274.02374pt>
+<thermistor1.jpg, id=1322, 492.6405pt x 274.02374pt>
 File: thermistor1.jpg Graphic file (type jpg)
  <use thermistor1.jpg>
-Package pdftex.def Info: thermistor1.jpg used on input line 277.
-(pdftex.def)             Requested size: 483.69684pt x 269.05573pt.
+Package pdftex.def Info: thermistor1.jpg used on input line 378.
+(pdftex.def)             Requested size: 386.95894pt x 215.2429pt.
 
-[31 <./thermistor1.jpg>] <thermistor2.jpg, id=945, 486.01575pt x 331.2375pt>
+[46 <./thermistor1.jpg>] <thermistor2.jpg, id=1334, 486.01575pt x 331.2375pt>
 File: thermistor2.jpg Graphic file (type jpg)
 
 <use thermistor2.jpg>
-Package pdftex.def Info: thermistor2.jpg used on input line 300.
-(pdftex.def)             Requested size: 483.69684pt x 329.6648pt.
- <thermistor3.jpg, id=948, 492.6405pt x 310.761pt>
+Package pdftex.def Info: thermistor2.jpg used on input line 401.
+(pdftex.def)             Requested size: 386.95894pt x 263.73183pt.
+ [47 <./thermistor2.jpg>]
+<thermistor3.jpg, id=1343, 492.6405pt x 310.761pt>
 File: thermistor3.jpg Graphic file (type jpg)
+ <use thermistor3.jpg>
+Package pdftex.def Info: thermistor3.jpg used on input line 410.
+(pdftex.def)             Requested size: 386.95894pt x 244.09966pt.
 
-<use thermistor3.jpg>
-Package pdftex.def Info: thermistor3.jpg used on input line 309.
-(pdftex.def)             Requested size: 483.69684pt x 305.12694pt.
- [32 <./thermistor2.jpg>]
-<thermistor5.jpg, id=957, 563.10374pt x 421.575pt>
+<thermistor5.jpg, id=1347, 563.10374pt x 421.575pt>
 File: thermistor5.jpg Graphic file (type jpg)
  <use thermistor5.jpg>
-Package pdftex.def Info: thermistor5.jpg used on input line 330.
+Package pdftex.def Info: thermistor5.jpg used on input line 431.
 (pdftex.def)             Requested size: 386.95894pt x 289.70343pt.
 
-[33 <./thermistor3.jpg>] [34 <./thermistor5.jpg>]) (processing.tex [35]
-[36]
-Chapter 6.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [37
+[48 <./thermistor3.jpg>] [49 <./thermistor5.jpg>]
+<psowebsite.jpg, id=1368, 257.16075pt x 184.2885pt>
+File: psowebsite.jpg Graphic file (type jpg)
+ <use psowebsite.jpg>
+Package pdftex.def Info: psowebsite.jpg used on input line 456.
+(pdftex.def)             Requested size: 290.22105pt x 207.98206pt.
 
-] [38])
-(results.tex [39]
+[50 <./psowebsite.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--476
+
+ []
+
+<psoltspice.jpg, id=1376, 553.46774pt x 352.31625pt>
+File: psoltspice.jpg Graphic file (type jpg)
+ <use psoltspice.jpg>
+Package pdftex.def Info: psoltspice.jpg used on input line 481.
+(pdftex.def)             Requested size: 386.95894pt x 246.33476pt.
+
+
+LaTeX Warning: Citation `bc548' on page 51 undefined on input line 486.
+
+<psooutput.jpg, id=1378, 560.0925pt x 332.442pt>
+File: psooutput.jpg Graphic file (type jpg)
+ <use psooutput.jpg>
+Package pdftex.def Info: psooutput.jpg used on input line 490.
+(pdftex.def)             Requested size: 386.95894pt x 229.68958pt.
+ [51 <./psoltspice.jpg>] <psooutputzoom.jpg, id=1385, 659.46375pt x 361.35pt>
+File: psooutputzoom.jpg Graphic file (type jpg)
+
+<use psooutputzoom.jpg>
+Package pdftex.def Info: psooutputzoom.jpg used on input line 497.
+(pdftex.def)             Requested size: 386.95894pt x 212.03676pt.
+ <psooutputfft.jpg, id=1387, 653.44125pt x 361.95226pt>
+File: psooutputfft.jpg Graphic file (type jpg)
+
+<use psooutputfft.jpg>
+Package pdftex.def Info: psooutputfft.jpg used on input line 504.
+(pdftex.def)             Requested size: 386.95894pt x 214.33975pt.
+ [52 <./psooutput.jpg> <./psooutputzoom.jpg>] [53 <./psooutputfft.jpg>] [54] <p
+socalibration.jpg, id=1415, 513.117pt x 320.397pt>
+File: psocalibration.jpg Graphic file (type jpg)
+
+<use psocalibration.jpg>
+Package pdftex.def Info: psocalibration.jpg used on input line 564.
+(pdftex.def)             Requested size: 386.95894pt x 241.6318pt.
+ [55] [56 <./psocalibration.jpg>]) (processing.tex
+[57]
+Chapter 6.
+[58
+
+]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 22.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [59]
+<rpi3vnc.jpg, id=1476, 283.0575pt x 140.32425pt>
+File: rpi3vnc.jpg Graphic file (type jpg)
+ <use rpi3vnc.jpg>
+Package pdftex.def Info: rpi3vnc.jpg used on input line 87.
+(pdftex.def)             Requested size: 338.5863pt x 167.8658pt.
+ [60]
+[61 <./rpi3vnc.jpg>] <vncserver.png, id=1506, 1153.30875pt x 650.43pt>
+File: vncserver.png Graphic file (type png)
+
+<use vncserver.png>
+Package pdftex.def Info: vncserver.png used on input line 133.
+(pdftex.def)             Requested size: 483.69684pt x 272.79167pt.
+ [62]) (results.tex [63 <./vncserver.png>]
 Chapter 7.
-<ecgsim.jpg, id=1028, 651.03226pt x 271.0125pt>
+<ecgsim.jpg, id=1526, 651.03226pt x 271.0125pt>
 File: ecgsim.jpg Graphic file (type jpg)
  <use ecgsim.jpg>
 Package pdftex.def Info: ecgsim.jpg used on input line 9.
 (pdftex.def)             Requested size: 483.69684pt x 201.36075pt.
- [40
+ [64
 
  <./ecgsim.jpg>]
 Chapter 8.
-[41
+[65
 
 ]
 Chapter 9.
-<standardattachment.jpg, id=1041, 386.6445pt x 342.078pt>
+<standardattachment.jpg, id=1538, 386.6445pt x 342.078pt>
 File: standardattachment.jpg Graphic file (type jpg)
 
 <use standardattachment.jpg>
 Package pdftex.def Info: standardattachment.jpg used on input line 38.
 (pdftex.def)             Requested size: 241.84842pt x 213.97046pt.
- [42
+ [66
 
-] <body.png, id=1049, 602.25pt x 553.06625pt>
+] <body.png, id=1546, 602.25pt x 553.06625pt>
 File: body.png Graphic file (type png)
 
 <use body.png>
 Package pdftex.def Info: body.png used on input line 48.
 (pdftex.def)             Requested size: 241.84842pt x 222.10023pt.
- [43 <./standardattachment.jpg> <./body.png>]
-<ecgtest2.jpg, id=1057, 912.40875pt x 386.04225pt>
+ [67 <./standardattachment.jpg> <./body.png>]
+<ecgtest2.jpg, id=1555, 912.40875pt x 386.04225pt>
 File: ecgtest2.jpg Graphic file (type jpg)
  <use ecgtest2.jpg>
 Package pdftex.def Info: ecgtest2.jpg used on input line 68.
@@ -828,7 +1017,7 @@ Overfull \hbox (0.78886pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
-<ecgtest19.jpg, id=1059, 878.68275pt x 377.61075pt>
+<ecgtest19.jpg, id=1557, 878.68275pt x 377.61075pt>
 File: ecgtest19.jpg Graphic file (type jpg)
  <use ecgtest19.jpg>
 Package pdftex.def Info: ecgtest19.jpg used on input line 77.
@@ -838,8 +1027,8 @@ Overfull \hbox (0.8092pt too wide) in paragraph at lines 77--78
  [][] 
  []
 
-[44 <./ecgtest2.jpg> <./ecgtest19.jpg>]
-<ecgtest12.jpg, id=1067, 932.283pt x 371.58826pt>
+[68 <./ecgtest2.jpg> <./ecgtest19.jpg>]
+<ecgtest12.jpg, id=1565, 932.283pt x 371.58826pt>
 File: ecgtest12.jpg Graphic file (type jpg)
  <use ecgtest12.jpg>
 Package pdftex.def Info: ecgtest12.jpg used on input line 91.
@@ -849,7 +1038,7 @@ Overfull \hbox (0.81197pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-<ecgtest7.jpg, id=1069, 923.24925pt x 367.97475pt>
+<ecgtest7.jpg, id=1567, 923.24925pt x 367.97475pt>
 File: ecgtest7.jpg Graphic file (type jpg)
  <use ecgtest7.jpg>
 Package pdftex.def Info: ecgtest7.jpg used on input line 100.
@@ -859,8 +1048,8 @@ Overfull \hbox (0.80196pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
-[45 <./ecgtest12.jpg> <./ecgtest7.jpg>]
-<jiahuipic5.jpg, id=1074, 234.8775pt x 151.16475pt>
+[69 <./ecgtest12.jpg> <./ecgtest7.jpg>]
+<jiahuipic5.jpg, id=1572, 234.8775pt x 151.16475pt>
 File: jiahuipic5.jpg Graphic file (type jpg)
  <use jiahuipic5.jpg>
 Package pdftex.def Info: jiahuipic5.jpg used on input line 114.
@@ -871,25 +1060,71 @@ Overfull \hbox (90.42978pt too wide) in paragraph at lines 118--119
 EEEEEEEEEEEE 
  []
 
-<jiahuipic6.jpg, id=1075, 364.9635pt x 257.16075pt>
+<jiahuipic6.jpg, id=1573, 364.9635pt x 257.16075pt>
 File: jiahuipic6.jpg Graphic file (type jpg)
  <use jiahuipic6.jpg>
 Package pdftex.def Info: jiahuipic6.jpg used on input line 126.
 (pdftex.def)             Requested size: 386.95894pt x 272.67542pt.
 
-[46 <./jiahuipic5.jpg>] <jiahuipic7.jpg, id=1081, 496.85625pt x 384.2355pt>
+[70 <./jiahuipic5.jpg>] <jiahuipic7.jpg, id=1578, 496.85625pt x 384.2355pt>
 File: jiahuipic7.jpg Graphic file (type jpg)
 
 <use jiahuipic7.jpg>
 Package pdftex.def Info: jiahuipic7.jpg used on input line 134.
 (pdftex.def)             Requested size: 386.95894pt x 299.25104pt.
- [47 <./jiahuipic6.jpg>]) (challenges.tex [48 <./jiahuipic7.jpg>]
-Chapter 10.
-[49
+ [71 <./jiahuipic6.jpg>]
+<georgepic8.jpg, id=1583, 605.26125pt x 456.5055pt>
+File: georgepic8.jpg Graphic file (type jpg)
+ <use georgepic8.jpg>
+Package pdftex.def Info: georgepic8.jpg used on input line 147.
+(pdftex.def)             Requested size: 338.5863pt x 255.36967pt.
 
-]) (conclusion.tex [50]
+[72 <./jiahuipic7.jpg>] <georgepic9.jpg, id=1588, 726.91576pt x 364.36125pt>
+File: georgepic9.jpg Graphic file (type jpg)
+
+<use georgepic9.jpg>
+Package pdftex.def Info: georgepic9.jpg used on input line 155.
+(pdftex.def)             Requested size: 386.95894pt x 193.96117pt.
+ <georgepic10.jpg, id=1589, 747.9945pt x 435.42674pt>
+File: georgepic10.jpg Graphic file (type jpg)
+
+<use georgepic10.jpg>
+Package pdftex.def Info: georgepic10.jpg used on input line 163.
+(pdftex.def)             Requested size: 386.95894pt x 225.2605pt.
+ [73 <./georgepic8.jpg> <./georgepic9.jpg>]
+<georgepic11.jpg, id=1595, 413.74574pt x 283.0575pt>
+File: georgepic11.jpg Graphic file (type jpg)
+ <use georgepic11.jpg>
+Package pdftex.def Info: georgepic11.jpg used on input line 173.
+(pdftex.def)             Requested size: 386.95894pt x 264.74811pt.
+
+[74 <./georgepic10.jpg>] <georgepic12.jpg, id=1600, 576.35326pt x 339.669pt>
+File: georgepic12.jpg Graphic file (type jpg)
+
+<use georgepic12.jpg>
+Package pdftex.def Info: georgepic12.jpg used on input line 183.
+(pdftex.def)             Requested size: 386.95894pt x 228.05388pt.
+ [75 <./georgepic11.jpg>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+
+<georgepic13.jpg, id=1605, 699.8145pt x 220.4235pt>
+File: georgepic13.jpg Graphic file (type jpg)
+ <use georgepic13.jpg>
+Package pdftex.def Info: georgepic13.jpg used on input line 200.
+(pdftex.def)             Requested size: 483.69684pt x 152.35135pt.
+)
+(challenges.tex [76 <./georgepic12.jpg> <./georgepic13.jpg>] [77]
+Chapter 10.
+[78
+
+]) (conclusion.tex [79]
 Chapter 11.
-) (master.bbl [51
+) (master.bbl [80
 
 ]
 Underfull \hbox (badness 7030) in paragraph at lines 4--9
@@ -922,130 +1157,277 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 48--52
+Underfull \hbox (badness 10000) in paragraph at lines 42--47
+[]$\OT1/pcr/m/n/12 http : / / www . ruralareavet . org / PDF / Anesthesia-[]Pat
+ient _ Monitoring .
+ []
+
+[81
+
+]
+Underfull \hbox (badness 3068) in paragraph at lines 76--80
 []\OT1/cmr/m/n/12 Casey Reas Ben Fry.  Pro-cess-ing.  []$\OT1/pcr/m/n/12 https 
 : / / processing . org / download /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--60
+Underfull \hbox (badness 10000) in paragraph at lines 82--87
+[]\OT1/cmr/m/n/12 Inc. Biopac Sys-tems.  BIONO-MADIX WIRE-LESS WEAR-ABLE PHYS-I
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--87
+\OT1/cmr/m/n/12 OL-OGY.  []$\OT1/pcr/m/n/12 https : / / www . biopac . com / pr
+oduct-[]category / research /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
 []\OT1/cmr/m/n/12 SparkFun Elec-tron-ics (R) CaseyTheR-obot.  Ad8232 heart rate
  mon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--60
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
 \OT1/cmr/m/n/12 i-tor hookup guide.  []$\OT1/pcr/m/n/12 https : / / learn . spa
 rkfun . com / tutorials /
  []
 
-[52
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
+Underfull \hbox (badness 10000) in paragraph at lines 102--107
+\OT1/pcr/m/n/12 / / www . mayoclinic . org / healthy-[]lifestyle / fitness / ex
+pert-[]answers /
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 109--114
+[]\OT1/cmr/m/n/12 Wikimedia Com-mons.  File:oxy and de-oxy hemoglobin near-infr
+ared ab-sorp-tion
+ []
+
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 131--137
 []\OT1/cmr/m/n/12 Ubuntu-Team-Member De-viantArt.  8 ad-van-tages of us-ing lin
 ux over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
+Underfull \hbox (badness 10000) in paragraph at lines 131--137
 \OT1/cmr/m/n/12 win-dows.  []$\OT1/pcr/m/n/12 http : / / ubuntu-[]artists . dev
 iantart . com / journal /
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 75--81
+Underfull \hbox (badness 2302) in paragraph at lines 131--137
 \OT1/pcr/m/n/12 8-[]Advantages-[]of-[]using-[]Linux-[]over-[]Windows-[]29168191
 4$[]\OT1/cmr/m/n/12 , 3 2012.  Ac-
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 83--89
+Underfull \hbox (badness 3396) in paragraph at lines 139--145
 []\OT1/cmr/m/n/12 Casey Kuhns Spark-Fun Elec-tron-ics.  Ad8232[]heart[]rate[]mo
 nitor[]v10.  []$\OT1/pcr/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--89
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
 \OT1/pcr/m/n/12 / / cdn . sparkfun . com / datasheets / Sensors / Biometric / A
 D8232 _ Heart _
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 97--101
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
+\OT1/pcr/m/n/12 1294 / files / assets / common / downloads / Wireless % 20Techn
+ology % 20in %
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 171--175
 []\OT1/cmr/m/n/12 RASPBERRY PI FOUN-DA-TION.  Noobs.  []$\OT1/pcr/m/n/12 https 
 : / / www . raspberrypi . org /
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 103--107
+Underfull \hbox (badness 1635) in paragraph at lines 177--181
 []\OT1/cmr/m/n/12 RASPBERRY PI FOUN-DA-TION.  Rasp-berry pi 3 model b.  []$\OT1
 /pcr/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 109--114
+Underfull \hbox (badness 3428) in paragraph at lines 183--188
 []\OT1/cmr/m/n/12 RASPBERRY PI FOUN-DA-TION.  Rasp-berry pi hard-ware.  []$\OT1
 /pcr/m/n/12 https : / / www .
  []
 
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 192--197
+[83]
+Underfull \hbox (badness 7504) in paragraph at lines 236--241
+[]\OT1/cmr/m/n/12 Withings In-spire Health.  What does spo2 mean? what is a nor
+-mal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--241
+\OT1/cmr/m/n/12 spo2 level?  []$\OT1/pcr/m/n/12 https : / / withings . zendesk 
+. com / hc / en-[]us / articles /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--241
+\OT1/pcr/m/n/12 201494667-[]What-[]does-[]SpO2-[]mean-[]What-[]is-[]a-[]normal-
+[]SpO2-[]level-[]$[]\OT1/cmr/m/n/12 .
+ []
+
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 278--283
+[]\OT1/cmr/m/n/12 R-B (Em-bed-ded Lab).  Easy pulse sen-sor (ver-sion 1.1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--283
+\OT1/cmr/m/n/12 overview (part 1).  []$\OT1/pcr/m/n/12 http : / / embedded-[]la
+b . com / blog /
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 278--283
+\OT1/pcr/m/n/12 easy-[]pulse-[]version-[]1-[]1-[]sensor-[]overview-[]part-[]1/$
+[]\OT1/cmr/m/n/12 .  Ac-cessed: 2016-9-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--291
+[]\OT1/cmr/m/n/12 Libelium.  e-health sen-sor plat-form v2.0 for ar-duino and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--291
+\OT1/cmr/m/n/12 rasp-berry pi [bio-met-ric / med-i-cal ap-pli-ca-tions].  []$\O
+T1/pcr/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--291
+\OT1/pcr/m/n/12 / / www . cooking-[]hacks . com / documentation / tutorials /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--291
+\OT1/pcr/m/n/12 ehealth-[]biometric-[]sensor-[]platform-[]arduino-[]raspberry-[
+]pi-[]medical$[]\OT1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
 []\OT1/cmr/m/n/12 Johns Hop-kins Medicine.  Elec-troen-cephalo-gram (eeg).  []$
 \OT1/pcr/m/n/12 http : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--197
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
 \OT1/pcr/m/n/12 hopkinsmedicine . org / healthlibrary / test _ procedures / neu
 rological /
  []
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--312
+\OT1/pcr/m/n/12 project / tradlospasient / 080208-[]seminar-[]rikshospitalet / 
+bwsn _
+ []
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 346--351
 []\OT1/cmr/m/n/12 Electrocomponents PLC.  Ntc ther-mis-tors.  []$\OT1/pcr/m/n/1
 2 http : / / docs-[]europe .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--261
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
+[]\OT1/cmr/m/n/12 Andy Py-bus.  Ex-pand-ing the role of smart-phones in the op-
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
+\OT1/cmr/m/n/12 er-at-ing the-atre.  []$\OT1/pcr/m/n/12 http : / / www . anzca 
+. edu . au / documents /
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
+[]\OT1/cmr/m/n/12 scruss.  Pro-cess-ing 2.1 + or-a-cle java + rasp-berry pi + s
+e-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
+\OT1/cmr/m/n/12 rial + ar-duino = .  []$\OT1/pcr/m/n/12 http : / / scruss . com
+ / blog / 2014 / 01 / 07 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
+\OT1/pcr/m/n/12 processing-[]2-[]1-[]oracle-[]java-[]raspberry-[]pi-[]serial-[]
+arduino-[] % E2 %
+ []
+
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 421--427
 []\OT1/cmr/m/n/12 Electronics Tu-to-ri-als.  The rc os-cil-la-tor cir-cuit.  []
 $\OT1/pcr/m/n/12 http : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--261
+Underfull \hbox (badness 10000) in paragraph at lines 421--427
 \OT1/pcr/m/n/12 electronics-[]tutorials . ws / oscillator / rc _ oscillator . h
 tml$[]\OT1/cmr/m/n/12 , 2014.
  []
 
-) (appendixprograms.tex [55]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+) (appendixprograms.tex [87]
 Appendix A.
-<noobs.png, id=1180, 797.98125pt x 590.205pt>
+<noobs.png, id=1761, 797.98125pt x 590.205pt>
 File: noobs.png Graphic file (type png)
  <use noobs.png>
-Package pdftex.def Info: noobs.png used on input line 7.
+Package pdftex.def Info: noobs.png used on input line 10.
 (pdftex.def)             Requested size: 483.69684pt x 357.75507pt.
- [56
+ [88
 
-] [57 <./noobs.png>] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lst
-lang1.sty"
+] [89 <./noobs.png>] [90] <ecgarduino.png, id=1815, 384.43625pt x 501.875pt>
+File: ecgarduino.png Graphic file (type png)
+
+<use ecgarduino.png>
+Package pdftex.def Info: ecgarduino.png used on input line 90.
+(pdftex.def)             Requested size: 193.47577pt x 252.58334pt.
+ [91 <./ecgarduino.png>] [92] [93]
+<ecgprocessing.png, id=1922, 327.2225pt x 501.875pt>
+File: ecgprocessing.png Graphic file (type png)
+ <use ecgprocessing.png>
+Package pdftex.def Info: ecgprocessing.png used on input line 193.
+(pdftex.def)             Requested size: 193.47577pt x 296.73929pt.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 40.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 202.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 48.
- [58]
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 203.
+ [94 <./ecgprocessing.png>] [95] [96] [97] [98] [99]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [59]
-[60] [61] [62] [63]) (appendixpcb.tex [64]
+) [100]
+[101] [102] [103] [104]) (appendixpcb.tex [105]
 Appendix B.
-<AD8232_Heart_Rate_Monitor_v10.pdf, id=1445, 794.97pt x 614.295pt>
+<AD8232_Heart_Rate_Monitor_v10.pdf, id=2368, 794.97pt x 614.295pt>
 File: AD8232_Heart_Rate_Monitor_v10.pdf Graphic file (type pdf)
 
 <use AD8232_Heart_Rate_Monitor_v10.pdf>
@@ -1057,22 +1439,49 @@ Overfull \hbox (24.18631pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-[65
+[106
 
-] <RPI-3B.pdf, id=1451, 1195.46625pt x 845.1575pt>
+] <RPI-3B.pdf, id=2374, 1195.46625pt x 845.1575pt>
 File: RPI-3B.pdf Graphic file (type pdf)
  <use RPI-3B.pdf>
 Package pdftex.def Info: RPI-3B.pdf used on input line 25.
 (pdftex.def)             Requested size: 604.62105pt x 427.45242pt.
- [66 <./AD8232_Heart_Rate_Monitor_v10.pdf>]) (appendixmeasure.tex
-Overfull \hbox (3.07951pt too wide) in paragraph at lines 30--1
+
+[107 <./AD8232_Heart_Rate_Monitor_v10.pdf>]
+Overfull \hbox (3.07951pt too wide) in paragraph at lines 30--31
 \OT1/cmr/m/n/12 https://www.raspberrypi.org/documentation/hardware/raspberrypi/
 schematics/RPI-3B-V1[]2-
  []
 
-[67 <./RPI-3B.pdf, page is rotated 90 degrees>] [68]
+[108 <./RPI-3B.pdf, page is rotated 90 degrees>]
+<georgepic14.jpg, id=2408, 717.27975pt x 328.22626pt>
+File: georgepic14.jpg Graphic file (type jpg)
+ <use georgepic14.jpg>
+Package pdftex.def Info: georgepic14.jpg used on input line 39.
+(pdftex.def)             Requested size: 483.69684pt x 221.34282pt.
+
+<georgepic15.jpg, id=2409, 731.73375pt x 287.27325pt>
+File: georgepic15.jpg Graphic file (type jpg)
+ <use georgepic15.jpg>
+Package pdftex.def Info: georgepic15.jpg used on input line 47.
+(pdftex.def)             Requested size: 483.69684pt x 189.899pt.
+
+[109 <./georgepic14.jpg>] <georgepic16.jpg, id=2415, 726.91576pt x 397.485pt>
+File: georgepic16.jpg Graphic file (type jpg)
+
+<use georgepic16.jpg>
+Package pdftex.def Info: georgepic16.jpg used on input line 55.
+(pdftex.def)             Requested size: 483.69684pt x 264.48796pt.
+ <georgepic17.jpg, id=2416, 660.066pt x 299.9205pt>
+File: georgepic17.jpg Graphic file (type jpg)
+
+<use georgepic17.jpg>
+Package pdftex.def Info: georgepic17.jpg used on input line 63.
+(pdftex.def)             Requested size: 483.69684pt x 219.7822pt.
+) (appendixmeasure.tex [110 <./georgepic15.jpg> <./georgepic16.jpg>] [111 <./ge
+orgepic17.jpg>]
 Appendix C.
-<thermistordatasheet.jpg, id=1489, 506.49225pt x 519.1395pt>
+<thermistordatasheet.jpg, id=2425, 506.49225pt x 519.1395pt>
 File: thermistordatasheet.jpg Graphic file (type jpg)
 
 <use thermistordatasheet.jpg>
@@ -1083,34 +1492,115 @@ Overfull \hbox (24.18631pt too wide) in paragraph at lines 7--8
  [][] 
  []
 
-[69
+[112
 
 ]
 Overfull \vbox (155.004pt too high) has occurred while \output is active []
 
 
-[70 <./thermistordatasheet.jpg>]
-<thermistor4.jpg, id=1502, 563.10374pt x 421.575pt>
+[113 <./thermistordatasheet.jpg>]
+<thermistor4.jpg, id=2437, 563.10374pt x 421.575pt>
 File: thermistor4.jpg Graphic file (type jpg)
  <use thermistor4.jpg>
 Package pdftex.def Info: thermistor4.jpg used on input line 16.
 (pdftex.def)             Requested size: 386.95894pt x 289.70343pt.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
 
-[71 <./thermistor4.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Overfull \hbox (22.16722pt too wide) in alignment at lines 26--48
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 48
+ []
+
+
+Overfull \hbox (22.16722pt too wide) in alignment at lines 48--68
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[114 <./thermistor4.jpg>]
+Overfull \hbox (22.16722pt too wide) in alignment at lines 68--88
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[115]
+Overfull \hbox (22.16722pt too wide) in alignment at lines 88--108
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (22.16722pt too wide) in alignment at lines 108--128
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[116]
+Overfull \hbox (22.16722pt too wide) in alignment at lines 128--131
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[117]
+Overfull \hbox (24.7783pt too wide) in alignment at lines 136--157
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 157
+ []
+
+
+Overfull \hbox (24.7783pt too wide) in alignment at lines 157--177
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (24.7783pt too wide) in alignment at lines 177--197
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[118]
+Overfull \hbox (24.7783pt too wide) in alignment at lines 197--217
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[119]
+Overfull \hbox (24.7783pt too wide) in alignment at lines 217--237
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (24.7783pt too wide) in alignment at lines 237--241
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[120]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 243.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 85.
+ [121] [122]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
  (master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 4B417A7AC25BCECDD021F5114EEC7122;6671.
+(rerunfilecheck)             Checksum: 9D7F1CD0DCCED766EB3F5EEF13C54269;8957.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 10916 strings out of 493335
- 157400 string characters out of 3136674
- 484265 words of memory out of 3000000
- 13671 multiletter control sequences out of 15000+200000
+ 11830 strings out of 493335
+ 170472 string characters out of 3136674
+ 518954 words of memory out of 3000000
+ 14063 multiletter control sequences out of 15000+200000
  11683 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,8n,74p,1138b,2373s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1118,18 +1608,19 @@ Here is how much of TeX's memory you used:
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-courier/ucrro8a.pfb>
-Output written on master.pdf (86 pages, 3986844 bytes).
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/urw/courier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/cou
+rier/ucrro8a.pfb>
+Output written on master.pdf (140 pages, 6570880 bytes).
 PDF statistics:
- 1662 PDF objects out of 1728 (max. 8388607)
- 541 named destinations out of 1000 (max. 500000)
- 922 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2733 PDF objects out of 2984 (max. 8388607)
+ 1026 named destinations out of 1200 (max. 500000)
+ 1311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

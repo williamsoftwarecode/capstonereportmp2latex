@@ -1,5 +1,8 @@
 \chapter{Program Installation}
 
+\section{Operating System - Raspbian Jessie}
+\label{appraspbianjessie}
+
 The operating system used for the project is Raspbian Jessie. To simplify installation, the SD card of the Raspberry Pi was flashed with an OS installer containing Raspbian Jessie, called NOOBS (New Out Of the Box Software) \cite{rpi3noobs}. When starting up, the loading screen will look typically like Figure \ref{rpi3noobs}. The version of NOOBS used was version 1.9.2, with a release date of 27/5/2016. 
 
 \begin{figure}[H]
@@ -11,8 +14,6 @@ The operating system used for the project is Raspbian Jessie. To simplify instal
 
 Aside from using NOOBS for the OS installation, it is possible to download the Raspbian Jessie image from the official Raspberry Pi website, unzip the image file, and copy it to the SD card. However, NOOBS was used specifically for its convenience, since it is necessary to obtain disk imager utilities on Windows for this method. Nevertheless, the choice of installation approach does not in any way affect the functionality of the OS after it has been loaded.  
 
-\section{Operating System - Raspbian Jessie}
-\label{appraspbianjessie}
 
 
 
@@ -32,6 +33,308 @@ sudo apt-get install python-matplotlib
 
 
 \section{Code}
+
+\subsection{ECG Code for Arduino Pro Mini}
+\label{ecgarduino}
+
+The following source code is sourced from SparkFun's AD8232 Heart Rate Monitor GitHub repository \cite{ad8232github}. This is saved as Heart\_Rate\_Display\_Arduino.ino.
+
+\begin{lstlisting}
+/******************************************************************************
+Heart_Rate_Display.ino
+Demo Program for AD8232 Heart Rate sensor.
+Casey Kuhns @ SparkFun Electronics
+6/27/2014
+https://github.com/sparkfun/AD8232_Heart_Rate_Monitor
+The AD8232 Heart Rate sensor is a low cost EKG/ECG sensor.  This example shows
+how to create an ECG with real time display.  The display is using Processing.
+This sketch is based heavily on the Graphing Tutorial provided in the Arduino
+IDE. http://www.arduino.cc/en/Tutorial/Graph
+Resources:
+This program requires a Processing sketch to view the data in real time.
+Development environment specifics:
+IDE: Arduino 1.0.5
+Hardware Platform: Arduino Pro 3.3V/8MHz
+AD8232 Heart Monitor Version: 1.0
+This code is beerware. If you see me (or any other SparkFun employee) at the
+local pub, and you've found our code helpful, please buy us a round!
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+void setup() {
+// initialize the serial communication:
+Serial.begin(9600);
+pinMode(10, INPUT); // Setup for leads off detection LO +
+pinMode(11, INPUT); // Setup for leads off detection LO -
+
+}
+
+void loop() {
+
+if((digitalRead(10) == 1)||(digitalRead(11) == 1)){
+Serial.println('!');
+}
+else{
+// send the value of analog input 0:
+Serial.println(analogRead(A0));
+}
+//Wait for a bit to keep serial data from saturating
+delay(1);
+}
+\end{lstlisting}
+
+The method to upload is as the following figure: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{ecgarduino.png}
+	\caption{Upload sketch to Arduino Pro-Mini \cite{ad8232}}
+\end{figure}
+
+\subsection{ECG Code for Processing 2.2.1}
+\label{ecgprocessing}
+
+The following source code is sourced from SparkFun's AD8232 Heart Rate Monitor GitHub repository \cite{ad8232github}. This is saved as Heart\_Rate\_Display.pde.
+
+\begin{lstlisting}
+/******************************************************************************
+Heart_Rate_Display.ino
+Demo Program for AD8232 Heart Rate sensor.
+Casey Kuhns @ SparkFun Electronics
+6/27/2014
+https://github.com/sparkfun/AD8232_Heart_Rate_Monitor
+The AD8232 Heart Rate sensor is a low cost EKG/ECG sensor.  This example shows
+how to create an ECG with real time display.  The display is using Processing.
+This sketch is based heavily on the Graphing Tutorial provided in the Arduino
+IDE. http://www.arduino.cc/en/Tutorial/Graph
+Resources:
+This program requires a Processing sketch to view the data in real time.
+Development environment specifics:
+IDE: Arduino 1.0.5
+Hardware Platform: Arduino Pro 3.3V/8MHz
+AD8232 Heart Monitor Version: 1.0
+This code is beerware. If you see me (or any other SparkFun employee) at the
+local pub, and you've found our code helpful, please buy us a round!
+Distributed as-is; no warranty is given.
+******************************************************************************/
+
+import processing.serial.*;
+
+Serial myPort;        // The serial port
+int xPos = 1;         // horizontal position of the graph
+float height_old = 0;
+float height_new = 0;
+float inByte = 0;
+
+
+void setup () {
+// set the window size:
+size(1000, 400);        
+
+// List all the available serial ports
+println(Serial.list());
+// Open whatever port is the one you're using.
+myPort = new Serial(this, Serial.list()[2], 9600);
+// don't generate a serialEvent() unless you get a newline character:
+myPort.bufferUntil('\n');
+// set inital background:
+background(0xff);
+}
+
+
+void draw () {
+// everything happens in the serialEvent()
+}
+
+
+void serialEvent (Serial myPort) {
+// get the ASCII string:
+String inString = myPort.readStringUntil('\n');
+
+if (inString != null) {
+// trim off any whitespace:
+inString = trim(inString);
+
+// If leads off detection is true notify with blue line
+if (inString.equals("!")) { 
+stroke(0, 0, 0xff); //Set stroke to blue ( R, G, B)
+inByte = 512;  // middle of the ADC range (Flat Line)
+}
+// If the data is good let it through
+else {
+stroke(0xff, 0, 0); //Set stroke to red ( R, G, B)
+inByte = float(inString); 
+}
+
+//Map and draw the line for new data point
+inByte = map(inByte, 0, 1023, 0, height);
+height_new = height - inByte; 
+line(xPos - 1, height_old, xPos, height_new);
+height_old = height_new;
+
+// at the edge of the screen, go back to the beginning:
+if (xPos >= width) {
+xPos = 0;
+background(0xff);
+} 
+else {
+// increment the horizontal position:
+xPos++;
+}
+
+}
+}
+\end{lstlisting}
+
+The method to run is as in the following figure: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{ecgprocessing.png}
+	\caption{Run the Processing sketch \cite{ad8232}}
+\end{figure}
+
+\subsection{PPG with Processing 2+}
+
+\begin{lstlisting}[language=c]
+import processing.serial.*;
+
+Serial myPort;        // The serial port
+int xPos = 1;         // horizontal position of the graph
+float inByte = 0;
+float oldinByte = 0;
+PrintWriter output;   // Create an object for exporting data
+PrintWriter output_average;
+
+int LM_SIZE = 750;
+float[] LM =  new float[LM_SIZE];      // LastMeasurements
+int index = 0;
+static float sum = 0;
+int count = 0;
+
+float movingAverage = 0;
+double previous_time = 0;
+double current_time = 0;
+double time_difference = 0;
+double heart_rate = 0;
+float input;
+
+int peak = 0;
+int trough = 0;
+
+void setup () {
+
+// Create a new file in the sketch directory
+//output = createWriter("infrared_data.txt");
+//output_average = createWriter("movingAverage.txt");
+
+// set the window size:
+size(980, 420);
+
+// List all the available serial ports
+// if using Processing 2.1 or later, use Serial.printArray()
+println(Serial.list());
+
+// I know that the first port in the serial list on my mac
+// is always my  Arduino, so I open Serial.list()[0].
+// Open whatever port is the one you're using.
+myPort = new Serial(this, Serial.list()[2], 9600);
+
+// don't generate a serialEvent() unless you get a newline character:
+myPort.bufferUntil('\n');
+
+// set inital background:
+background(0);
+}
+void draw () {
+// draw the line:
+stroke(127, 34, 255);
+
+//if (inByte > 30 && inByte < 600) {
+line(xPos-1, (height-oldinByte), xPos, (height-inByte));
+//text("received: " + inByte,10,50); 
+// at the edge of the screen, go back to the beginning:
+if (xPos >= width) {
+xPos = 1;
+background(0);
+} else {
+// increment the horizontal position:
+xPos++;
+}
+//}
+
+}
+
+void serialEvent (Serial myPort) {
+// get the ASCII string:
+String inString = myPort.readStringUntil('\n');
+
+if (inString != null) {
+
+// Store the old value for line drawing purpose
+oldinByte = inByte;
+// trim off any whitespace:
+//inString = trim(inString);
+// convert to an int and map to the screen height:
+inByte = float(inString);
+input = inByte;
+//println("Input = " + input);
+movingAverage = runningAverage(input);
+//println(" Average = " + movingAverage);     
+//output.println(input);
+//output_average.println(movingAverage);
+inByte = map(inByte*30, 0, 800, 0, height-500);
+
+// Wait 3 seconds before calculating heart rate
+if ( millis() > 3000){
+// Calculating heart rate
+
+// Detects peak of the period
+if (input > movingAverage && (peak == 0)){
+
+current_time = millis();
+time_difference = current_time - previous_time;
+//println("Current_time = " + current_time);
+//println("previous_time = " + previous_time);
+heart_rate = 60.0/(time_difference*0.001);
+previous_time = current_time;
+println("heart rate = " + heart_rate);
+peak = 1;
+trough = 0;
+}
+
+// Detects trough of the period
+if (input < movingAverage && (trough == 0)){
+peak = 0;
+trough = 1;
+
+}    
+}
+
+}
+}
+
+// runningAverage for heart rate counting
+float runningAverage(float M) {
+
+// keep sum updated to improve speed.
+sum -= LM[index];
+LM[index] = M;
+sum += LM[index];
+
+//println("Sum = " + sum);
+
+index++;
+index = index % LM_SIZE;
+if (count < LM_SIZE) count++;
+
+return (sum / count);
+}
+
+
+
+
+\end{lstlisting}
 
 \subsection{Arduino Code for Thermistor}
 \label{arduinothermistor}
@@ -80,8 +383,47 @@ void loop() {
 		//Serial.print(' '); 
 		//Serial.println(sensorValue);
 		
-		delay(1);}        // delay in between reads for stability
+		delay(1); 	// delay in between reads for stability
+		}        
 }
+\end{lstlisting}
+
+\subsection{Arduino Code for Phase Shift Oscillator}
+\label{arduinopso}
+
+\begin{lstlisting}[language=c]
+#include <math.h>
+double T = 0;  	/*Temperature*/
+double t = 0;	/*Period*/
+double F = 0;	/*Frequency*/
+
+void setup() {
+
+	/* Define pin 3 as an input */
+	pinMode(3,INPUT);
+	Serial.begin(9600); 
+}
+
+void loop() {
+
+	while(digitalRead(3) == HIGH) {
+	}; 
+	while(digitalRead(3) == LOW) {
+	};
+	t = micros();
+	while(digitalRead(3) == HIGH) {
+	};
+	while(digitalRead(3) == LOW) {
+	}; 
+
+	t = micros() - t;
+	F = 1.0E6/t;
+	T = 102.58*log(F) - 659.57; 
+
+	Serial.println(T); 
+	delay(1); 
+}
+
 \end{lstlisting}
 
 \subsection{MATLAB ECG Simulation}

@@ -27,10 +27,23 @@ Arduino.
 \newblock \url{https://www.arduino.cc/}.
 \newblock Accessed: 2016-9-25.
 
+\bibitem{george11}
+Arduino.
+\newblock A running average class for arduino.
+\newblock \url{http://playground.arduino.cc/Main/RunningAverage}.
+\newblock Accessed: 2016-9-30.
+
 \bibitem{ashley2004conquering}
 Euan~A Ashley and Josef Niebauer.
 \newblock {\em Conquering the ECG}.
 \newblock Remedica, 2004.
+
+\bibitem{george2}
+Humane Society Veterinary~Medical Association.
+\newblock Monitoring the anesthetized patient.
+\newblock
+  \url{http://www.ruralareavet.org/PDF/Anesthesia-Patient_Monitoring.pdf}.
+\newblock Accessed: 2016-9-30.
 
 \bibitem{atlee2006complications}
 John~L Atlee.
@@ -44,11 +57,33 @@ Australian and New Zealand~College of~Anaesthetists~(ANZCA).
 \newblock {\em Australian and New Zealand College of Anaesthetists (ANZCA)},
   PS18, 2016.
 
+\bibitem{george4}
+Sangeeta Bagha and Laxmi Shaw.
+\newblock A real time analysis of ppg signal for measurement of spo2 and pulse
+  rate.
+\newblock {\em International journal of computer applications},
+  36(11):0975--8887, 2011.
+
+\bibitem{lit7}
+Flavia Basilotta, Stefano Riario, Francesca Stradolini, Irene Taurino, Danilo
+  Demarchi, Giovanni De~Micheli, and Sandro Carrara.
+\newblock Wireless monitoring in intensive care units by a 3d-printed system
+  with embedded electronic.
+\newblock In {\em Biomedical Circuits and Systems Conference (BioCAS), 2015
+  IEEE}, pages 1--4. IEEE, 2015.
+
 \bibitem{processing221}
 Casey~Reas Ben~Fry.
 \newblock Processing.
 \newblock \url{https://processing.org/download/?processing}.
 \newblock Accessed: 2016-9-25.
+
+\bibitem{lit10}
+Inc. Biopac~Systems.
+\newblock {BIONOMADIX WIRELESS WEARABLE PHYSIOLOGY}.
+\newblock
+  \url{https://www.biopac.com/product-category/research/bionomadix-wireless-physiology/}.
+\newblock Accessed: 2016-10-1.
 
 \bibitem{ad8232}
 SparkFun Electronics~(R) CaseyTheRobot.
@@ -63,6 +98,20 @@ FL~Cesarano and AR~Piergeorge.
 \newblock The spaghetti syndrome. a new clinical entity.
 \newblock {\em Critical care medicine}, 7(4):182--183, 1979.
 
+\bibitem{george8}
+Edward R. Laskowski~(Mayo Clinic).
+\newblock What's a normal resting heart rate?
+\newblock
+  \url{http://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/heart-rate/faq-20057979}.
+\newblock Accessed: 2016-9-30.
+
+\bibitem{george3}
+Wikimedia Commons.
+\newblock File:oxy and deoxy hemoglobin near-infrared absorption spectra.png.
+\newblock
+  \url{https://commons.wikimedia.org/wiki/File:Oxy_and_Deoxy_Hemoglobin_Near-Infrared_absorption_spectra.png}.
+\newblock Accessed: 2016-9-30.
+
 \bibitem{linuxadvantagedisadvantage}
 Jennifer Marsh StorageCraft~Technology Corporation.
 \newblock Linux: Advantages and disadvantages of open-source technology.
@@ -70,6 +119,13 @@ Jennifer Marsh StorageCraft~Technology Corporation.
   \url{http://www.storagecraft.com/blog/linux-advantages-disadvantages-open-source-technology/},
   9 2016.
 \newblock Accessed: 2016-9-15.
+
+\bibitem{lit4}
+Kusum~Grewal Dangi and Supriya~P Panda.
+\newblock Performance analysis of patient monitoring wireless body area
+  networks using queueing models.
+\newblock {\em International Journal of Applied Engineering Research},
+  11(9):6671--6675, 2016.
 
 \bibitem{linuxwindows}
 Ubuntu-Team-Member DeviantArt.
@@ -86,6 +142,24 @@ Casey Kuhns~SparkFun Electronics.
   \url{https://cdn.sparkfun.com/datasheets/Sensors/Biometric/AD8232\_Heart\_Rate\_Monitor\_v10.pdf},
   7 2014.
 \newblock Accessed: 2016-9-14.
+
+\bibitem{lit1}
+Pfiedler Enterprises.
+\newblock Wireless technology in the or.
+\newblock
+  \url{http://pfiedler.com/ce/1294/files/assets/common/downloads/Wireless%20Technology%20in%20the%20OR.pdf}.
+\newblock Accessed: 2016-10-1.
+
+\bibitem{peterfarrell}
+Peter Farrell.
+\newblock Elen30013 electronic system implementation 2014 lecture (university
+  of melbourne).
+
+\bibitem{george13}
+Silent~H Films.
+\newblock Simulated patient monitor.
+\newblock \url{https://www.youtube.com/watch?v=jcXidSeirMU}.
+\newblock Accessed: 2016-9-30.
 
 \bibitem{rpi3faqs}
 RASPBERRY~PI FOUNDATION.
@@ -147,10 +221,23 @@ Jayavardhana Gubbi, Rajkumar Buyya, Slaven Marusic, and Marimuthu Palaniswami.
   future directions.
 \newblock {\em Future Generation Computer Systems}, 29(7):1645--1660, 2013.
 
+\bibitem{george9}
+J~Guyomard and R~Stortelder.
+\newblock Heart rate measurement through ppg: Heartbeat measurement in a
+  wireless headset.
+\newblock 2015.
+
 \bibitem{hall2015guyton}
 John~E Hall.
 \newblock {\em Guyton and Hall textbook of medical physiology}.
 \newblock Elsevier Health Sciences, 2015.
+
+\bibitem{george1}
+Withings~Inspire Health.
+\newblock What does spo2 mean? what is a normal spo2 level?
+\newblock
+  \url{https://withings.zendesk.com/hc/en-us/articles/201494667-What-does-SpO2-mean-What-is-a-normal-SpO2-level-}.
+\newblock Accessed: 2016-9-30.
 
 \bibitem{imhoff2004spaghetti}
 Michael Imhoff.
@@ -162,6 +249,12 @@ National Instruments.
 \newblock Biomedical engineering education portal.
 \newblock \url{http://www.ni.com/white-paper/5593/en/}, 3 2016.
 \newblock Accessed: 2016-9-13.
+
+\bibitem{george12}
+Texas Instruments.
+\newblock Lm358 (active) dual operational amplifiers.
+\newblock \url{http://www.ti.com/product/LM358}.
+\newblock Accessed: 2016-9-30.
 
 \bibitem{jiahui3}
 Leslie~C Jameson and Tod~B Sloan.
@@ -181,6 +274,21 @@ Erik Kershaw.
 \newblock Wireless networking reshapes the face of patient monitoring systems.
 \newblock {\em Biomedical instrumentation \& technology}, 36(3):201--202, 2002.
 
+\bibitem{george6}
+R-B~(Embedded Lab).
+\newblock Easy pulse sensor (version 1.1) overview (part 1).
+\newblock
+  \url{http://embedded-lab.com/blog/easy-pulse-version-1-1-sensor-overview-part-1/}.
+\newblock Accessed: 2016-9-30.
+
+\bibitem{lit9}
+Libelium.
+\newblock e-health sensor platform v2.0 for arduino and raspberry pi [biometric
+  / medical applications].
+\newblock
+  \url{https://www.cooking-hacks.com/documentation/tutorials/ehealth-biometric-sensor-platform-arduino-raspberry-pi-medical}.
+\newblock Accessed: 2016-10-1.
+
 \bibitem{jiahui2}
 Nicolas Marchant, Robert Sanders, Jamie Sleigh, Audrey Vanhaudenhuyse,
   Marie-Aur{\'e}lie Bruno, Jean~Fran{\c{c}}ois Brichant, Steven Laureys, and
@@ -195,6 +303,13 @@ Johns~Hopkins Medicine.
   \url{http://www.hopkinsmedicine.org/healthlibrary/test_procedures/neurological/electroencephalogram_eeg_92,p07655/}.
 \newblock Accessed: 2016-9-28.
 
+\bibitem{lit2}
+Memscap.
+\newblock Memscap sensor solution.
+\newblock
+  \url{http://www.sintef.no/globalassets/project/tradlospasient/080208-seminar-rikshospitalet/bwsn_memscap.pdf}.
+\newblock Accessed: 2016-10-1.
+
 \bibitem{jiahui5}
 Natus Neurology.
 \newblock Natus eeg webinar: Noise and artifacts sources eeg \- how to
@@ -206,6 +321,13 @@ Natus Neurology.
 R~Joe Noble, J~Stanley Hillis, and Donald~A Rothbaum.
 \newblock Electrocardiography.
 \newblock 1990.
+
+\bibitem{george5}
+NXP.
+\newblock Pulse oximeter fundamentals and design.
+\newblock
+  \url{http://www.nxp.com/files/32bit/doc/app_note/AN4327.pdf?tid=AMdlDR}.
+\newblock Accessed: 2016-9-30.
 
 \bibitem{java7}
 Oracle.
@@ -227,10 +349,36 @@ Electrocomponents PLC.
   \url{http://docs-europe.electrocomponents.com/webdocs/14c2/0900766b814c2f5a.pdf}.
 \newblock Accessed: 2016-9-28.
 
+\bibitem{lit8}
+Andy Pybus.
+\newblock Expanding the role of smartphones in the operating theatre.
+\newblock
+  \url{http://www.anzca.edu.au/documents/expanding-the-role-of-smartphones-in-the-operating.pdf}.
+\newblock Accessed: 2016-10-1.
+
 \bibitem{rosenthal2003new}
 Kelli Rosenthal.
 \newblock New frequencies, new monitoring technology.
 \newblock {\em Nursing management}, 34(3):49--51, 2003.
+
+\bibitem{george10}
+Praveen Arou (Texas~Instruments) Sang-Soo~Oak.
+\newblock How to design peripheral oxygen saturation (spo2) and optical heart
+  rate monitoring (ohrm) systems using the afe4403.
+\newblock \url{http://www.ti.com/lit/an/slaa655/slaa655.pdf}.
+\newblock Accessed: 2016-9-30.
+
+\bibitem{installingprocessing}
+scruss.
+\newblock Processing 2.1 + oracle java + raspberry pi + serial + arduino = ☺.
+\newblock
+  \url{http://scruss.com/blog/2014/01/07/processing-2-1-oracle-java-raspberry-pi-serial-arduino-%E2%98%BA/}.
+\newblock Accessed: 2016-10-1.
+
+\bibitem{imanshames}
+Iman Shames.
+\newblock Elen90075 power electronics 2016 workshop 2 (university of
+  melbourne).
 
 \bibitem{windowstightvnc}
 TightVNC Software.
@@ -245,11 +393,29 @@ Kazem Sohraby, Daniel Minoli, and Taieb Znati.
   applications}.
 \newblock John Wiley \& Sons, 2007.
 
+\bibitem{lit5}
+Radosveta Sokullu, Mustafa~Alper Akkas, and H{\"u}seyin~Ert{\"u}rk {\c{C}}etin.
+\newblock Wireless patient monitoring system.
+\newblock In {\em Sensor Technologies and Applications (SENSORCOMM), 2010
+  Fourth International Conference on}, pages 179--184. IEEE, 2010.
+
+\bibitem{ad8232github}
+SparkFun.
+\newblock Ad8232 single lead heart rate monitor (github).
+\newblock \url{https://github.com/sparkfun/AD8232_Heart_Rate_Monitor}.
+\newblock Accessed: 2016-10-1.
+
 \bibitem{strohmenger1997analysis}
 Hans-Ulrich Strohmenger, Karl~H Lindner, and Charles~G Brown.
 \newblock Analysis of the ventricular fibrillation ecg signal amplitude and
   frequency parameters as predictors of countershock success in humans.
 \newblock {\em Chest}, 111(3):584--589, 1997.
+
+\bibitem{lit6}
+Prashant Tripathi, Naman Pal, Paras Kaushal, and Preeti Jaidka.
+\newblock Wireless biomedical parameter monitoring system using zigbee cc2500
+  rf module.
+\newblock 2015.
 
 \bibitem{psotutorial}
 Electronics Tutorials.
@@ -258,5 +424,17 @@ Electronics Tutorials.
   \url{http://www.electronics-tutorials.ws/oscillator/rc_oscillator.html},
   2014.
 \newblock Accessed: 2016-8-27.
+
+\bibitem{lit3}
+Mats~KEB Wallin and Samson Wajntraub.
+\newblock Evaluation of bluetooth as a replacement for cables in intensive care
+  and surgery.
+\newblock {\em Anesthesia \& Analgesia}, 98(3):763--767, 2004.
+
+\bibitem{george7}
+Wikipedia.
+\newblock Beer–lambert law.
+\newblock \url{https://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law}.
+\newblock Accessed: 2016-9-30.
 
 \end{thebibliography}
