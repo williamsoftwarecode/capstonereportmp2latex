@@ -23,32 +23,27 @@ A block diagram of the Wireless Vital Signs Monitoring System is shown in Figure
 \section{Design Specifications}
 \label{specifications}
 
-\section{Hardware Design and Development}
+\begin{enumerate}
+	\item	The sensors must be able to measure the specified anaesthesia parameters at a basic level. 
+	\item 	The following anaesthesia parameters should be monitored: 
+	\begin{enumerate}
+		\item Electrocardiography (ECG)
+		\item Electroencephalography (EEG)
+		\item Photoplethysmography (PPG)
+		\item Blood Pressure
+		\item Blood Temperature 
+	\end{enumerate}
+	\item	The terminal must be able to process the inputs from the sensors. 
+	\item	The terminal must be able to visualise and display the input from the sensors. 
+	\item	The terminal must be able to wireless transmit the required information to another display. 
+	\item 	The visualised output must be displayed on a monitor. 
+	\item	The wireless system must be robust to disconnections due to extended range. 
+\end{enumerate}
 
+\section{Actual System Implementation}
 
-
-
-
-
-
-\section{Software Design and Development}
-\label{software}
-
-
-
-
-\section{Analysis of Competitors - Similar Papers - Literature Review}
-
-
-
-
-
-
-
-\section{Analysis of Existing Systems}
-
-\subsection{Consideration of Bionomadix}
-
-\subsection{Consideration of Libelium and Waspmote}
-
-\subsection{Consideration of Cooking Hacks}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{entiresystemlabelled.jpg}
+	\caption{Actual System Implementation of Sensors and Terminal}
+\end{figure}

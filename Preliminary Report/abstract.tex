@@ -1,40 +1,15 @@
 
 \chapter*{Abstract}
 
-This  thesis considers the  problem of the rejection of
-exogenous  disturbance   signals  applied to a linear time  invariant  plant.
-An   analysis of the disturbance  rejection  performance of
-periodically  time varying feedback controllers is  conducted. The performance  used
-is the  induced system norm of the  closed loop  disturbance response  system.
+This report documents the design and development process of a wireless vital signs monitoring system by Master of Engineering (Electrical) students at the University of Melbourne. The project aims to assemble a completely wireless system with attached sensors which is as reliable and accurate as current conventional monitoring systems.  
 
+In modern surgery, there is an ever increasing number of devices attached to a patient in the surgery room. The presence of wire bundles introduces implicit hazards which could possibly harm the patient or the surgeons. To mitigate and circumvent this issue, the number of wires could be reduced through the implementation of wireless vital signs monitoring systems in operating theatres.  
 
-The analysis  considers   both  discrete  systems, in  which both
-plant and controller  operate in  discrete-time,   and also
-sampled-data  systems,  in which the  plant operates in
-continuous-time, while the  controller  operates  in
-discrete-time.  The disturbance  input  signals  under consideration are  assumed to
-belong to the  $l_p$ signal spaces (for discrete  systems) and   the  $L_p$ signal spaces
-(for sampled-data  systems).
+The wireless vital signs monitoring system consists of a main operating terminal and connected sensors. The anaesthetic parameters chosen for observation are electrocardiography (ECG), electroencephalography (EEG), photoplethysmography (PPG), blood temperature, and blood pressure. 
 
-In the  analysis, time  invariant  controllers are distinguished from strictly
-periodically  time varying controllers. This allows a  comparison to be made   of the
-relative  disturbance rejection  performance of these two  classes  of controllers.
- For a given nonlinear  time invariant periodic controller, a nonlinear time invariant
-controller is constructed which  stabilizes the closed loop system
-when applied to the linear time  invariant plant. Necessary and
-sufficient conditions are presented under which the nonlinear
-time invariant controller gives strictly better  disturbance rejection performance
-than the nonlinear  time invariant periodic controller.
+The terminal is designed for data processing, data transmission, and data visualisation. To do this, the Raspberry Pi 3 Model B was chosen due to its desirable properties as a miniaturised computer and fulfills the platform requirements of the project. It runs applications on an ARM processor loaded with a Linux-based Raspbian Jessie operating system. In terms of wireless transmission, it is fully capable of WiFi transmission and establishing a VNC server for secured external access. 
 
+The sensors are designed individually with analog inputs and these signals are fed into analog-to-digital converters. The converted digital signals are then processed by applications on the terminal to be visualised and then transmitted wirelessly to another terminal for displaying the output. 
 
-Earlier results on $l_2$ (and  $L_2$) performance  of linear periodic  controllers
-are extended  to  present a unified treatment of $l_p$ performance for all $p \in
-[1,\infty]$ (respectively, $L_p$ performance for all $p \in[1,\infty]$).
-  Results  are  obtained  for both linear and nonlinear controllers.  Thus results in
-the  literature  on the inferior disturbance rejection performance  of linear
-periodic  controllers are shown to remain valid   when the class of  controllers  is
-extended to include nonlinear controllers.  Thus the principal claims  to originality
-of this thesis are that  it obtains results  for   a wider  class  of disturbance
-signals, and  that it provides a performance comparison of nonlinear time varying
-controllers with nonlinear time invariant controllers.
+Both the terminal and sensors have been tested. The terminal has successfully collected signals from different sensors and transmitted them across to a second platform to be displayed. Additionally, the sensors circuit testing shows multiple sensors to be fully working and accurate. 
 

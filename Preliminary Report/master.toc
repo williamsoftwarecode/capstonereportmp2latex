@@ -3,88 +3,112 @@
 \contentsline {section}{\numberline {1.2}Benefits of a Wireless Implementation}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Overview of the Project}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Anaesthetic Parameters for Patient Monitoring}{3}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Theory of Electrocardiography}{3}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.1}Theory of Electrocardiography}{4}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Theory of Electroencephalography}{6}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Theory of Photoplethysmography}{6}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}Theory of Blood Pressure}{6}{subsection.1.4.4}
-\contentsline {subsection}{\numberline {1.4.5}Theory of Blood Temperature}{6}{subsection.1.4.5}
-\contentsline {chapter}{\numberline {2}Survey of Related Previous Work - Overview of Wireless Sensor Network Technology}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Wireless Sensor Networks}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Body Area Networks}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Methods of Wireless Transmission}{7}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Comparison between Virtual Nerwork Computing (VNC) and Raw Transmission}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Virtual Network Computing}{9}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}WiFi}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Bluetooth}{9}{section.2.5}
-\contentsline {section}{\numberline {2.6}Zigbee}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}Comparison of Different Protocols}{9}{section.2.7}
-\contentsline {chapter}{\numberline {3}Project Design and Development}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}System Overview}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Design Specifications}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Hardware Design and Development}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Software Design and Development}{11}{section.3.4}
-\contentsline {section}{\numberline {3.5}Analysis of Competitors - Similar Papers - Literature Review}{11}{section.3.5}
-\contentsline {section}{\numberline {3.6}Analysis of Existing Systems}{11}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Consideration of Bionomadix}{11}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Consideration of Libelium and Waspmote}{11}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Consideration of Cooking Hacks}{11}{subsection.3.6.3}
-\contentsline {chapter}{\numberline {4}Terminals for Data Processing}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Operating System}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}Raspberry Pi 3 Model B}{14}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Raspbian Jessie}{16}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Portable Power Supply for the Raspberry Pi 3 Model B}{16}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Intel Nuc}{16}{section.4.3}
-\contentsline {chapter}{\numberline {5}Sensors}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}ECG}{17}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}AD8232 IC ECG Sensor}{18}{subsection.5.1.1}
-\contentsline {subsubsection}{Front End}{18}{section*.6}
-\contentsline {section}{\numberline {5.2}Blood Temperature}{24}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Thermistor}{24}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Self-Heating - Phase Shift Oscillator}{26}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Astable Operation of 555 Timer}{26}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Interface}{27}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}USB}{27}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Arduino Uno / Arduino Pro Mini - Analog to Digital Conversion}{27}{subsection.5.3.2}
-\contentsline {subsubsection}{Sensitivity of Arduino Uno}{27}{section*.10}
-\contentsline {chapter}{\numberline {6}Data Processing, Visualisation, and Transmission}{28}{chapter.6}
-\contentsline {section}{\numberline {6.1}Processing 2.2.1}{30}{section.6.1}
-\contentsline {section}{\numberline {6.2}Serial Input}{30}{section.6.2}
-\contentsline {section}{\numberline {6.3}Code}{30}{section.6.3}
-\contentsline {section}{\numberline {6.4}Visualisation}{30}{section.6.4}
-\contentsline {section}{\numberline {6.5}Wireless Transmission}{30}{section.6.5}
-\contentsline {chapter}{\numberline {7}Simulation}{31}{chapter.7}
-\contentsline {chapter}{\numberline {8}Testing}{32}{chapter.8}
-\contentsline {chapter}{\numberline {9}Results}{33}{chapter.9}
-\contentsline {section}{\numberline {9.1}Wireless Vital Signs Monitoring System}{33}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Setup}{33}{subsection.9.1.1}
-\contentsline {section}{\numberline {9.2}Interface Output}{33}{section.9.2}
-\contentsline {section}{\numberline {9.3}ECG}{33}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}AD8232 and Arduino Pro Mini Setup}{33}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}ECG Electrode Placement}{33}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}ECG Output}{35}{subsection.9.3.3}
-\contentsline {subsection}{\numberline {9.3.4}Motion Artifacts}{36}{subsection.9.3.4}
-\contentsline {section}{\numberline {9.4}Statistics}{37}{section.9.4}
-\contentsline {chapter}{\numberline {10}Challenges and Limitations}{38}{chapter.10}
-\contentsline {section}{\numberline {10.1}Power Efficiency}{38}{section.10.1}
-\contentsline {section}{\numberline {10.2}Interference}{38}{section.10.2}
-\contentsline {section}{\numberline {10.3}Security Risk}{39}{section.10.3}
-\contentsline {section}{\numberline {10.4}Data Management}{39}{section.10.4}
-\contentsline {section}{\numberline {10.5}Regulation and Compliance Standards}{39}{section.10.5}
-\contentsline {section}{\numberline {10.6}Reliability}{39}{section.10.6}
-\contentsline {section}{\numberline {10.7}Range}{39}{section.10.7}
-\contentsline {section}{\numberline {10.8}Raspberry Pi USB}{39}{section.10.8}
-\contentsline {chapter}{\numberline {11}Conclusion }{40}{chapter.11}
-\contentsline {section}{\numberline {11.1}Summary of Main Results}{40}{section.11.1}
-\contentsline {section}{\numberline {11.2}Practical Interpretation of our Results}{40}{section.11.2}
-\contentsline {chapter}{\numberline {A}Program Installation}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}Operating System - Raspbian Jessie}{46}{section.A.1}
-\contentsline {section}{\numberline {A.2}Code}{47}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Arduino Code for Thermistor}{47}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}MATLAB ECG Simulation}{48}{subsection.A.2.2}
-\contentsline {chapter}{\numberline {B}PCB Design and Schematics}{54}{appendix.B}
-\contentsline {section}{\numberline {B.1}ECG Shield for AD8232 and Arduino Pro Mini}{55}{section.B.1}
-\contentsline {section}{\numberline {B.2}Blood Temperature}{55}{section.B.2}
-\contentsline {section}{\numberline {B.3}AD8232 Heart Rate Monitor SparkFun Implementation}{55}{section.B.3}
-\contentsline {section}{\numberline {B.4}Raspberry Pi 3 Model B}{56}{section.B.4}
-\contentsline {chapter}{\numberline {C}Measurements and Datasheets}{58}{appendix.C}
-\contentsline {section}{\numberline {C.1}Datasheet}{59}{section.C.1}
+\contentsline {subsubsection}{Engineering Understanding}{8}{section*.7}
+\contentsline {subsection}{\numberline {1.4.3}Theory of Photoplethysmography (PPG)}{8}{subsection.1.4.3}
+\contentsline {subsubsection}{Working Principle of the Infrared PPG Sensor}{9}{section*.8}
+\contentsline {subsection}{\numberline {1.4.4}Theory of Blood Temperature}{11}{subsection.1.4.4}
+\contentsline {chapter}{\numberline {2}Literature Review: Survey of Related Previous Work - Overview of Wireless Sensor Network Technology}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Methodology}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Introduction}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Wireless in Anaesthesia}{13}{section.2.3}
+\contentsline {section}{\numberline {2.4}Benefits}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Challenges}{14}{section.2.5}
+\contentsline {section}{\numberline {2.6}Case Studies}{15}{section.2.6}
+\contentsline {section}{\numberline {2.7}Analysis of Existing Systems}{16}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Consideration of e-Health Sensor by Cooking Hacks (Libelium)}{16}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Consideration of BioNomadix Wireless Wearable Physiology by Biopac Systems}{17}{subsection.2.7.2}
+\contentsline {section}{\numberline {2.8}Body Area Networks}{18}{section.2.8}
+\contentsline {section}{\numberline {2.9}Comparison of Different Wireless Protocols}{19}{section.2.9}
+\contentsline {chapter}{\numberline {3}Project Design and Development}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}System Overview}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Design Specifications}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Actual System Implementation}{22}{section.3.3}
+\contentsline {chapter}{\numberline {4}Design and Development: Terminals for Data Processing, Transmission, and Visualisation}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Operating System}{24}{section.4.1}
+\contentsline {section}{\numberline {4.2}Raspberry Pi 3 Model B}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Raspbian Jessie}{27}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Methods of Wireless Transmission}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Comparison between Virtual Nerwork Computing (VNC) and Raw Transmission}{27}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Portable Power Supply for the Raspberry Pi 3 Model B}{28}{section.4.4}
+\contentsline {chapter}{\numberline {5}Design and Development: Sensors for Data Collection}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}ECG}{30}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}AD8232 IC ECG Sensor}{30}{subsection.5.1.1}
+\contentsline {subsubsection}{Front End}{31}{section*.9}
+\contentsline {section}{\numberline {5.2}EEG}{35}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Neurosky TGAM module}{35}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}PPG}{38}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Bandwidth Selection}{39}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Circuit Design}{39}{subsection.5.3.2}
+\contentsline {subsubsection}{High Pass Filter}{40}{section*.13}
+\contentsline {subsubsection}{Low Pass Filter}{40}{section*.14}
+\contentsline {subsubsection}{Amplifier}{40}{section*.15}
+\contentsline {subsubsection}{Offset Voltage}{41}{section*.16}
+\contentsline {subsubsection}{LTSpice Simulation}{41}{section*.17}
+\contentsline {section}{\numberline {5.4}Blood Temperature}{42}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Thermistor}{42}{subsection.5.4.1}
+\contentsline {subsubsection}{Analysis of Nonlinearity between Thermistor Resistance and Bit Value of the Arduino}{45}{section*.18}
+\contentsline {subsubsection}{Sensitivity Analysis of Material Type F Thermistor}{46}{section*.19}
+\contentsline {subsubsection}{Self-Heating of Negative Temperature Coefficient (NTC) Thermistor}{47}{section*.20}
+\contentsline {subsection}{\numberline {5.4.2}Thermistor in Phase Shift Oscillator (PSO) Configuration}{48}{subsection.5.4.2}
+\contentsline {chapter}{\numberline {6}Design and Development: Software }{50}{chapter.6}
+\contentsline {section}{\numberline {6.1}Installation of Necessary Applications}{50}{section.6.1}
+\contentsline {section}{\numberline {6.2}Wireless Transmission: Operation of VNC Client-Server System}{52}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Access from Another Raspberry Pi}{54}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Access from a Windows Platform}{54}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}ECG Software}{55}{section.6.3}
+\contentsline {section}{\numberline {6.4}EEG Software}{55}{section.6.4}
+\contentsline {section}{\numberline {6.5}PPG Software}{55}{section.6.5}
+\contentsline {section}{\numberline {6.6}Thermistor with Phase Shift Oscillator Software}{55}{section.6.6}
+\contentsline {chapter}{\numberline {7}Results}{56}{chapter.7}
+\contentsline {section}{\numberline {7.1}Wireless Vital Signs Monitoring System}{56}{section.7.1}
+\contentsline {section}{\numberline {7.2}ECG}{56}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}ECG Electrode Placement}{56}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}ECG Output}{57}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Motion Artifacts}{58}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Simulation}{59}{section.7.3}
+\contentsline {section}{\numberline {7.4}EEG}{60}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Operation}{60}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}PPG}{62}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Prototype Sensor with Arduino Uno}{62}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Heart Rate Measurement}{63}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Abstract AC/DC Values}{64}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Blood Temperature}{65}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Calibration of Phase Shift Oscillator}{66}{subsection.7.6.1}
+\contentsline {chapter}{\numberline {8}Discussion}{68}{chapter.8}
+\contentsline {section}{\numberline {8.1}Challenges, Limitations, and Future Work}{68}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}ECG}{69}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}EEG}{69}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}PPG}{70}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Raspberry Pi}{71}{subsection.8.1.4}
+\contentsline {subsubsection}{Power Efficiency}{71}{section*.21}
+\contentsline {subsubsection}{Security and Data Management}{71}{section*.22}
+\contentsline {subsubsection}{Reliability and Range}{71}{section*.23}
+\contentsline {subsubsection}{Raspberry Pi Root USB}{72}{section*.24}
+\contentsline {subsubsection}{Consideration of Platform Upgrade}{72}{section*.25}
+\contentsline {chapter}{\numberline {9}Conclusion }{73}{chapter.9}
+\contentsline {chapter}{\numberline {A}Program Installation}{83}{appendix.A}
+\contentsline {section}{\numberline {A.1}Operating System - Raspbian Jessie}{83}{section.A.1}
+\contentsline {section}{\numberline {A.2}Code}{85}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}ECG Code for Arduino Pro Mini}{85}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}ECG Code for Processing 2.2.1}{86}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}PPG with Processing 2+}{89}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Arduino Code for Thermistor}{93}{subsection.A.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Arduino Code for Phase Shift Oscillator}{94}{subsection.A.2.5}
+\contentsline {subsection}{\numberline {A.2.6}MATLAB ECG Simulation}{95}{subsection.A.2.6}
+\contentsline {chapter}{\numberline {B}PCB Design and Schematics}{101}{appendix.B}
+\contentsline {section}{\numberline {B.1}ECG Shield PCB for AD8232 and Arduino Pro Mini}{101}{section.B.1}
+\contentsline {section}{\numberline {B.2}Thermistor in Phase Shift Oscillator Configuration Schematic and PCB}{102}{section.B.2}
+\contentsline {section}{\numberline {B.3}AD8232 Heart Rate Monitor SparkFun Implementation}{103}{section.B.3}
+\contentsline {section}{\numberline {B.4}Raspberry Pi 3 Model B}{104}{section.B.4}
+\contentsline {section}{\numberline {B.5}Transmitter Schematics for PPG}{105}{section.B.5}
+\contentsline {section}{\numberline {B.6}Transmitter PCB for PPG}{106}{section.B.6}
+\contentsline {section}{\numberline {B.7}Receiver Schematics for PPG}{106}{section.B.7}
+\contentsline {section}{\numberline {B.8}Receiver PCB for PPG}{107}{section.B.8}
+\contentsline {chapter}{\numberline {C}Measurements and Datasheets}{108}{appendix.C}
+\contentsline {section}{\numberline {C.1}Datasheet}{109}{section.C.1}
+\contentsline {section}{\numberline {C.2}Summary of Output Frequency, R1 Resistance, and Temperature}{111}{section.C.2}
+\contentsline {section}{\numberline {C.3}Phase Shift Oscillator Calibration}{111}{section.C.3}
+\contentsline {subsection}{\numberline {C.3.1}Astable Operation of 555 Timer}{112}{subsection.C.3.1}
+\contentsline {subsection}{\numberline {C.3.2}Priority Queueing Models}{112}{subsection.C.3.2}

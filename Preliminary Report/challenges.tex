@@ -1,6 +1,47 @@
-\chapter{Challenges and Limitations}
+\chapter{Discussion}
 
-\section{Power Efficiency}
+\section{Challenges, Limitations, and Future Work}
+
+The biggest challenge for this project is the time constraint introduced due to the delay in the necessary device delivery (12 weeks) and hence we could only focus on literature review and researching existing solutions. Development of hardware have only started in July, and there were some setbacks as the purchased sensors do not operate as expected and there have been difficulties in extracting vital information from those devices. 
+
+Another setback was the diversity of sensors required in the project. EEG has been especially hard to develop, as medical standards EEG has strong amplifiers and advanced filters which we have not been able to replicate, rendering our EEG results to be non-satisfactory. This is also contributed by the lack of information from the selected chip manufacturer, which made the troubleshoot duration long and unproductive. 
+
+Extensive research had been done in data prioritization protocols and programming but we were unable to integrate it into our systems due to the choice of virtual network computing in the end. This limits our capability to prioritize packet transmission via wireless as this will be done back-ended by the selected VNC server.  
+
+The scope of the project is extremely broad, covering both the terminal and sensor design. Further in depth development and testing could be done if the sphere was narrowed down to either the design of the wireless terminal or specific sensors.  
+
+\subsection{ECG}
+
+The use of the AD8232 is a good decision due to the reliability of the IC. However, it is only good as a proof of concept and not for actual use in the medical industry as it does not meet regulatory standards. Another disadvantage of using the AD8232 is the use of only three electrodes rather than the usual 10-12 electrodes for standard ECG systems. 
+
+It has been noticed that the output of the ECG has a moderately high frequency component which cannot be easily removed. This anomaly can be attributed to the frequency of the mains power supply. This chip was designed in the United States, where the mains power supply frequency is 60 Hz. Internally, the AD8232 has an inbuilt signal processing filter to remove this externally introduced noise. However, in Australia, the mains power supply frequency is set at 50 Hz. The ECG output is consistent with a small injection of power supply noise. To rectify this issue in future developments of this project, it is suggested to use either an electronic notch filter at 50 Hz or implement a signal processing filter at 50 Hz. This problem was only observed with the use of a connected power supply instead of a portable external battery. 
+
+A PCB shield for the AD8232 and the Arduino Pro Mini was designed for this project. This PCB design can be found in Appendix \ref{ecgshieldpcb}. Nevertheless, it would be better to integrate the entire system onto a single board without the use of a shield. This was not done due to the broad scope of the project, leaving little time for other sections of the project if this aim was further pursued. 
+
+The ECG is also an extremely sensitive component of the project, which provides differing results under similar circumstances. The results are not easy to replicate and extra care should be taken to ensure that testing conditions remain relatively the same, (i.e. the position and orientation of the patient). 
+
+\subsection{EEG}
+As EEG is easily affected by noise, a reliable front end will need to be devised. A notch filter will at 50Hz can be devised to filter of any noise that may be due to the power supply. This will be followed by a signal amplifier of approximately 10,000 gain to boost the measured 10 - 100uV to a measurable voltage of 100mV – 1V. Then, a low pass filter should be placed to filter of other noises from artifacts. 
+
+The soldering of pins from EEG to the chip may also be a main contribution of why no reliable signal is detected in our application. This can be mitigated by purchasing a EEG head converter to pins rather than directly soldering the wire to the pads. The impurities in solder may cause the small signal to be gone prior to reaching the microchip, and hence the microchip will only detect noise during operation.
+
+As EEG is relatively complex compared to the other parameters, it is suggested that a commercialized EEG amplifier to be used before we extract the information to be transmitted wirelessly. However, this have not been attempted due to the delay in delivery of sensors as well as budget constraints. 
+
+\subsection{PPG}
+
+The primary aim of this project is to demonstrate a working prototype system of wireless patient monitoring system. Since Raspberry Pi 3 Model B is chosen to be the Terminal of whole system and Arduino is used as an ADC for collecting analog signal, the remaining problem is how to connect a Pulse Oximeter to the Arduino and capture the desired signal. 
+
+We started with the medical standard Pulse Oximeter (BioNomadix Wireless Wearable sensor) from Biopac Systems. The Pulse Oximeter is attached to a wireless transmitter module. Raw data are transferred via wireless communication to a receiver module and then to a wire connected PC. The signal processing and visualization is then performed on the PC. However, the BioNomadix Wireless system is fully developed commercial product such that we cannot get any access to either hardware or software. In another word, it is impossible to collect the PPG signal by connecting their Pulse Oximeter to our Raspberry Pi 3 model B. Hence, we decide to design our own Pulse Oximeter for proof of concept. We also believe that developing your own hardware is also a good practical experience.
+
+Unfortunately, at this stage, the PPG we have designed is not able to detect the Oxygen Saturation level. However, a clean waveform and heart rate can be obtained from the sensor we designed. Oxygen Saturation level calculation is way more complicated than expected. 
+
+Since this is a prototype designed mainly for collecting data for the wireless monitoring display, the current state of the waveform is sufficient for such a purpose. Calibration and noise cancellation can be implemented in the future to counter the issue such as signal variation due to the motion artifacts and noise from the power supply.
+
+For this project, a PCB has been designed for the pulse oximeter. A simpler combination of integrated PCB with ADC and Pulse Oximeter can be used to replace the current design of connecting two separate pieces.
+
+\subsection{Raspberry Pi}
+
+\subsubsection{Power Efficiency}
 
 According to Sohraby, Minoli, and Taieb \cite{sohraby2007wireless}, power efficiency can be achieved by having: 
 
@@ -10,22 +51,27 @@ According to Sohraby, Minoli, and Taieb \cite{sohraby2007wireless}, power effici
 	\item "Multihop networking reduces the requirement for long-range transmission since signal path loss is an inverse exponent with range or distance. Each node in the sensor network can act as a repeater, thereby reducing the link range coverage required and, in turn, the transmission power." 
 \end{enumerate}
 
-\section{Interference}
+\subsubsection{Security and Data Management}
+The data measured via our system will be output in a readable format to be stored in the medical server for record purposes. This will be helpful when researchers/ health practitioners going through the surgical procedure to determine if anything was wrong. 
 
-One of the major problems identified with wireless systems in general is the high probability of interference. 
+When disconnected due to unforeseen reasons, the buffer in the transmitter will record the information and re-transmits when connection resumed. A proposed solution would be cable available to link the transmission unit to a nearby monitor if the Local Area Network is down due to some unforeseen circumstances. 
 
-\section{Security Risk}
+\subsubsection{Reliability and Range}
+As of the date of writing, Raspberry Pi has "uptime" of 81 days. This shows the reliability of the Raspberry Pi as a Terminal as it can operate for prolonged periods of time without freezing or crashing. 
 
-\section{Data Management}
+\begin{lstlisting}
+pi@raspberrypi:~/Desktop $ uptime
+00:58:17 up 81 days, 23:21, 2 users, load average: 0.30, 0.19, 0.15
+\end{lstlisting}
 
-\section{Regulation and Compliance Standards}
+In terms of range, the Terminal has been tested to a range of up to 10m and has a throughput of 11.98Mbit/s \cite{wifibenchmark}. This is suitable for use in a moderately sized operating theatre. 
 
-\section{Reliability}
-Raspberry Pi has "uptime"
-
-\section{Range}
-
-
-\section{Raspberry Pi USB}
+\subsubsection{Raspberry Pi Root USB}
 
 Only a single root USB port is available on the Raspberry Pi 3 Model B and all data traffic from USB devices are directed to this single bus \cite{rpi3hardware}. The maximum speed of this root USB port is 480Mbps \cite{rpi3faqs}. The WVSMT utilises all 4 USB ports available for connections to individual Sensors and this could possibly lead to bottlenecking in the root USB port. However, it is noted that the bandwidth required for each sensor is low and that this scenario is not probable. 
+
+\subsubsection{Consideration of Platform Upgrade}
+
+One of the suggestions for the future development of this project is the replacement of the Raspberry Pi with a more powerful platform. The use of the Raspberry Pi is sufficient only as a proof of concept as it does not provide adequate processing power for further applications. Running concurrent processes such as VNC server hosting and data visualisation is possible but a small noticable lag is seen in the output waveform.   
+
+A new platform can be designed from scratch but this would be very time consuming and requires technical expertise. Another option would be to consider upgrading the Raspberry Pi to an Intel NUC \cite{intelnuc}. The reason for not using such a platform from the start was due to cost constraints for prototyping. Now that the prototype is successfully working, it is highly recommended that a more powerful terminal be used in place of the Raspberry Pi.  

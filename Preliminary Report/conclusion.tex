@@ -1,17 +1,18 @@
-\chapter{Conclusion }  \label{Conc}
+\chapter{Conclusion }  
+\label{Conclusion}
 
+This report is result of the comprehensive documentation of the approach used and the design process of the wireless vital signs monitoring system. The development of the system encompasses two major sections, that is the Terminal design and the Sensor design. 
 
-\section{Summary of Main  Results} \label{MainRes}
+The Terminal chosen is the Raspberry Pi 3 Model B as it runs on a Linux-based OS, has WiFi capabilities, and has a sufficiently powerful processor for the purpose of this project. The Raspbian Jessie provides the needed kernel and OS foundation, allowing many needed applications to be installed and used. Data processing is done through Arduino, which converts a digital signal to a serial input. Data visualisation is completed in Processing 2.2.1, which plots real-time graphs of the vital signs monitored. Wireless data transmission is accomplished through the use of Tight VNC Server, which allows remote access from a separate Terminal, through the use of virtual network computing. This platform provides the foundation of the project as the main interface between the Sensors and display. 
 
+The ECG sensor utilises the AD8232 IC from Analog Devices, which is a part of the front end for signal conditioning of the analog signal input received from the electrodes placed at specific locations on the skin surface. The amplified and filtered signal is then fed through an analog-to-digital converter and an FTDI-to-serial converter. The digital signal is then processed and visualised on the Terminal. The system has been tested successfully and shows a complete ECG output. 
 
-\section{Practical Interpretation of our   Results} \label{PracInt}
+The EEG sensor is comprised of the Neurosky TGAM module, which takes an input from electrodes placed on the surface of the scalp. It is a primary brainwave sensor ASIC module to process and output EEG frequency spectrum, EEG single quality, and raw EEG waveform. It has proved to be an extremely challenging part of the project due to the nature of the EEG signal amplitude. As such, it is suggested that a commercialized EEG amplifier to be used in future developments of this project. 
 
-To  provide some practical interpretation of our  results, we  may  consider the
-following hypothetical  scenario. A   control  engineer   has
- designed  a  particular    periodic discrete or sampled-data  controller $K$  for
-his closed loop  feedback system.  The engineer finds  out  about  our results and is
-interested to hear  that  a  time  invariant controller   can  in  general
-give strictly better disturbance rejection  performance than  his  periodic
-controller. The engineer then asks  us  to tell  him how to modify  his  periodic
-controller to obtain  a  superior   time  invariant controller. To  advise  him   we
+The PPG sensor utilises the GC1 PPG sensor, with an integrated infrared sensor, DC offset, high-pass filter, amplifier, and low-pass filter. The PPG sensor is fully capable of accurately capturing the SpO2 waveform and measuring the heart rate. The SpO2 concentration has been theoretically calculated and can be implemented in the future. 
 
+The temperature sensor uses a simple thermistor in a phase shift oscillator configuration. This combination is suggested to make the frequency of the circuit temperature-dependent, mitigating the issue of self-heating in NTC thermistors, resulting in more accurate and reliable temperature readings. 
+
+The diversity of this project is unique with a very broad scope, and each functional component has to be integrated together to function as a complete wireless vital signs monitoring system. It encompasses both front end development (sensors for data collection) and back end development (terminal for visualisation and wireless transmission). 
+
+Overall, this project has generated sufficient evidence to show that the design of a wireless vital signs monitoring system for operating theatres is viable and feasible. The prototype constructed is a successful proof of concept, which paves the way for future development in the field of wireless medical systems.  

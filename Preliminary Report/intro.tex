@@ -14,14 +14,9 @@ Nevertheless, most advances in this area of wireless device development is limit
 
 \section{Benefits of a Wireless Implementation}
 
-Having a wireless version of current vital signs monitoring systems will bring additional benefits to 
+Having a wireless version of current vital signs monitoring systems will bring additional benefits to both the patient and the surgeons. One of the biggest advantages is the improved safety factor, leading to less risk of injury due to tripping hazards or disconnection issues. Less obstruction from the presence of wires means smaller delays for operations, making surgeries faster and more efficient. This translates to a better overall working environment for doctors and medical staff. 
 
-
-Ease of use - convenience
-Less risk of injury
-Faster surgery - smaller delay due to obstruction from wires
-Safer
-Better working environment for doctors
+The ease of use and portability of wireless systems lead to convenience for patient transportation. Current sensors are connected to multiple screens and this introduces the issue of space constraint. An integrated wireless system allows generic sensors with the same interface to be connected to a single terminal and monitor, circumventing the issue of having multiple displays. 
 
 \section{Overview of the Project}
 
@@ -32,9 +27,9 @@ The aim of this project is to make as many patient monitoring, measuring devices
 The project involves two parts: 
 
 \begin{enumerate}
-	\item programming hardware nodes to collect wireless sensor data using Android, and 
+	\item Designing and programming hardware nodes (sensors) to collect wireless sensor data, and 
 	
-	\item software application development to visualize the data in real-time. The project also involves estimating missing data and inferring suitable information to medical professionals. The project requires developing a mobile app and also a data analysis platform.
+	\item Software application development to visualize the data in real-time. The project requires developing a wireles data analysis platform.
 \end{enumerate}
 
 
@@ -42,7 +37,7 @@ The project involves two parts:
 
 Countless operations are conducted on a daily basis which requires patients to be under general anaesthesia. To ensure the patient's optimal safety when under anaesthesia, it is necessary to consistently monitor certain parameters to ensure that they remain within a specified range which is considered to be safe or normal. Based on Atlee's Complications in Anesthesia \cite{atlee2006complications}, monitoring of anaesthetic admisnistration reduces the probability of anaesthetic overdose or underdose. 
 
-Complications associated with an improper dosage of anaesthesia could arise such as coma, brain damage, nerve damage, or possibly death, if real-time observations of vital signs are not conducted. The risk of such issues occuring during surgery could be reduced significantly if a feedback system were implemented for the amount of anaesthetics administered to the patient. Such parameters have been stipulated by ANZCA. 
+Complications associated with an improper dosage of anaesthesia could arise such as coma, brain damage, nerve damage, or possibly death, if real-time observations of vital signs are not conducted. The risk of such issues occuring during surgery could be reduced significantly if a feedback system were implemented for the amount of anaesthetics administered to the patient. Such parameters have been stipulated by the ANZCA \cite{anaesthesiaguide}. 
 
 \subsection{Theory of Electrocardiography}
 
@@ -73,7 +68,7 @@ The basic ECG pattern is correlated as follows:
 	\item "Depolarization and repolarization deflections occur in opposite directions" \cite{ashley2004conquering} 
 \end{itemize}  
 
-Ashley and Niebauer (2004) (p.g. 19) \cite{ashley2004conquering} succinctly explains the types of waves and intervals of the ECG trace, (which mainly comprises of three different waves, namely P, QRS complex, and T): 
+The abstract below by Ashley and Niebauer (2004) (p.g. 19) \cite{ashley2004conquering} succinctly explains the types of waves and intervals of the ECG trace, (which mainly comprises of three different waves, namely P, QRS complex, and T): 
 
 \blockquote{
 "The {\bf P wave} is a small deflection wave that represents atrial depolarization. 
@@ -95,8 +90,98 @@ The {\bf ST segment}, which is also known as the ST interval, is the time betwee
 
 \subsection{Theory of Electroencephalography}
 
-\subsection{Theory of Photoplethysmography}
+An electroencephalogram (EEG) is a non-invasive test that detects electrical activity in your brain using small, flat metal discs (electrodes) attached to your scalp. The brain cells communicate using electrical impulses, and such activity will be showing up as wavy lines on an EEG recording. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. It is most often used to diagnose epilepsy, which will cause the patient to have an abnormal EEG reading but also used to detect coma, sleep disorders, brain death etc \cite{jiahui1}.  
 
-\subsection{Theory of Blood Pressure}
+Generally, EEG is used to evaluate several types of brain disorders. In surgery context, it is commonly used to determine the overall electrical activity of the brain as well as monitoring blood flow. EEG is also used in quantifying and characterizing effects of anaesthetic agents on the central nervous system, providing valuable information to the anaesthesiologist during the surgery \cite{jiahui2}. 
+
+Through an EEG diagram, depth of anaesthesia as well as the effect of different sedative at different period of surgery will be able to be monitored, especially during medically induced coma.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{jiahuipic1.jpg}
+	\caption{The Structure of EEG Systems \cite{jiahui2}}
+\end{figure}
+
+A raw EEG signal will require digitization and computerization using modern technology to be able to generate specific EEG parameters which can be used to correlate to the effectiveness of anaesthetic agents in alteration of consciousness and inducing coma. Useful information can be extracted in both the time and frequency domain, where the frequency domain approach produces a better precise description. 
+
+During surgical procedure, anaesthetic agents are administered to ensure that patients can tolerate unpleasant and painful interventions to avoid complications. This is achieved through a combination of different effects of several agents, and the alteration of consciousness (hypnotic effect), immobility (through muscle relaxation) and limitations to reactions to surgical stimulation (anti-nociception). EEG recording is primarily used as a source to measure hypnosis and anti-nociception. In short, EEG provides a huge amount of information to the anaesthesiologist in understanding of mechanism of anaesthesia. 
+
+\subsubsection{Engineering Understanding}
+
+A typical adult human EEG signal is about 10uV to 100uV in amplitude when measured from the scalp and is about 1-2mV when measured from the subdural electrodes. 
+
+EEG typically contains different rhythmic activity as well as transients and can be categorize into a few different bands as illustrated below
+
+\begin{enumerate}
+	\item Delta wave – at below 4Hz
+	\item Theta wave – at 4 - 7Hz
+	\item Alpha wave – at 8 – 15 Hz
+	\item Beta wave – at 16 – 31 Hz
+	\item Gamma wave – at 32++ Hz
+	\item Mu wave – at 8 – 12 Hz
+\end{enumerate}
+
+
+Each of the bands correlates to different functionality and regions of brains, and will be used pathologically to monitor different areas of interest. However, it is vital to know that EEG is affected by age, and EEG in childhood has lower frequency oscillations than adult EEG and have to be taken into consideration during analysis \cite{jiahui3}. 
+
+Under the use of anaesthetics, different general anaesthesia will result in different effects on the EEG observed. For example, the use of propofol will result in a rapid alpha and nonreactive EEG pattern seen over most of the scalp \cite{jiahui4}. 
+
+Due to the small amplitude of EEG signal, it is very prone to artefact and noise in some electrical activities arising from other sources other than the brain that are able to modify, distort or cancel the brain activity. This can be categorized into physiological artifacts (e.g. cardiac activity, muscle activity, eye movement) and non-physiological artifacts (e.g. electrode artifacts, external devices etc.) \cite{jiahui5}.
+
+
+\subsection{Theory of Photoplethysmography (PPG)}
+
+As a crucial part of patient monitoring system, PPG sensor, known as pulse oximeter is used to measure the SpO2 level. “SpO2 stands for peripheral capillary oxygen saturation, an estimate of arterial oxygen saturation, or SaO2, which refers to the amount of oxygenated haemoglobin in the blood" \cite{george1}.
+
+The blood oxygen saturation reading of a normal person should be between 95\% and 100\% \cite{george1}. A respiratory or cardiovascular problem may be present if the oxygen saturation drops to 90\% ~ 95\%. The patient will highly likely experience hypoxic if the oxygen saturation falls under 90\% \cite{george2}.
+
+\subsubsection{Working Principle of the Infrared PPG Sensor}
+
+Photoplethysmogram Sensor (PPG sensor) takes advantage of the different absorption level of Oxyhemoglobin (HbO2) and deoxyhemoglobin (Hb) for the light beams with different wavelength. By placing a pair of infrared and red LED on one side of the finger and a receiver on the other side, the variation of light intensity can be measured. The light transmitting through fingertip will be absorbed by pulsatile arterial blood, non pulsatile arterial blood, venous blood and tissue \cite{george5}. As we know the pulsatile arterial blood is varying according to the heart pulse, hence the light absorption is also varying according to the heart pulse. Such variation is used as the waveform of PPG signal.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{georgepic1.jpg}
+	\caption{Waveform of PPG Signal \cite{george6}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{georgepic2.jpg}
+	\caption{Absorption Spectra of Hemoglobin \cite{george3}}
+\end{figure}
+
+The Oxygen saturation level can be calculated by the following equation:
+\begin{equation}
+	SpO_2=\frac{HbO_2}{HbO_2 + Hb}
+\end{equation}
+
+Where: 
+\begin{itemize}
+	\item $HbO_2$: Oxyhemoglobin
+	\item $Hb$: Deoxyhemoglobin
+\end{itemize}
+
+The pulse oximeter uses Beer–Lambert law \cite{george4} \cite{george5} to define relationship between the light attenuation (light absorption) and the material it travels through \cite{george7}.
+  
+A normalized ratio of the Red to IR then can be calculated:
+
+\begin{equation}
+	R = \frac{\frac{AC_{RED}}{DC_{RED}}}{\frac{AC_{IR}}{DC_{IR}}}
+\end{equation}
+
+Where: 
+\begin{itemize}
+	\item $AC_{RED}$: AC Component of Red light waveform
+	\item $DC_{RED}$: DC Component of Red light waveform
+	\item $AC_{IR}$: AC Component of Infrared light waveform
+	\item $DC_{IR}$: DC Component of Infrared light waveform
+\end{itemize}
+
+The accurate SpO2 is proportional to this ratio. Proper calibration can be done to get the accurate SpO2 reading \cite{george10}. The PPG waveform is periodic and its period is based on the real time heart rate. Therefore, the heart rate can also be measured through signal processing of the PPG waveform. 
 
 \subsection{Theory of Blood Temperature}
+
+The core temperature of the body is regulated to be at a constant value of $36.9 \degree C$. When anaesthetics are administered, the temperature of the body drops due to "an internal core-to-peripheral redistribution of body heat" \cite{sessler2008temperature}. This has to be monitored carefully to ensure that there is no overdose of anaesthetics administered. The onset of such an issue can be avoided through the "detection of malignant hyperthermia" and "quantification of hyperthermia and hypothermia" \cite{sessler2008temperature}. 
+
+The monitoring of blood temperature in the case of this project is done through direct contact with the skin. Although the actual blood temperature is not measured (through invasive means), the body temperature gives a rough indication of what the blood temperature is. This is a reasonable assumption made for this project as a proof of concept. 

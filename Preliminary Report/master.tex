@@ -4,7 +4,7 @@
 
 %\evensidemargin = 0mm
 %\oddsidemargin = 0mm
-\topmargin = -20mm
+\topmargin = -30mm
 \headheight = 0mm
 \headsep = 20mm
 \textheight = 240mm
@@ -16,6 +16,8 @@
 \lineskip = 1.0mm
 \parskip = 1.5mm
 \renewcommand{\baselinestretch}{1.5}
+\usepackage{longtable}
+
 
 
 \usepackage{cite}
@@ -56,6 +58,8 @@
 	
 	\tableofcontents
 	\listoffigures
+	\listoftables
+	
 	
 	\mainmatter
 	\input{intro.tex}
@@ -69,13 +73,14 @@
 	\input{conclusion.tex}
 	
 	\nocite{*}
-	\bibliographystyle{plain}
-	%\bibliographystyle{ieeetr}
+	%\bibliographystyle{plain}
+	\bibliographystyle{ieeetr}
 	\bibliography{bibfile}	
 	
 	\appendix
 	\input{appendixprograms.tex}
 	\input{appendixpcb.tex}
+	\input{appendixpower.tex}
 	\input{appendixmeasure.tex}
 	
 \end{document}
